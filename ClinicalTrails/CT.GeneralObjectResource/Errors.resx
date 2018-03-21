@@ -1,0 +1,1213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="GenericKey_NewPasswordShouldNotBeSameAsLastUsedPassword" xml:space="preserve">
+    <value>The previous {0} passwords connot be used</value>
+  </data>
+  <data name="Key_InvalidModelHavingNoErrorList" xml:space="preserve">
+    <value>Invalid Model Having No Error List</value>
+  </data>
+  <data name="Key_CanNotCreateLoginAsResourceLoginAlreadyExist" xml:space="preserve">
+    <value>Can not create Login as Resource Login already Exist</value>
+  </data>
+  <data name="Key_EmailIdIsMandatory" xml:space="preserve">
+    <value>Email Id is mandatory</value>
+  </data>
+  <data name="Key_EmailTemplateIsNotExist" xml:space="preserve">
+    <value>Email Template is not exist</value>
+  </data>
+  <data name="Key_EmailTemplateNameCanNotBeBlank" xml:space="preserve">
+    <value>Email Template name can not blank</value>
+  </data>
+  <data name="Key_ErrorProcessingRequest" xml:space="preserve">
+    <value>Internal Error occurred to Process Request</value>
+  </data>
+  <data name="Key_ExceptionOccourred" xml:space="preserve">
+    <value>Exception occourred !!!</value>
+  </data>
+  <data name="GenericKey_InvalidEmailFormat" xml:space="preserve">
+    <value>Invalid Email: {0} specified as per the standard Format</value>
+  </data>
+  <data name="GenericKey_InvalIdLoginIdSpecified" xml:space="preserve">
+    <value>Specified Username: {0} does not exists</value>
+  </data>
+  <data name="Key_InvalidResourceIdForUpdate" xml:space="preserve">
+    <value>Invalid ResourceId specified for Update operation</value>
+  </data>
+  <data name="Key_InvalidRoleIdForDetachedRoleFromUser" xml:space="preserve">
+    <value>Invalid RoleId specified to Detach Role From User</value>
+  </data>
+  <data name="Key_InvalidUserIdForDetachedRoleFromUser" xml:space="preserve">
+    <value>Invalid UserId specified to Detach Role From User</value>
+  </data>
+  <data name="Key_InvalidUserIdForUpdate" xml:space="preserve">
+    <value>Invalid UserId</value>
+  </data>
+  <data name="Key_InvalidUserIdOrRoleIdToGetSudoRole" xml:space="preserve">
+    <value>Invalid UserId or RoleId specified to get Sudo Role</value>
+  </data>
+  <data name="Key_InvalidUserIdToGetSudoRole" xml:space="preserve">
+    <value>Invalid UserId specified to get User Sudo Role</value>
+  </data>
+  <data name="GenericKey_LoginIdAlreadyExist" xml:space="preserve">
+    <value>Specified username: {0} already exists</value>
+  </data>
+  <data name="Key_NewPasswordAndConfirmPasswordNotMatched" xml:space="preserve">
+    <value>Specified new password and confirm password are not matched</value>
+  </data>
+  <data name="Key_PasswordCanNotBeEmpty" xml:space="preserve">
+    <value>Password can not be empty</value>
+  </data>
+  <data name="GenericKey_ResourceCodeAlreadyExist" xml:space="preserve">
+    <value>Specified Resource Code: {0} already Exist</value>
+  </data>
+  <data name="Key_ResourceCodeCanNotBeEmpty" xml:space="preserve">
+    <value>Resource Code can not be Empty</value>
+  </data>
+  <data name="Key_ResourceEmailCanNotBeEmpty" xml:space="preserve">
+    <value>Resource Email can not be Empty</value>
+  </data>
+  <data name="GenericKey_ResourceEmailIdAlreadyExist" xml:space="preserve">
+    <value>Specified Resource Email Id: {0} already Exist</value>
+  </data>
+  <data name="Key_RoleNameCanNotBeEmpty" xml:space="preserve">
+    <value>Role Name can not be Empty</value>
+  </data>
+  <data name="GenericKey_SpecifiedEmailIdIsNotPresent" xml:space="preserve">
+    <value>No User found against specified LoginID: {0} or EmailID: {1}</value>
+  </data>
+  <data name="Key_SuperAdminCanNotBeDeleted" xml:space="preserve">
+    <value>System Super Admin Can not be Deleted</value>
+  </data>
+  <data name="Key_TokenCanNotBeBlank" xml:space="preserve">
+    <value>Token can not be blank</value>
+  </data>
+  <data name="GenericKey_UserIsDisabled" xml:space="preserve">
+    <value>Can't Login into the system. User: {0} is Disabled</value>
+  </data>
+  <data name="GenericKey_UserIsLocked" xml:space="preserve">
+    <value>Can't Login into the system. User: {0} is Locked</value>
+  </data>
+  <data name="Key_UserIsNotExist" xml:space="preserve">
+    <value>User is not exist</value>
+  </data>
+  <data name="Key_UserNameCanNotBeEmpty" xml:space="preserve">
+    <value>User Name can not be empty</value>
+  </data>
+  <data name="GenericKey_UsernameOrPasswordIsIncorrect" xml:space="preserve">
+    <value>Specified User name {0} or password is incorrect</value>
+  </data>
+  <data name="Key_SuperAdminCanNotBeLocked" xml:space="preserve">
+    <value>Super Admin can not be Locked</value>
+  </data>
+  <data name="Key_ErrorPageMessage" xml:space="preserve">
+    <value>There is some problem while processing your request. Please contact the system Administrator</value>
+  </data>
+  <data name="Key_PageNotFound" xml:space="preserve">
+    <value>Sorry, the page you are looking for is currently not available. Please try after sometime or contact your administrator for futher assistance</value>
+  </data>
+  <data name="Key_UnAuthorizedPageMessage" xml:space="preserve">
+    <value>Sorry, you are currently not authorized to view this page. Please contact the system administrator</value>
+  </data>
+  <data name="Key_UnexpectedErrorHasOccurred" xml:space="preserve">
+    <value>An unexpected error has occurred. Please contact the system administrator</value>
+  </data>
+  <data name="Key_ChangePassword_Fields_ConfirmNewPassword_Required" xml:space="preserve">
+    <value>Confirm New Password can not be empty</value>
+  </data>
+  <data name="Key_ChangePassword_Fields_NewPassword_EnteredPasswordsDoNotMatch" xml:space="preserve">
+    <value>Specified new password and confirm password are not matched</value>
+  </data>
+  <data name="Key_ChangePassword_Fields_NewPassword_Required" xml:space="preserve">
+    <value>New Password can not be empty</value>
+  </data>
+  <data name="Key_ChangePassword_Fields_OldPassword_Required" xml:space="preserve">
+    <value>User Old Password can not be empty</value>
+  </data>
+  <data name="Key_InvalidUserIdForDelete" xml:space="preserve">
+    <value>Invalid UserId</value>
+  </data>
+  <data name="Key_InvalidUserIdForEnableExternalUser" xml:space="preserve">
+    <value>Invalid UserId</value>
+  </data>
+  <data name="Key_AddressLine1IsMandatory" xml:space="preserve">
+    <value>Address Line1 is mandatory</value>
+  </data>
+  <data name="Key_AddressLine2IsMandatory" xml:space="preserve">
+    <value>Address Line2 is mandatory</value>
+  </data>
+  <data name="Key_EmailIdIsNotInCorrectFormat" xml:space="preserve">
+    <value>Email Id is not in correct format</value>
+  </data>
+  <data name="Key_FirstNameIsMandatory" xml:space="preserve">
+    <value>First name is mandatory</value>
+  </data>
+  <data name="Key_LastNameIsMandatory" xml:space="preserve">
+    <value>Last name is mandatory</value>
+  </data>
+  <data name="Key_PhoneNumberIsMandatory" xml:space="preserve">
+    <value>Phone Number is mandatory</value>
+  </data>
+  <data name="Key_PassingPercentageIsMandatory" xml:space="preserve">
+    <value>Passing Percentage is mandatory</value>
+  </data>
+  <data name="Key_StartTimeShouldBeNull" xml:space="preserve">
+    <value>Start time should be null</value>
+  </data>
+  <data name="Key_EmailIdDoesNotExist" xml:space="preserve">
+    <value>Email Id does not exist</value>
+  </data>
+  <data name="Key_EndTimeShouldBeNull" xml:space="preserve">
+    <value>End Time should be null</value>
+  </data>
+  <data name="Key_ExternalUserIdDoesNotExist" xml:space="preserve">
+    <value>UserId does not exist</value>
+  </data>
+  <data name="Key_StartTimeIsMandatory" xml:space="preserve">
+    <value>Start Time is mandatory</value>
+  </data>
+  <data name="Key_EmailIdAlreadyExist" xml:space="preserve">
+    <value>Email Id already exist</value>
+  </data>
+  <data name="Key_NextQuestionNotFound" xml:space="preserve">
+    <value>Next question not found</value>
+  </data>
+  <data name="Key_CodeIsMandatory" xml:space="preserve">
+    <value>Code is mandatory</value>
+  </data>
+  <data name="Key_NoRecordFoundInFile" xml:space="preserve">
+    <value>No record found in File. Atleast one record is required to process the File</value>
+  </data>
+  <data name="Key_ExternalUserAlreadyMapped" xml:space="preserve">
+    <value>Test had been already mapped to this Candidate. Please reassign it</value>
+  </data>
+  <data name="Key_InvalidDocument" xml:space="preserve">
+    <value>Invalid document. Please try again</value>
+  </data>
+  <data name="Key_DocumentCanNotBeDeleted" xml:space="preserve">
+    <value>Document Can Not Be Deleted</value>
+  </data>
+  <data name="Key_CompanyNameIsMandatory" xml:space="preserve">
+    <value>Company Name is manadatory</value>
+  </data>
+  <data name="Key_EmployeeTypeIdNotFound" xml:space="preserve">
+    <value>Employee Type Id not found</value>
+  </data>
+  <data name="Key_EmployeeTypeIsMandatory" xml:space="preserve">
+    <value>Employee Type is mandatory</value>
+  </data>
+  <data name="Key_GlobalEquityIdNotFound" xml:space="preserve">
+    <value>Global ISIN Id not found</value>
+  </data>
+  <data name="Key_IntimationPeriodIsMandatoryForNonAccessUser" xml:space="preserve">
+    <value>Intimation Period is mandatory For Non-Access User</value>
+  </data>
+  <data name="Key_ISINCodeIsMandatory" xml:space="preserve">
+    <value>ISIN Code is manadatory</value>
+  </data>
+  <data name="Key_TransactionLimitIdNotFound" xml:space="preserve">
+    <value>Employee Type Id not found</value>
+  </data>
+  <data name="Key_DepartmentHeadIdIsMandatory" xml:space="preserve">
+    <value>Department Head Id is mandatory</value>
+  </data>
+  <data name="Key_DepartmentIdNotFound" xml:space="preserve">
+    <value>Department Id is mandatory</value>
+  </data>
+  <data name="Key_DepartmentNameIsMandatory" xml:space="preserve">
+    <value>Department Name is mandatory</value>
+  </data>
+  <data name="Key_StatusNameIsMandatory" xml:space="preserve">
+    <value>Status Name is mandatory</value>
+  </data>
+  <data name="Key_CountryCodeCanNotBeEmpty" xml:space="preserve">
+    <value>Country Code is Mandatory</value>
+  </data>
+  <data name="Key_CountryNameCanNotBeEmpty" xml:space="preserve">
+    <value>Country Name is Mandatory</value>
+  </data>
+  <data name="Key_StateNameCanNotBeEmpty" xml:space="preserve">
+    <value>State Name is Mandatory</value>
+  </data>
+  <data name="GenericKey_UserIsLockedMaxLoginAttemptExceed" xml:space="preserve">
+    <value>Can't Login into the system. User: {0} is Locked. Max Login Attempt Exceeded</value>
+  </data>
+  <data name="Key_SecurityTypeNameIsMandatory" xml:space="preserve">
+    <value>Security Type Is Mandatory</value>
+  </data>
+  <data name="Key_DateOfTransactionIsMandatory" xml:space="preserve">
+    <value>Date Of Transaction Is Mandatory</value>
+  </data>
+  <data name="Key_PricePerShareIsMandatory" xml:space="preserve">
+    <value>Price Per Share Is Mandatory</value>
+  </data>
+  <data name="Key_QuantityIsMandatory" xml:space="preserve">
+    <value>Quantity Is Mandatory</value>
+  </data>
+  <data name="Key_RequestIdIsMandatory" xml:space="preserve">
+    <value>RequestId Is Should Not be Null</value>
+  </data>
+  <data name="Key_TotalPurchaseAmountIsMandatory" xml:space="preserve">
+    <value>Tota Purchase Amount Is Mandatory</value>
+  </data>
+  <data name="Key_GlobalEquityISINCodeAlreadyExist" xml:space="preserve">
+    <value>Global ISIN Code should be unique</value>
+  </data>
+  <data name="Key_GlobalEquityCodeAlreadyExist" xml:space="preserve">
+    <value>Global ISIN Code should be unique</value>
+  </data>
+  <data name="Key_TransactionTypeIsMandatory" xml:space="preserve">
+    <value>Transaction Type Is Mandatory</value>
+  </data>
+  <data name="Key_DesignationCodeAlreadyExist" xml:space="preserve">
+    <value>Designation Code Already Exist</value>
+  </data>
+  <data name="Key_DesignationCodeCanNotBeEmpty" xml:space="preserve">
+    <value>Designation Code is Mandatory</value>
+  </data>
+  <data name="Key_DepartmentDetailsNotFound" xml:space="preserve">
+    <value>Department Details Not found</value>
+  </data>
+  <data name="Key_GlobalEquityDetailsNotFound" xml:space="preserve">
+    <value>Global ISIN Details not found</value>
+  </data>
+  <data name="Key_EmployeeTypeDetailsNotFound" xml:space="preserve">
+    <value>Employee Type Detail not found</value>
+  </data>
+  <data name="Key_ISINCodeAlreadyExist" xml:space="preserve">
+    <value>ISIN Code Already Exist</value>
+  </data>
+  <data name="Key_DesignationNameCanNotBeEmpty" xml:space="preserve">
+    <value>Designation Name is Mandatory</value>
+  </data>
+  <data name="Key_SecurityTypeIsMandatory" xml:space="preserve">
+    <value>Security Type Name is mandatory</value>
+  </data>
+  <data name="Key_SecurityTypeNameAlreadyExist" xml:space="preserve">
+    <value>SecurityType Name Already Exist</value>
+  </data>
+  <data name="Key_CountryRecordNotFound" xml:space="preserve">
+    <value>Country Record not found</value>
+  </data>
+  <data name="Key_StateRecordNotFound" xml:space="preserve">
+    <value>State Record not found</value>
+  </data>
+  <data name="Key_ApprovalFlowRecordNotFound" xml:space="preserve">
+    <value>Approval Flow Record not found</value>
+  </data>
+  <data name="Key_CommentIsMandatory" xml:space="preserve">
+    <value>Comment is Mandatory</value>
+  </data>
+  <data name="Key_ResourceIdIsMandatory" xml:space="preserve">
+    <value>Employee name is Mandatory</value>
+  </data>
+  <data name="Key_PurchaseDateIsMandatory" xml:space="preserve">
+    <value>Date of Purchase is Mandatory</value>
+  </data>
+  <data name="Key_UserCodeCanNotBeEmpty" xml:space="preserve">
+    <value>User Code can not be empty</value>
+  </data>
+  <data name="Key_LimitMasterCanNotBeGreaterThanOne" xml:space="preserve">
+    <value>Limit Master Record can not be greater than one</value>
+  </data>
+  <data name="Key_MinimumCutOffLimitIsMandatory" xml:space="preserve">
+    <value>Cut Off Limit is Manadatory</value>
+  </data>
+  <data name="Key_BuyAproverValidityIsMandatoryForAccessUser" xml:space="preserve">
+    <value>Buy Aprover Validity is mandatory For Access User</value>
+  </data>
+  <data name="Key_BuyAproverValidityIsMandatoryForDesignatedUser" xml:space="preserve">
+    <value>Buy Aprover Validity is mandatory For Designated User</value>
+  </data>
+  <data name="Key_BuyAproverValidityIsMandatoryForNonAccessUser" xml:space="preserve">
+    <value>Buy Aprover Validity is mandatory For Non-Access User</value>
+  </data>
+  <data name="Key_COApproverLimitIsMandatory" xml:space="preserve">
+    <value>Complaince Officer Approver Limit Is Mandatory</value>
+  </data>
+  <data name="Key_CMApproverLimitIsMandatory" xml:space="preserve">
+    <value>Complaince Manager ApproverLimit Is Mandatory</value>
+  </data>
+  <data name="Key_CoolingPeriodIsMandatoryForAccessUser" xml:space="preserve">
+    <value>Cooling Period is mandatory For Access User</value>
+  </data>
+  <data name="Key_CoolingPeriodIsMandatoryForDesignatedUser" xml:space="preserve">
+    <value>Cooling Period is mandatory For  Designated User</value>
+  </data>
+  <data name="Key_CoolingPeriodIsMandatoryForNonAccessUser" xml:space="preserve">
+    <value>Cooling Period is mandatory For Non-Access User</value>
+  </data>
+  <data name="Key_CutoffLimitIsMandatory" xml:space="preserve">
+    <value>Cut off Limit Is Mandatory</value>
+  </data>
+  <data name="Key_IntervalBetweenRemindersApproverIsMandatory" xml:space="preserve">
+    <value>Interval Between Reminders Approver Is Mandatory</value>
+  </data>
+  <data name="Key_MinimumHoldingPeriodIsMandatoryForAccessUser" xml:space="preserve">
+    <value>Minimum Holding Period is mandatory For Access User</value>
+  </data>
+
+  <data name="Key_MutualFundMinimumHoldingPeriodIsMandatoryForAccessUser" xml:space="preserve">
+    <value>Mutual Fund Minimum Holding Period is mandatory For Access User</value>
+  </data>
+  <data name="Key_MutualFundMinimumHoldingPeriodIsMandatoryForNonAccessUser" xml:space="preserve">
+    <value>Mutual Fund Minimum Holding Period is mandatory For Non-Access User</value>
+  </data>
+  <data name="Key_MutualFundMinimumHoldingPeriodIsMandatoryForDesignatedUser" xml:space="preserve">
+    <value>Mutual Fund Minimum Holding Period is mandatory For Designated User</value>
+  </data>
+  
+  <data name="Key_MinimumHoldingPeriodIsMandatoryForDesignatedUser" xml:space="preserve">
+    <value>Minimum Holding Period is mandatory For Designated User</value>
+  </data>
+  <data name="Key_MinimumHoldingPeriodIsMandatoryForNonAccessUser" xml:space="preserve">
+    <value>Minimum Holding Period is mandatory For Non-Access User</value>
+  </data>
+  <data name="Key_ReminderApproverIsMandatory" xml:space="preserve">
+    <value>Reminder Approver Is Mandatory</value>
+  </data>
+  <data name="Key_ReminderStartTimeApproverIsMandatory" xml:space="preserve">
+    <value>Reminder Start Time Approver Is Mandatory</value>
+  </data>
+  <data name="Key_SellAproverValidityIsMandatoryForAccessUser" xml:space="preserve">
+    <value>Sell Aprover Validity is mandatory For Access User</value>
+  </data>
+  <data name="Key_SellAproverValidityIsMandatoryForDesignatedUser" xml:space="preserve">
+    <value>Sell Aprover Validity is mandatory For Designated User</value>
+  </data>
+  <data name="Key_SellAproverValidityIsMandatoryForNonAccessUser" xml:space="preserve">
+    <value>Sell Aprover Validity is mandatory For Non-Access User</value>
+  </data>
+  <data name="Key_UserReminderPeriodIsMandatory" xml:space="preserve">
+    <value>User Reminder Period Is Mandatory</value>
+  </data>
+  <data name="Key_GradeNameAlreadyExist" xml:space="preserve">
+    <value>Grade Name already exist</value>
+  </data>
+  <data name="Key_GradeIdNotFound" xml:space="preserve">
+    <value>Grade Id Not Found</value>
+  </data>
+  <data name="Key_GradeNameIsMandatory" xml:space="preserve">
+    <value>Grade Name is Mandatory</value>
+  </data>
+  <data name="Key_GradeNotFound" xml:space="preserve">
+    <value>Grade Not Found</value>
+  </data>
+  <data name="Key_DesignationNameAlreadyExist" xml:space="preserve">
+    <value>Designation Name Already Exist</value>
+  </data>
+  <data name="Key_ReportViewerNameAlreadyExist" xml:space="preserve">
+    <value>Viewer is already exist</value>
+  </data>
+  <data name="Key_LocationNameAlreadyExist" xml:space="preserve">
+    <value>Location Name already exist</value>
+  </data>
+  <data name="Key_OldPasswordIsIncorrect" xml:space="preserve">
+    <value>The Old Password entered was invalid</value>
+  </data>
+  <data name="Key_Error" xml:space="preserve">
+    <value>Error !!!</value>
+  </data>
+  <data name="Key_UnAuthorizeAccess" xml:space="preserve">
+    <value>Unauthorized access !!!</value>
+  </data>
+  <data name="Key_DepartmentCodeAlreadyExist" xml:space="preserve">
+    <value>Department Code Already Exist</value>
+  </data>
+  <data name="Key_DepartmentNameAlreadyExist" xml:space="preserve">
+    <value>Department Name Already Exist</value>
+  </data>
+  <data name="Key_StatusNameAlreadyExist" xml:space="preserve">
+    <value>Status name already exists</value>
+  </data>
+  <data name="Key_ApproverAlreadyExists" xml:space="preserve">
+    <value>Approver Already Exists</value>
+  </data>
+  <data name="Key_ApproverIsMandatory" xml:space="preserve">
+    <value>Approver is Mandatory</value>
+  </data>
+  <data name="Key_ApproverCanNotBeRemove" xml:space="preserve">
+    <value>You cannot remove approver as requests are still pending</value>
+  </data>
+  <data name="Key_ApproverTypeCanNotBeModify" xml:space="preserve">
+    <value>You cannot modify approvertype as requests are still pending</value>
+  </data>
+  <data name="Key_ExistingApproverIsMandatory" xml:space="preserve">
+    <value>Existing Approver Is Mandatory</value>
+  </data>
+  <data name="Key_NewApproverIsMandatory" xml:space="preserve">
+    <value>New Approver Is Mandatory</value>
+  </data>
+  <data name="Key_ApproverChangeDetailRecordNotFound" xml:space="preserve">
+    <value>Approver Change Detail Record not found</value>
+  </data>
+  <data name="Key_ExistingApproverAndNewApproverCanNotBeSame" xml:space="preserve">
+    <value>Existing Approver and New Approver Can't be same. Please select another Approver</value>
+  </data>
+  <data name="Key_ExistingApproverAlreadyExistsInTheSystem" xml:space="preserve">
+    <value>Existing Approver already exists in the system</value>
+  </data>
+  <data name="Key_TotalPurchaseAmountMustBeGreaterThanZero" xml:space="preserve">
+    <value>Total Purchase Amount must be greater than zero</value>
+  </data>
+  <data name="Key_InvalidDateFormat" xml:space="preserve">
+    <value>Invalid Date Format</value>
+  </data>
+  <data name="Key_GenderIsMandatory" xml:space="preserve">
+    <value>Gender is Required</value>
+  </data>
+  <data name="Key_InvalidGenderSpecified" xml:space="preserve">
+    <value>Invalid Gender Specified</value>
+  </data>
+  <data name="Key_InValidCutoffLimitSpecified" xml:space="preserve">
+    <value>Invalid Format Specified For Cut off Limit</value>
+  </data>
+  <data name="Key_FromReportMonthIsMandatory" xml:space="preserve">
+    <value>From Report Month Is Mandatory</value>
+  </data>
+  <data name="Key_FromYearIsMandatory" xml:space="preserve">
+    <value>From Year Is Mandatory</value>
+  </data>
+  <data name="Key_BuyValidityIsExpired" xml:space="preserve">
+    <value>You Cannot perform Buy operation due to Buy validity was expired</value>
+  </data>
+  <data name="Key_CommentIsMandatoryForResponseToSMITheRequest" xml:space="preserve">
+    <value>Comment is required for response to a SMI request</value>
+  </data>
+  <data name="Key_CommentIsMandatoryToSMITheRequest" xml:space="preserve">
+    <value>Comment is required to SMI the Request</value>
+  </data>
+  <data name="Key_CommentIsRequiredToMarkTransactionAsNotDone" xml:space="preserve">
+    <value>Comment is required to Mark Transaction as not done</value>
+  </data>
+  <data name="Key_DateOfBuyIsMandatory" xml:space="preserve">
+    <value>Date of Buy is Required</value>
+  </data>
+  <data name="Key_InvalidTransactionType" xml:space="preserve">
+    <value>Invalid Transaction Type specified for this Request</value>
+  </data>
+  <data name="Key_ISINCompanyNameIsMandatory" xml:space="preserve">
+    <value>ISIN Company Name is Required</value>
+  </data>
+  <data name="Key_MutualFundIsMandatory" xml:space="preserve">
+    <value>MutualFund Name is Mandatory</value>
+  </data>
+  <data name="Key_MFSchmeNameIsMandatory" xml:space="preserve">
+    <value>MFScheme Name is Required</value>
+  </data>
+  <data name="Key_MFSchamePlanIsMandatory" xml:space="preserve">
+    <value>MFScheme Plan is Mandatory</value>
+  </data>
+  <data name="Key_PricePerShareMustBeGreaterThanZero" xml:space="preserve">
+    <value>Price Per Share must be greater than zero</value>
+  </data>
+  <data name="Key_QuantityMustBeGreaterThanZero" xml:space="preserve">
+    <value>Quantity must be greater than zero</value>
+  </data>
+  <data name="Key_RelativeNameIsMandatory" xml:space="preserve">
+    <value>Relative Name is Required</value>
+  </data>
+  <data name="Key_RequestCanNotBeResubmit" xml:space="preserve">
+    <value>Can't perform this operation, Request can not be Resubmit</value>
+  </data>
+  <data name="Key_RequesterWorkFlowNotDefinedWithCMorCOInConfiguration" xml:space="preserve">
+    <value>Can not Submit request. Requester Work flow not defined with Compliance Manager or Compliance Officer in configuration</value>
+  </data>
+  <data name="Key_RequestIsNotInSubmittedState" xml:space="preserve">
+    <value>Can't perform operation, Request is not in Submitted State</value>
+  </data>
+  <data name="Key_TransactionIsNotBuyTransaction" xml:space="preserve">
+    <value>Can not perform Buy operation as Transaction is not Buy Transaction</value>
+  </data>
+  <data name="Key_TransactionMustBeBuyToPerformOperation" xml:space="preserve">
+    <value>Can't perform this operation, Transaction must be of type Buy to perform this operation</value>
+  </data>
+  <data name="Key_UnableToPerformBuyOperationAsRequesterNotMatched" xml:space="preserve">
+    <value>Can not Perform Buy operation as Requester is not Matched</value>
+  </data>
+  <data name="GenericKey_UnableToPerformActualTransactionAsInvalidRequestStatus" xml:space="preserve">
+    <value>You can not perform {0} operation as Request status is {1}</value>
+  </data>
+  <data name="Key_UnableToPerformSellOperationAsRequesterNotMatched" xml:space="preserve">
+    <value>Can not Perform Sell operation as Requester is not Matched</value>
+  </data>
+  <data name="Key_UnableToPerformSellOperationAsTransactionIsNotSellTransaction" xml:space="preserve">
+    <value>Can not perform Sell operation as Transaction is not Sell Transaction</value>
+  </data>
+  <data name="Key_UnableToSubmitRequestAsRequesterNotMatched" xml:space="preserve">
+    <value>Can not Submit request as Requester is not Matched</value>
+  </data>
+  <data name="Key_UnAuthorizedRequester" xml:space="preserve">
+    <value>Can't perform this operation, You have no access to perform this operation</value>
+  </data>
+  <data name="Key_UnAuthorizedRequesterToApproveRequest" xml:space="preserve">
+    <value>Can't approve request as you are not authorize to perform this operation</value>
+  </data>
+  <data name="Key_UnAuthorizedRequesterToRejectRequest" xml:space="preserve">
+    <value>Can't Reject request as you are not authorize to perform this operation</value>
+  </data>
+  <data name="Key_UnAuthorizedRequesterToSMIRequest" xml:space="preserve">
+    <value>Can't SMI request as you are not authorize to perform this operation</value>
+  </data>
+  <data name="Key_InvalidTotalPurchaseAmountSpecified" xml:space="preserve">
+    <value>Invalid Total Purchase Amount specified. Total Purchase Amount must be multiplication of Quantity and Price Per Share</value>
+  </data>
+  <data name="Key_TotalBuyQuantityDoesNotMatchWithSecurityBuyQuantity" xml:space="preserve">
+    <value>Total Buy Quantity does not match with Security Buy Quantity</value>
+  </data>
+  <data name="Key_UnableToSubmitRequestForSellAsRequesterDoesNotMatch" xml:space="preserve">
+    <value>Can not Submit Request for Sell as Requester does not match</value>
+  </data>
+  <data name="Key_UnableToSubmitRequestForSellOperationAsRequestStatusIsNotInPendingForSellState" xml:space="preserve">
+    <value>Can not Submit Request for Sell Operation as Request Status is not in Pending for Sell State</value>
+  </data>
+  <data name="Key_UnableToSubmitRequestForSellOperationAsTransactionIsNotInBuyState" xml:space="preserve">
+    <value>Can not Submit Request for Sell Operation as Request Transaction is not in Buy State</value>
+  </data>
+  <data name="Key_CommentIsMandatoryToRejectTheRequest" xml:space="preserve">
+    <value>Comment is required to Reject the Request</value>
+  </data>
+  <data name="Key_SellSubmitIsNotAllowedForActualProcess" xml:space="preserve">
+    <value>Sell Submit is not allowed for this request</value>
+  </data>
+  <data name="Key_CoolingPeriodHasNotExpired" xml:space="preserve">
+    <value>Cooling Period has not yet expired for this ISIN</value>
+  </data>
+  <data name="GenericKey_CutOffLimitExceeded" xml:space="preserve">
+    <value>Cannot perform Transaction as Cut Off time has exceeded. Please perform transaction(s) between 9:00 AM to {0}</value>
+  </data>
+  <data name="Key_LimitMasterAlreadyExist" xml:space="preserve">
+    <value>Limit Master already created. Can not Add new Limit Master</value>
+  </data>
+  <data name="Key_BrokerCodeIsMandatary" xml:space="preserve">
+    <value>Broker Code is Mandatary</value>
+  </data>
+  <data name="Key_BrokerNameIsMandatary" xml:space="preserve">
+    <value>Broker Name is Mandatary</value>
+  </data>
+  <data name="Key_InvalidFileContentType" xml:space="preserve">
+    <value>Invalid File ContentType specified</value>
+  </data>
+  <data name="Key_DocumentTypeIsMandatary" xml:space="preserve">
+    <value>Document Type is required</value>
+  </data>
+  <data name="Key_InvalidDocumentType" xml:space="preserve">
+    <value>Invalid DocumentType specified</value>
+  </data>
+  <data name="Key_InvalidFileExtensionType" xml:space="preserve">
+    <value>Invalid File Extension specified</value>
+  </data>
+  <data name="Key_InvalidSecurityType" xml:space="preserve">
+    <value>Invalid Security Type Specified</value>
+  </data>
+  <data name="Key_ISINMasterNotFoundForThisCompany" xml:space="preserve">
+    <value>ISIN Master not found for this company</value>
+  </data>
+  <data name="GenericKey_SecurityQuantityShouldNotBeGreaterThanRemainingQuantity" xml:space="preserve">
+    <value>Security {0} Quantity should not be greater than remaining quantity</value>
+  </data>
+  <data name="GenericKey_ISINCodeAlreadyExist" xml:space="preserve">
+    <value>ISIN Code: {0} Already Exist</value>
+  </data>
+  <data name="GenericKey_CanNotDeActivateEmployeeAsUseAsSystemAdmin" xml:space="preserve">
+    <value>You cannot deactive an application admin from TAS</value>
+  </data>
+  <data name="Key_CanNotDeActivateEmployeeAsUserIsAssignedAsApprover" xml:space="preserve">
+    <value>You cannot deactive a user who is a Approver</value>
+  </data>
+  <data name="Key_LimitMasterDetailsNotFound" xml:space="preserve">
+    <value>Limit Master Details not found</value>
+  </data>
+  <data name="Key_MinimumHoldingPeriodHasNotExpired" xml:space="preserve">
+    <value>Minimum Holding Period has not yet expired</value>
+  </data>
+  <data name="Key_CustomerNotFoundForUpdate" xml:space="preserve">
+    <value>No Customer found for Update operation</value>
+  </data>
+  <data name="Key_CustomerNotRegisteredIntoSystem" xml:space="preserve">
+    <value>Customer not registered into the System</value>
+  </data>
+  <data name="Key_DepartmentCodeIsMandatory" xml:space="preserve">
+    <value>Department Code is mandatory</value>
+  </data>
+  <data name="Key_DepartmentIdIsMandatory" xml:space="preserve">
+    <value>Department Id id Manadatory</value>
+  </data>
+  <data name="Key_FileContainsDuplicateHeaders" xml:space="preserve">
+    <value>File Contains Duplicate Headers</value>
+  </data>
+  <data name="Key_FileCouldNotBeParsed" xml:space="preserve">
+    <value>File could not be parsed</value>
+  </data>
+  <data name="Key_ISINMasterDetailsNotFound" xml:space="preserve">
+    <value>ISIN Master Details not found</value>
+  </data>
+  <data name="Key_LengthOfNumbersDoesNotMatch" xml:space="preserve">
+    <value>Length of numbers does not match</value>
+  </data>
+  <data name="Key_LocationIdNotFound" xml:space="preserve">
+    <value>Location Id not found</value>
+  </data>
+  <data name="Key_LocationNameIsMandatory" xml:space="preserve">
+    <value>Location Name is mandatory</value>
+  </data>
+  <data name="Key_LocationRecordNotFound" xml:space="preserve">
+    <value>Location Record not found</value>
+  </data>
+  <data name="Key_MinValueCanNotBeGreaterThanMaxValue" xml:space="preserve">
+    <value>Minimum value cannot be greater than maximum value</value>
+  </data>
+  <data name="Key_RecordNotFound" xml:space="preserve">
+    <value>Record Not Found</value>
+  </data>
+  <data name="Key_ResourceandDepartmentIdIsMandatory" xml:space="preserve">
+    <value>Resource and Department Id Is Mandatory</value>
+  </data>
+  <data name="Key_StateCodeCanNotBeEmpty" xml:space="preserve">
+    <value>State Code is Mandatory</value>
+  </data>
+  <data name="Key_StatutsMasterDetailsNotFound" xml:space="preserve">
+    <value>Statuts Master Details Not Found</value>
+  </data>
+  <data name="Key_SystemAdminNameAlreadyExist" xml:space="preserve">
+    <value>System Asmin Name Already Exist</value>
+  </data>
+  <data name="Key_SystemAdminNameIsMandatory" xml:space="preserve">
+    <value>{0} Name is mandatory</value>
+  </data>
+  <data name="GenericKey_CanNotCreateLoginAsResourceLoginAlreadyExist" xml:space="preserve">
+    <value>Can not create Login as Resource Login already Exist</value>
+  </data>
+  <data name="GenericKey_RoleNameAlreadyExist" xml:space="preserve">
+    <value>Specified Role Name already Exist</value>
+  </data>
+  <data name="Key_EmployeeTypeCodeIsMandatory" xml:space="preserve">
+    <value>EmployeeType Code is mandatory</value>
+  </data>
+  <data name="Key_IntervalBetweenRemindersUserIsMandatory" xml:space="preserve">
+    <value>Interval Between Reminders User Is Mandatory</value>
+  </data>
+  <data name="Key_NumberOfRowsToBeDisplayedIsMandatory" xml:space="preserve">
+    <value>Number Of Rows To Be Displayed Is Mandatory</value>
+  </data>
+  <data name="Key_QuarterlyReportMonthIsMandatory" xml:space="preserve">
+    <value>Quarterly Report Month Is Mandatory</value>
+  </data>
+  <data name="Key_ReminderStartTimeUserIsMandatory" xml:space="preserve">
+    <value>Reminder Start Time User Is Mandatory</value>
+  </data>
+  <data name="Key_ReminderUserIsMandatory" xml:space="preserve">
+    <value>Reminder to User Is Mandatory</value>
+  </data>
+  <data name="Key_ReportViewerDetailIdNotFound" xml:space="preserve">
+    <value>ReportViewerDetail Id is mandatory</value>
+  </data>
+  <data name="Key_ResourceDoesNotExist" xml:space="preserve">
+    <value>Resource Does Not Exist</value>
+  </data>
+  <data name="Key_UnableToPerformSellOperationAsSellValidityIsExpired" xml:space="preserve">
+    <value>Can not perform Sell operation, Sell Validity is expired</value>
+  </data>
+  <data name="Key_YearlyReportMonthIsMandatory" xml:space="preserve">
+    <value>Yearly Report Month Is Mandatory</value>
+  </data>
+  <data name="GenericKey_PasswordExpiredIntimation" xml:space="preserve">
+    <value>Your Password will expired on {0}. Kindly change your password before it expired</value>
+  </data>
+  <data name="Key_LoginIdCanNotBeEmpty" xml:space="preserve">
+    <value>Username can not be empty</value>
+  </data>
+  <data name="GenericKey_InvalidDateOfPurchaseAsPerIntimationPeriod" xml:space="preserve">
+    <value>Invalid {0} : {1} specified as per the Intimation Period defined in TAS Limit</value>
+  </data>
+  <data name="GenericKey_FieldAlreadyExist" xml:space="preserve">
+    <value>{1} already exist: {2}</value>
+  </data>
+  <data name="GenericKey_FieldLengthExceed" xml:space="preserve">
+    <value>{0} Length exceeds the maximum value: {1}</value>
+  </data>
+  <data name="GenericKey_MaximumAllowedFileSizeExceeded" xml:space="preserve">
+    <value>Maximum allowed file size exceeded. Actual Size: {0}, Alowed Size: {1}</value>
+  </data>
+  <data name="GenericKey_UploadFileExtensionValidationError" xml:space="preserve">
+    <value>Only {0} files are allowed to Upload. Actual File Extension: {1}</value>
+  </data>
+  <data name="Key_EmptyFileSelectedForUpload" xml:space="preserve">
+    <value>Empty File selected for Upload</value>
+  </data>
+  <data name="Key_NoFileSelectedForUpload" xml:space="preserve">
+    <value>No File Selected for upload</value>
+  </data>
+  <data name="Key_UnableToSubmitRequestForSellAfterSMIAsRequestStatusIsNotInSMIState" xml:space="preserve">
+    <value>Can not Submit Request for Sell after SMI as Request Status is not in SMI State</value>
+  </data>
+  <data name="Key_HolidayCalendarMasterDateCanNotBeEmpty" xml:space="preserve">
+    <value>Holiday Calendar's  Holiday Date is Mandatory.</value>
+  </data>
+  <data name="Key_HolidayCalendarDetailYearShouldResembleWithin" xml:space="preserve">
+    <value>Holiday Calendar Detail's year should resemble within 2000 to 9999</value>
+  </data>
+  <data name="Key_HolidayCalendarMasterDescriptionCanNotBeEmpty" xml:space="preserve">
+    <value>Holiday Calendar's Holiday Description is Mandatory</value>
+  </data>
+  <data name="Key_EmailTemplateDoesNotExist" xml:space="preserve">
+    <value>Email Template Does Not Exist</value>
+  </data>
+  <data name="Key_InvalidFromDateSpecified" xml:space="preserve">
+    <value>Invalid From Date specified</value>
+  </data>
+  <data name="Key_InvalidToDateSpecified" xml:space="preserve">
+    <value>Invalid To Date specified</value>
+  </data>
+  <data name="Key_FromDateMustBeLessThanEqualToToDate" xml:space="preserve">
+    <value>From Date must be less than or equal to To Date</value>
+  </data>
+  <data name="Key_BuyDateShouldBeLessThanEqualToCurrentDate" xml:space="preserve">
+    <value>Buy Date should be less than equal to current Date</value>
+  </data>
+  <data name="Key_PurchaseDateShouldBeLessThanEqualToCurrentDate" xml:space="preserve">
+    <value>Purchase Date should be less than equal to current Date</value>
+  </data>
+  <data name="Key_RequestDetailNotFound" xml:space="preserve">
+    <value>Request Detail Not Found</value>
+  </data>
+  <data name="Key_InvalidTradingRequestIdSpecified" xml:space="preserve">
+    <value>Invalid Trading Request Id Specified</value>
+  </data>
+  <data name="Key_ApproverChangeDetailUpdateIsNotAllowed" xml:space="preserve">
+    <value>Can Not Update Approver Change Detail as Update is allowed only in Pending State</value>
+  </data>
+  <data name="Key_UserAndApproverCanNotBeSame" xml:space="preserve">
+    <value>Same User Can Not Be Added As An Approver For Itself</value>
+  </data>
+  <data name="Key_CouldNotUploadDocumentForAlreadyInPendingList" xml:space="preserve">
+    <value>Document can not be uploaded as one Document of same type is already pending for processing. Kindly wait for some time to process that Document or you can manually delete that Document and try again</value>
+  </data>
+  <data name="Key_DocumentTypeIsRequiredWhileUploadingDocument" xml:space="preserve">
+    <value>DocumentType is required while uploading Document</value>
+  </data>
+  <data name="Key_SystemFailureError" xml:space="preserve">
+    <value>Could not process the request due to some System failure. Kindly contact to the system admininstrator for more information</value>
+  </data>
+  <data name="Key_UserNameIsMandatory" xml:space="preserve">
+    <value>User Name Is Mandatory</value>
+  </data>
+  <data name="Key_PleaseProvideAtleastOneValue" xml:space="preserve">
+    <value>Please Provide Atleast One Value</value>
+  </data>
+  <data name="Key_CorporateActionDescriptionIsMandatory" xml:space="preserve">
+    <value>Corporate Action Description is Mandatory</value>
+  </data>
+  <data name="GenericKey_SecurityTypeNotAllowed" xml:space="preserve">
+    <value>Security Type: {0} not allowed</value>
+  </data>
+  <data name="Key_ResourceDateOfJoiningCanNotBeEmpty" xml:space="preserve">
+    <value>Resource Date Of Joining can not be empty</value>
+  </data>
+  <data name="Key_ActualQuantityShouldNotBeGreaterThanOrEqualToZero" xml:space="preserve">
+    <value>Actual Quantity Should not be greater than or equal to zero</value>
+  </data>
+  <data name="Key_ActualQuantityShouldNotBeLessThanRemainingQuantity" xml:space="preserve">
+    <value>Actual Quantity Should not be less than remaining Quantity</value>
+  </data>
+  <data name="Key_ActualQuantityShouldBeLessThanOrEqualToRemainingQuantity" xml:space="preserve">
+    <value>Actual Quantity should be less than or equal to remaning quantity</value>
+  </data>
+  <data name="Key_FileContainsInvalidDataForUpload" xml:space="preserve">
+    <value>Uploading Failed. File contains invalid data. See more detail Error Log by clicking on the File Name link in the table</value>
+  </data>
+  <data name="Key_InvalidUserLocked" xml:space="preserve">
+    <value>User is locked. Kindly contact the administrator to unlock the user or try after some time</value>
+  </data>
+  <data name="Key_InactiveUserValidation" xml:space="preserve">
+    <value>Current user is not active. Kindly contact administrator to activate user</value>
+  </data>
+  <data name="GenericKey_MultipleUserforLoginOrEmail" xml:space="preserve">
+    <value>Multiple records found against spectified LoginID: {0} or EmailID: {1}</value>
+  </data>
+  <data name="Key_MutualFundSchemeNameAlreadyExist" xml:space="preserve">
+    <value>Mutual Fund Scheme Name already exists</value>
+  </data>
+  <data name="Key_MutualFundSchemeNameIsMandatory" xml:space="preserve">
+    <value>Mutual Fund Scheme Name is Mandatory</value>
+  </data>
+  <data name="Key_MutualFundSchemeRecordNotFound" xml:space="preserve">
+    <value>Mutual Fund Record Not Found</value>
+  </data>
+  <data name="Key_SystemAdminTeamEmailAlreadyExist" xml:space="preserve">
+    <value>Email Already exist for the System Admin.</value>
+  </data>
+  <data name="Key_ITSystemAdminActionNotAllowed" xml:space="preserve">
+    <value>User does not have permission for the action.</value>
+  </data>
+  <data name="Key_CommodityDescriptionIsMandatory" xml:space="preserve">
+    <value>Others Description is Required</value>
+  </data>
+  <data name="Key_DateOfEntitlementIsMandatory" xml:space="preserve">
+    <value>Date Of Entitlement is mandatory</value>
+  </data>
+  <data name="Generic_SystemAdminTeamMemberNotFoundForId" xml:space="preserve">
+    <value>System Admin Team Member not found for Id : {0}</value>
+  </data>
+  <data name="Key_SystemAdminTeamMemberNotFound" xml:space="preserve">
+    <value>System Admin Team Member not found.</value>
+  </data>
+  <data name="Key_SchemeOptionNameAlreadyExist" xml:space="preserve">
+    <value>Scheme Option Name already exists</value>
+  </data>
+  <data name="Key_SchemeOptionNameIsMandatory" xml:space="preserve">
+    <value>Scheme Option Name is Mandatory</value>
+  </data>
+  <data name="Key_SchemePlanNameAlreadyExist" xml:space="preserve">
+    <value>Scheme Plan Name already exists</value>
+  </data>
+  <data name="Key_SchemePlanNameIsMandatory" xml:space="preserve">
+    <value>Scheme Plan Name is Mandatory</value>
+  </data>
+  <data name="Key_SchemeOptionRecordNotFound" xml:space="preserve">
+    <value>Scheme Option Record Not Found.</value>
+  </data>
+  <data name="Key_SchemePlanRecordNotFound" xml:space="preserve">
+    <value>Scheme Plan Record Not Found</value>
+  </data>
+  <data name="Key_MFSchameOptionIsMandatory" xml:space="preserve">
+    <value>MFScheme Option is Required</value>
+  </data>
+  <data name="Key_ITAdminCanNotBeDeleted" xml:space="preserve">
+    <value>IT Admin Can not be deleted from the system</value>
+  </data>
+  <data name="Key_MutualFundSchemeCodeIsMandatory" xml:space="preserve">
+    <value>Mutual Fund Scheme Code is Mandatory</value>
+  </data>
+  <data name="Key_MutualFundSchemeCodeAlreadyExist" xml:space="preserve">
+    <value>Mutual Fund Scheme Code already exists</value>
+  </data>
+  <data name="GenericKey_InactiveUserValidation" xml:space="preserve">
+    <value>User: {0} is inactive</value>
+  </data>
+  <data name="GenericKey_InvalidUserLocked" xml:space="preserve">
+    <value>User: {0} is locked</value>
+  </data>
+  <data name="Key_InvalIdLoginIdSpecified" xml:space="preserve">
+    <value>Specified Username does not exists</value>
+  </data>
+  <data name="Key_MultipleUserforLoginOrEmail" xml:space="preserve">
+    <value>Multiple User records found against spectified LoginID/EmailID</value>
+  </data>
+  <data name="Key_SpecifiedEmailIdIsNotPresent" xml:space="preserve">
+    <value>No User found against specified LoginID/EmailID</value>
+  </data>
+  <data name="Key_UserIsDisabled" xml:space="preserve">
+    <value>Can't Login into the system. User is Disabled</value>
+  </data>
+  <data name="Key_UserIsLocked" xml:space="preserve">
+    <value>Can't Login into the system. User is Locked</value>
+  </data>
+  <data name="Key_UserIsLockedMaxLoginAttemptExceed" xml:space="preserve">
+    <value>Can't Login into the system. User is Locked. Max Login Attempt Exceeded</value>
+  </data>
+  <data name="Key_UsernameOrPasswordIsIncorrect" xml:space="preserve">
+    <value>Specified User name or password is incorrect</value>
+  </data>
+  <data name="Key_CanNotPerofrmTNDActualBuyIsInitited" xml:space="preserve">
+    <value>Can not Cancel (Transaction Not Done) the request, Actual Buy transaction is already initiated</value>
+  </data>
+  <data name="Key_CanNotPerofrmTNDRequestAlreadyCancelled" xml:space="preserve">
+    <value>Can not Cancel (Transaction Not Done) the request, it is already been cancelled</value>
+  </data>
+  <data name="Key_CanNotPerofrmTNDRequestIsInRejectedState" xml:space="preserve">
+    <value>Can not Cancel (Transaction Not Done) the request, it is already in rejected state</value>
+  </data>
+  <data name="Key_CommentIsMandatoryForForceBuyComplete" xml:space="preserve">
+    <value>Comment is required for Force Buy Complete operation</value>
+  </data>
+  <data name="Key_UnableToPerformForceBuyCompleteForAlreadyBuyCompletedRequest" xml:space="preserve">
+    <value>Can not perform Force Buy Complete, Buy Completion already performed</value>
+  </data>
+  <data name="Key_UnableToPerformForceBuyCompleteForSellTransaction" xml:space="preserve">
+    <value>Can not perform Force Buy Complete for Sell Transaction</value>
+  </data>
+  <data name="Key_UnableToPerformForceBuyCompleteForWithoutAnyActualBuyPerformed" xml:space="preserve">
+    <value>Can not perform Force Buy Complete as no actual Buy Transaction has been performed yet</value>
+  </data>
+  <data name="Key_UnableToPerformForceBuyCompleteOperationAsRequesterNotMatched" xml:space="preserve">
+    <value>Can not Perform Force Buy Complete operation as Requester not Matched</value>
+  </data>
+  <data name="GenericKey_InvalidPasswordFormatAtleast1Upper1Lower1Special1DigitNoSpace" xml:space="preserve">
+    <value>Specified Password does not match with password policy. It Should be {0}-{1} characters in length\rShould have atleast one lowercase character\rShould have atleast one uppercase character\rShould have atleast one number\rShould have atleast one special character\rShould not have spaces</value>
+  </data>
+  <data name="GenericKey_MaximumNCharactersAreRequiredForPasswordField" xml:space="preserve">
+    <value>Maximum {0} characters are required for Password field</value>
+  </data>
+  <data name="GenericKey_MinimumNCharactersAreRequiredForPasswordField" xml:space="preserve">
+    <value>Minimum {0} characters are required for Password field</value>
+  </data>
+  <data name="GenericKey_PasswordMustNotContainsMoreThanNConsecutiveIdenticalcharacters" xml:space="preserve">
+    <value>Password must not contains more than {0} consecutive identical characters</value>
+  </data>
+  <data name="Key_DefaultUserPasswordLengthMustBeInBetween8To15Character" xml:space="preserve">
+    <value>Default User Password length must be in between 8 to 15 character</value>
+  </data>
+  <data name="Key_EmptySpaceAreNotAllowedInUserPasswordField" xml:space="preserve">
+    <value>Empty Space is not allowed in User Password field</value>
+  </data>
+  <data name="Key_IntimationDaysBeforePasswordExpireValueMustBeLessThanEqualToPasswordExpiryLimitValue" xml:space="preserve">
+    <value>Intimation Days Before Password Expire value must be less than or equal to Password Expiry Limit value</value>
+  </data>
+  <data name="Key_InvalidAllowedNumberOfFailureLoginAttemptValueSpecified" xml:space="preserve">
+    <value>Allowed number of failure login Attempt value must be greater than or equal to Zero</value>
+  </data>
+  <data name="Key_InvalidConsecutiveIdenticalCharacterAllowedValueSpecified" xml:space="preserve">
+    <value>Consecutive Identical Character Allowed value must be greater than or equal to Zero</value>
+  </data>
+  <data name="Key_InvalidIntimationDaysBeforePasswordExpireValueSpecied" xml:space="preserve">
+    <value>Intimation Days Before Password Expire value must be greater than or equal to Zero</value>
+  </data>
+  <data name="Key_InvalidMaximumPasswordLengthValueSpecified" xml:space="preserve">
+    <value>Maximum Password Length value must be in between '1' to '20'</value>
+  </data>
+  <data name="Key_InvalidMinimumPasswordLengthValueSpecified" xml:space="preserve">
+    <value>Minimum Password Length value must be in between '1' to '20'</value>
+  </data>
+  <data name="Key_InvalidPasswordExpiryLimitValueSpecified" xml:space="preserve">
+    <value>Password Expiry Limit value must be greater than or equal to Zero</value>
+  </data>
+  <data name="Key_InvalidRememberNumberOfPasswordHistoryValueSpecified" xml:space="preserve">
+    <value>Remember number of Password History value must be greater than or equal to Zero</value>
+  </data>
+  <data name="Key_InvalidUserAutoUnlockPeriodValueSpecied" xml:space="preserve">
+    <value>User auto unlock period value must be greater than or equal to Zero</value>
+  </data>
+  <data name="Key_MaximumPasswordLengthValueMustBeGreaterThanOrEqualToMinimumPasswordLengthValue" xml:space="preserve">
+    <value>Maximum Password Length value must be greater than or equal to Minimum Password Length value</value>
+  </data>
+  <data name="Key_PasswordPolicyAlreadyExist" xml:space="preserve">
+    <value>Password Policy already defined in the system. Can not Add more than one Password Policy in the system</value>
+  </data>
+  <data name="Key_UserNameNotAllowedInPassword" xml:space="preserve">
+    <value>User Name are not allowed in Password</value>
+  </data>
+  <data name="Key_CanNotModifyQuantityAsBuyTransactionIsNotYetCompletedAsCompareToApprovedQuantity" xml:space="preserve">
+    <value>Can not modify Quantity as Buy transaction is not yet completed as compare to approved quantity. If you still want to update then please perform Force Complete action and then again try to update actual quantity</value>
+  </data>
+  <data name="Key_CanNotModifyQuantityForRequestAsActualBuyTransactionAlreadyInitiatated" xml:space="preserve">
+    <value>Can not modify Quantity for Request as Actual Buy transaction already initiatated. Please Try to update Quantity from Actual Buy transaction</value>
+  </data>
+  <data name="Key_InvalidTradingDetailIdSpecified" xml:space="preserve">
+    <value>Invalid Trading Detail Id Specified</value>
+  </data>
+  <data name="Key_NewRequestQuantityCanNotBeZero" xml:space="preserve">
+    <value>New Request Quantity can not be zero</value>
+  </data>
+  <data name="Key_SumOfTotalBuyQuantityCanNotBeLessThanSumOfTotalSellQuantity" xml:space="preserve">
+    <value>Sum of Total Buy Quantity can not be less than Sum of Total Sell Quantity</value>
+  </data>
+  <data name="Key_SumOfTotalSellQuantityCanNotBeGreaterThanSumOfTotalBuyQuantity" xml:space="preserve">
+    <value>Sum of Total Sell Quantity can not be greater than Sum of Total Buy Quantity</value>
+  </data>
+  <data name="GenericKey_EmailServerPasswordExpiredIntimation" xml:space="preserve">
+    <value>Email Server Setting Password will expired on {0}. Kindly change your password before it expired</value>
+  </data>
+  <data name="GenericKey_EmailServerPasswordAfterExpiredIntimation" xml:space="preserve">
+    <value>Email Server Setting Password has been expired on {0}. Kindly change your password to avoid any kind of email sending issues</value>
+  </data>
+  <data name="Key_KeyEmailServerSettingDetailsNotFound" xml:space="preserve">
+    <value>Email Server Setting not found in the system. Kindly</value>
+  </data>
+  <data name="Key_KeyEmailServerSettingAlreadyExist" xml:space="preserve">
+    <value>Email Server Setting already defined in the system. Can not Add more than one Email Server Setting in the system</value>
+  </data>
+  <data name="Key_KeySmtpUserNameIsMandatory" xml:space="preserve">
+    <value>SmtpUser Name is Mandatory</value>
+  </data>
+  <data name="Key_KeyFromEmailIDIsEmpty" xml:space="preserve">
+    <value>FromEmailId is Mandatory</value>
+  </data>
+  <data name="Key_KeySmtpUserNameRangeValueSpecified" xml:space="preserve">
+    <value>SmtpUserName charecter range from 1 to 100</value>
+  </data>
+  <data name="Key_KeySmtpUserNameValueSpecified" xml:space="preserve">
+    <value>Blank Space not allowed in SmtpUser Name</value>
+  </data>
+  <data name="Key_KeyFromEmailIdIsMandatory" xml:space="preserve">
+    <value>FromEmailId can not be empty</value>
+  </data>
+  <data name="Key_KeyFromEmailIdValueSpecified" xml:space="preserve">
+    <value>FromEmailId should not contain blank spaces</value>
+  </data>
+  <data name="Key_KeySmtpPasswordIsMandatory" xml:space="preserve">
+    <value>SmtpPassword is Mandatory</value>
+  </data>
+  <data name="Key_KeySmtpPasswordValueSpecified" xml:space="preserve">
+    <value>SmtpPassword should not contain blank spaces and null</value>
+  </data>
+  <data name="Key_KeyNewEmailPasswordLengthMustBeInBetween8To15Character" xml:space="preserve">
+    <value>New Email Password length must be in between 8 to 15 character</value>
+  </data>
+  <data name="Key_KeyLastPasswordUpdatedOnCanNotBeEmpty" xml:space="preserve">
+    <value>LastPasswordUpdatedOn can not be empty.</value>
+  </data>
+  <data name="Key_KeyLastPasswordUpdateOnDateRange" xml:space="preserve">
+    <value>Effective Start Date should not be greater than today's date</value>
+  </data>
+  <data name="Key_KeySmtpHostIsMandatory" xml:space="preserve">
+    <value>SmtpHost is Mandatory</value>
+  </data>
+  <data name="Key_KeySmtpHostValueSpecified" xml:space="preserve">
+    <value>Blank Space not allowed in SmtpHost</value>
+  </data>
+  <data name="Key_KeySmtpPortlengthValueSpecified" xml:space="preserve">
+    <value>SmtpPort allow enter upto 4 digit</value>
+  </data>
+  <data name="Key_KeypasswordExpiryLimitValueSpecified" xml:space="preserve">
+    <value>SmtpPasswordExpiry length must be in between 1 to 3 character</value>
+  </data>
+  <data name="Key_KeyIntimationDaysBeforePwdExpMinValueSpecified" xml:space="preserve">
+    <value>Intimation Days Before Password Expiry value should be greater than 0</value>
+  </data>
+  <data name="Key_KeyIntimationDaysBeforePwdExpRangeValueSpecified" xml:space="preserve">
+    <value>Intimation Days Before Password Expiry value should not be greater than Password Expiry Limit: {0}</value>
+  </data>
+  <data name="Key_KeyInvalidEmailFormat" xml:space="preserve">
+    <value>Invalid FromEmailId: {0} specified as per the standard Format</value>
+  </data>
+  <data name="Key_KeySmtpPasswordContainsBalnkSpaces" xml:space="preserve">
+    <value>Blank Space not allowed in New EmailPassword</value>
+  </data>
+  <data name="Key_ResourceAlreadyExists" xml:space="preserve">
+    <value>Employee Name Already Exists</value>
+  </data>
+  <data name="Key_ConfigureEmailServerSettingWithEmailPasswordInConfiguration" xml:space="preserve">
+    <value>Kindly configure Email Server setting with email server password in configuration to avoid any kind of email sending issues</value>
+  </data>
+  <data name="Key_KeyNewSellQuantityCannotbeLessThanZero" xml:space="preserve">
+    <value>New Sell Quantity cannot be less than zero if the Buy Quantity is positive value.</value>
+  </data>
+  <data name="Key_EmployeeNameIsMandatory" xml:space="preserve">
+    <value>Employee Name is Mandatory</value>
+  </data>
+
+  <data name="Key_RightsAlreadyExits" xml:space="preserve">
+    <value>Access Rights Already Assigned!</value>
+  </data>
+
+  <data name="Key_RightNotExits" xml:space="preserve">
+    <value>Access Rights Already Revoked!</value>
+  </data>
+</root>
