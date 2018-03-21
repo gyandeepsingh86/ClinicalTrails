@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTWebApi.Interface", "CTWebApi.Interface\CTWebApi.Interface.csproj", "{72C77F06-DCE8-4B60-A45E-44DA810389A9}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTWebApi.Model", "CTWebApi.Model\CTWebApi.Model.csproj", "{15D8C1C5-6EF2-499B-9E75-D583FB84CE13}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0", "0", "{3CBB20BB-6226-4E18-8A73-6A5F9D76978F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. DataAccess", "1. DataAccess", "{A0C31F7D-6BEE-4D46-9155-8001D713646F}"
@@ -15,7 +11,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Business", "2. Business"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "8. General Object Resources", "8. General Object Resources", "{E105A464-F713-4A9E-AD04-DEDC2EB08A91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CT.GeneralObjectResource", "CT.GeneralObjectResource\CT.GeneralObjectResource.csproj", "{01F7E9F9-2498-43E7-834F-43171BD9FB8A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicalTrail.DataAccess", "ClinicalTrail.DataAccess\ClinicalTrail.DataAccess.csproj", "{D2B2D7BE-0901-4290-8652-1EDE4F40841D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Services", "3. Services", "{BBBF3BE3-A5D4-45E4-B0AE-D08D896CF15D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicalTrail.Services.WebAPI", "ClinicalTrail.Services.WebAPI\ClinicalTrail.Services.WebAPI.csproj", "{CE3DDE4E-EAD3-4C5E-B95C-62A0F8F9A6BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicalTrail.Services.WCFService", "ClinicalTrail.Services.WCFService\ClinicalTrail.Services.WCFService.csproj", "{6406BD4D-6313-4C09-A46B-C530E4D8E5DB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Presentation", "5. Presentation", "{53933B25-F41C-4223-8410-454258A0F6CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicalTrail.Application.WebApplication", "ClinicalTrail.Application.WebApplication\ClinicalTrail.Application.WebApplication.csproj", "{038996A5-C6AB-4698-A19C-979538DD1152}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicalTrail.Business", "ClinicalTrail.Business\ClinicalTrail.Business.csproj", "{402DC0B5-1EDD-45EF-98F2-67CF8ED893FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicalTrail.GeneralObjectStore", "ClinicalTrail.GeneralObjectStore\ClinicalTrail.GeneralObjectStore.csproj", "{E91DCF10-4E52-496B-87B3-6E2463DE713D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,25 +33,40 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{72C77F06-DCE8-4B60-A45E-44DA810389A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{72C77F06-DCE8-4B60-A45E-44DA810389A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{72C77F06-DCE8-4B60-A45E-44DA810389A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{72C77F06-DCE8-4B60-A45E-44DA810389A9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{15D8C1C5-6EF2-499B-9E75-D583FB84CE13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{15D8C1C5-6EF2-499B-9E75-D583FB84CE13}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{15D8C1C5-6EF2-499B-9E75-D583FB84CE13}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{15D8C1C5-6EF2-499B-9E75-D583FB84CE13}.Release|Any CPU.Build.0 = Release|Any CPU
-		{01F7E9F9-2498-43E7-834F-43171BD9FB8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{01F7E9F9-2498-43E7-834F-43171BD9FB8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{01F7E9F9-2498-43E7-834F-43171BD9FB8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{01F7E9F9-2498-43E7-834F-43171BD9FB8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2B2D7BE-0901-4290-8652-1EDE4F40841D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2B2D7BE-0901-4290-8652-1EDE4F40841D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2B2D7BE-0901-4290-8652-1EDE4F40841D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2B2D7BE-0901-4290-8652-1EDE4F40841D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE3DDE4E-EAD3-4C5E-B95C-62A0F8F9A6BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE3DDE4E-EAD3-4C5E-B95C-62A0F8F9A6BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE3DDE4E-EAD3-4C5E-B95C-62A0F8F9A6BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE3DDE4E-EAD3-4C5E-B95C-62A0F8F9A6BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6406BD4D-6313-4C09-A46B-C530E4D8E5DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6406BD4D-6313-4C09-A46B-C530E4D8E5DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6406BD4D-6313-4C09-A46B-C530E4D8E5DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6406BD4D-6313-4C09-A46B-C530E4D8E5DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{038996A5-C6AB-4698-A19C-979538DD1152}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{038996A5-C6AB-4698-A19C-979538DD1152}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{038996A5-C6AB-4698-A19C-979538DD1152}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{038996A5-C6AB-4698-A19C-979538DD1152}.Release|Any CPU.Build.0 = Release|Any CPU
+		{402DC0B5-1EDD-45EF-98F2-67CF8ED893FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{402DC0B5-1EDD-45EF-98F2-67CF8ED893FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{402DC0B5-1EDD-45EF-98F2-67CF8ED893FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{402DC0B5-1EDD-45EF-98F2-67CF8ED893FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E91DCF10-4E52-496B-87B3-6E2463DE713D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E91DCF10-4E52-496B-87B3-6E2463DE713D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E91DCF10-4E52-496B-87B3-6E2463DE713D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E91DCF10-4E52-496B-87B3-6E2463DE713D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{72C77F06-DCE8-4B60-A45E-44DA810389A9} = {5EF3C81D-31D1-4CC5-8584-7DF25FB67B10}
-		{15D8C1C5-6EF2-499B-9E75-D583FB84CE13} = {A0C31F7D-6BEE-4D46-9155-8001D713646F}
-		{01F7E9F9-2498-43E7-834F-43171BD9FB8A} = {E105A464-F713-4A9E-AD04-DEDC2EB08A91}
+		{D2B2D7BE-0901-4290-8652-1EDE4F40841D} = {A0C31F7D-6BEE-4D46-9155-8001D713646F}
+		{CE3DDE4E-EAD3-4C5E-B95C-62A0F8F9A6BB} = {BBBF3BE3-A5D4-45E4-B0AE-D08D896CF15D}
+		{6406BD4D-6313-4C09-A46B-C530E4D8E5DB} = {BBBF3BE3-A5D4-45E4-B0AE-D08D896CF15D}
+		{038996A5-C6AB-4698-A19C-979538DD1152} = {53933B25-F41C-4223-8410-454258A0F6CD}
+		{402DC0B5-1EDD-45EF-98F2-67CF8ED893FE} = {5EF3C81D-31D1-4CC5-8584-7DF25FB67B10}
+		{E91DCF10-4E52-496B-87B3-6E2463DE713D} = {E105A464-F713-4A9E-AD04-DEDC2EB08A91}
 	EndGlobalSection
 EndGlobal

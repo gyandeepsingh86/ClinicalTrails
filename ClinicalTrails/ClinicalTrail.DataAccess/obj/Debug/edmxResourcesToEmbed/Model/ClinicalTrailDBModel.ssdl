@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ClinicalTrialsDBModelContext.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ClinicalTrials.dbo.CenterMaster' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CenterMaster">
+    <Key>
+      <PropertyRef Name="Center No" />
+      <PropertyRef Name="Center Name" />
+      <PropertyRef Name="Street Address" />
+      <PropertyRef Name="City" />
+      <PropertyRef Name="State" />
+      <PropertyRef Name="Country" />
+      <PropertyRef Name="Post code" />
+      <PropertyRef Name="Specialties" />
+      <PropertyRef Name="Office Phone" />
+      <PropertyRef Name="Email" />
+    </Key>
+    <Property Name="Center No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Center Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Center Type" Type="varchar" MaxLength="100" />
+    <Property Name="Street Address" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="City" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="State" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Country" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Post code" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Specialties" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Office Phone" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Mobile Phone" Type="varchar" MaxLength="100" />
+    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Primary Email" Type="varchar" MaxLength="100" />
+    <Property Name="Secondary Email" Type="varchar" MaxLength="100" />
+    <Property Name="Website" Type="varchar" MaxLength="100" />
+    <Property Name="Equipments" Type="varchar" MaxLength="100" />
+    <Property Name="Investigator 1" Type="varchar" MaxLength="100" />
+    <Property Name="Investigator 2" Type="varchar" MaxLength="100" />
+    <Property Name="Investigator 3" Type="varchar" MaxLength="100" />
+    <Property Name="Payee Name" Type="varchar" MaxLength="100" />
+    <Property Name="Bank Account Number" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ClinicalTrials.dbo.InvestigatorMaster' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="InvestigatorMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Title" />
+      <PropertyRef Name="Investigator First Name" />
+      <PropertyRef Name="Investigator Last Name" />
+      <PropertyRef Name="Degree" />
+      <PropertyRef Name="Address Type" />
+      <PropertyRef Name="Street Address" />
+      <PropertyRef Name="City" />
+      <PropertyRef Name="State" />
+      <PropertyRef Name="Country" />
+      <PropertyRef Name="Post Code" />
+      <PropertyRef Name="Office Phone" />
+      <PropertyRef Name="Mobile Phone" />
+      <PropertyRef Name="Email ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Investigator First Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Investigator Middle Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Investigator Last Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Degree" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Address Type" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Institute Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Street Address" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="City" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="State" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Country" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Post Code" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Office Phone" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Mobile Phone" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Fax No." Type="nvarchar" MaxLength="100" />
+    <Property Name="Email ID" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Primary Email" Type="varchar" MaxLength="100" />
+    <Property Name="Secondary Email ID" Type="nvarchar" MaxLength="100" />
+    <Property Name="Certification" Type="nvarchar" MaxLength="100" />
+    <Property Name="Speciality" Type="nvarchar" MaxLength="100" />
+    <Property Name="Centre 1" Type="nvarchar" MaxLength="100" />
+    <Property Name="Centre 2" Type="nvarchar" MaxLength="100" />
+    <Property Name="Centre 3" Type="nvarchar" MaxLength="100" />
+    <Property Name="Payee Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Bank Account Number" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ClinicalTrials.dbo.VendorMaster' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VendorMaster">
+    <Key>
+      <PropertyRef Name="Center No" />
+      <PropertyRef Name="Vendor Name" />
+      <PropertyRef Name="Street Address" />
+      <PropertyRef Name="City" />
+      <PropertyRef Name="State" />
+      <PropertyRef Name="Country" />
+      <PropertyRef Name="Post code" />
+      <PropertyRef Name="Specialties" />
+      <PropertyRef Name="Office Phone" />
+      <PropertyRef Name="Email" />
+      <PropertyRef Name="Payee Name" />
+      <PropertyRef Name="Bank Account Number" />
+    </Key>
+    <Property Name="Center No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Vendor Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Vendor Type" Type="varchar" MaxLength="100" />
+    <Property Name="Street Address" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="City" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="State" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Country" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Post code" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Specialties" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Office Phone" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Mobile Phone" Type="varchar" MaxLength="100" />
+    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Primary Email" Type="varchar" MaxLength="100" />
+    <Property Name="Secondary Email" Type="varchar" MaxLength="100" />
+    <Property Name="Website" Type="varchar" MaxLength="100" />
+    <Property Name="Equipments" Type="varchar" MaxLength="100" />
+    <Property Name="Payee Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Bank Account Number" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ClinicalTrialsDBModelContextStoreContainer">
+    <EntitySet Name="CenterMaster" EntityType="Self.CenterMaster" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CenterMaster].[Center No] AS [Center No], 
+    [CenterMaster].[Center Name] AS [Center Name], 
+    [CenterMaster].[Center Type] AS [Center Type], 
+    [CenterMaster].[Street Address] AS [Street Address], 
+    [CenterMaster].[City] AS [City], 
+    [CenterMaster].[State] AS [State], 
+    [CenterMaster].[Country] AS [Country], 
+    [CenterMaster].[Post code] AS [Post code], 
+    [CenterMaster].[Specialties] AS [Specialties], 
+    [CenterMaster].[Office Phone] AS [Office Phone], 
+    [CenterMaster].[Mobile Phone] AS [Mobile Phone], 
+    [CenterMaster].[Email] AS [Email], 
+    [CenterMaster].[Primary Email] AS [Primary Email], 
+    [CenterMaster].[Secondary Email] AS [Secondary Email], 
+    [CenterMaster].[Website] AS [Website], 
+    [CenterMaster].[Equipments] AS [Equipments], 
+    [CenterMaster].[Investigator 1] AS [Investigator 1], 
+    [CenterMaster].[Investigator 2] AS [Investigator 2], 
+    [CenterMaster].[Investigator 3] AS [Investigator 3], 
+    [CenterMaster].[Payee Name] AS [Payee Name], 
+    [CenterMaster].[Bank Account Number] AS [Bank Account Number]
+    FROM [dbo].[CenterMaster] AS [CenterMaster]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="InvestigatorMaster" EntityType="Self.InvestigatorMaster" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [InvestigatorMaster].[ID] AS [ID], 
+    [InvestigatorMaster].[Title] AS [Title], 
+    [InvestigatorMaster].[Investigator First Name] AS [Investigator First Name], 
+    [InvestigatorMaster].[Investigator Middle Name] AS [Investigator Middle Name], 
+    [InvestigatorMaster].[Investigator Last Name] AS [Investigator Last Name], 
+    [InvestigatorMaster].[Degree] AS [Degree], 
+    [InvestigatorMaster].[Address Type] AS [Address Type], 
+    [InvestigatorMaster].[Institute Name] AS [Institute Name], 
+    [InvestigatorMaster].[Street Address] AS [Street Address], 
+    [InvestigatorMaster].[City] AS [City], 
+    [InvestigatorMaster].[State] AS [State], 
+    [InvestigatorMaster].[Country] AS [Country], 
+    [InvestigatorMaster].[Post Code] AS [Post Code], 
+    [InvestigatorMaster].[Office Phone] AS [Office Phone], 
+    [InvestigatorMaster].[Mobile Phone] AS [Mobile Phone], 
+    [InvestigatorMaster].[Fax No.] AS [Fax No.], 
+    [InvestigatorMaster].[Email ID] AS [Email ID], 
+    [InvestigatorMaster].[Primary Email] AS [Primary Email], 
+    [InvestigatorMaster].[Secondary Email ID] AS [Secondary Email ID], 
+    [InvestigatorMaster].[Certification] AS [Certification], 
+    [InvestigatorMaster].[Speciality] AS [Speciality], 
+    [InvestigatorMaster].[Centre 1] AS [Centre 1], 
+    [InvestigatorMaster].[Centre 2] AS [Centre 2], 
+    [InvestigatorMaster].[Centre 3] AS [Centre 3], 
+    [InvestigatorMaster].[Payee Name] AS [Payee Name], 
+    [InvestigatorMaster].[Bank Account Number] AS [Bank Account Number]
+    FROM [dbo].[InvestigatorMaster] AS [InvestigatorMaster]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VendorMaster" EntityType="Self.VendorMaster" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VendorMaster].[Center No] AS [Center No], 
+    [VendorMaster].[Vendor Name] AS [Vendor Name], 
+    [VendorMaster].[Vendor Type] AS [Vendor Type], 
+    [VendorMaster].[Street Address] AS [Street Address], 
+    [VendorMaster].[City] AS [City], 
+    [VendorMaster].[State] AS [State], 
+    [VendorMaster].[Country] AS [Country], 
+    [VendorMaster].[Post code] AS [Post code], 
+    [VendorMaster].[Specialties] AS [Specialties], 
+    [VendorMaster].[Office Phone] AS [Office Phone], 
+    [VendorMaster].[Mobile Phone] AS [Mobile Phone], 
+    [VendorMaster].[Email] AS [Email], 
+    [VendorMaster].[Primary Email] AS [Primary Email], 
+    [VendorMaster].[Secondary Email] AS [Secondary Email], 
+    [VendorMaster].[Website] AS [Website], 
+    [VendorMaster].[Equipments] AS [Equipments], 
+    [VendorMaster].[Payee Name] AS [Payee Name], 
+    [VendorMaster].[Bank Account Number] AS [Bank Account Number]
+    FROM [dbo].[VendorMaster] AS [VendorMaster]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

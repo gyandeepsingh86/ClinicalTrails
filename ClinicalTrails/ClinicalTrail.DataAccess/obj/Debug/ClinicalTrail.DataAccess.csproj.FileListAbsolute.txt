@@ -1,0 +1,9 @@
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.DataAccess\bin\Debug\ClinicalTrail.DataAccess.dll.config
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.DataAccess\bin\Debug\ClinicalTrail.DataAccess.dll
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.DataAccess\bin\Debug\ClinicalTrail.DataAccess.pdb
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.DataAccess\bin\Debug\EntityFramework.dll
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.DataAccess\bin\Debug\EntityFramework.xml
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.DataAccess\obj\Debug\ClinicalTrail.DataAccess.dll
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.DataAccess\obj\Debug\ClinicalTrail.DataAccess.pdb

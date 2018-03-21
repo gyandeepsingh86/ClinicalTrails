@@ -1,0 +1,5 @@
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\bin\ClinicalTrail.Services.WCFService.dll.config
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\bin\ClinicalTrail.Services.WCFService.dll
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\bin\ClinicalTrail.Services.WCFService.pdb
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\obj\Debug\ClinicalTrail.Services.WCFService.dll
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\obj\Debug\ClinicalTrail.Services.WCFService.pdb

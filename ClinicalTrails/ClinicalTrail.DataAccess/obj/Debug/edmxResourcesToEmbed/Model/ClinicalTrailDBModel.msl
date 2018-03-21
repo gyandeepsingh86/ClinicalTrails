@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ClinicalTrialsDBModelContextStoreContainer" CdmEntityContainer="ClinicalTrialsDBEntities">
+    <EntitySetMapping Name="CenterMasters">
+      <EntityTypeMapping TypeName="ClinicalTrialsDBModelContext.CenterMaster">
+        <MappingFragment StoreEntitySet="CenterMaster">
+          <ScalarProperty Name="Center_No" ColumnName="Center No" />
+          <ScalarProperty Name="Center_Name" ColumnName="Center Name" />
+          <ScalarProperty Name="Center_Type" ColumnName="Center Type" />
+          <ScalarProperty Name="Street_Address" ColumnName="Street Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Post_code" ColumnName="Post code" />
+          <ScalarProperty Name="Specialties" ColumnName="Specialties" />
+          <ScalarProperty Name="Office_Phone" ColumnName="Office Phone" />
+          <ScalarProperty Name="Mobile_Phone" ColumnName="Mobile Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Primary_Email" ColumnName="Primary Email" />
+          <ScalarProperty Name="Secondary_Email" ColumnName="Secondary Email" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Equipments" ColumnName="Equipments" />
+          <ScalarProperty Name="Investigator_1" ColumnName="Investigator 1" />
+          <ScalarProperty Name="Investigator_2" ColumnName="Investigator 2" />
+          <ScalarProperty Name="Investigator_3" ColumnName="Investigator 3" />
+          <ScalarProperty Name="Payee_Name" ColumnName="Payee Name" />
+          <ScalarProperty Name="Bank_Account_Number" ColumnName="Bank Account Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvestigatorMasters">
+      <EntityTypeMapping TypeName="ClinicalTrialsDBModelContext.InvestigatorMaster">
+        <MappingFragment StoreEntitySet="InvestigatorMaster">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Investigator_First_Name" ColumnName="Investigator First Name" />
+          <ScalarProperty Name="Investigator_Middle_Name" ColumnName="Investigator Middle Name" />
+          <ScalarProperty Name="Investigator_Last_Name" ColumnName="Investigator Last Name" />
+          <ScalarProperty Name="Degree" ColumnName="Degree" />
+          <ScalarProperty Name="Address_Type" ColumnName="Address Type" />
+          <ScalarProperty Name="Institute_Name" ColumnName="Institute Name" />
+          <ScalarProperty Name="Street_Address" ColumnName="Street Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Post_Code" ColumnName="Post Code" />
+          <ScalarProperty Name="Office_Phone" ColumnName="Office Phone" />
+          <ScalarProperty Name="Mobile_Phone" ColumnName="Mobile Phone" />
+          <ScalarProperty Name="Fax_No_" ColumnName="Fax No." />
+          <ScalarProperty Name="Email_ID" ColumnName="Email ID" />
+          <ScalarProperty Name="Primary_Email" ColumnName="Primary Email" />
+          <ScalarProperty Name="Secondary_Email_ID" ColumnName="Secondary Email ID" />
+          <ScalarProperty Name="Certification" ColumnName="Certification" />
+          <ScalarProperty Name="Speciality" ColumnName="Speciality" />
+          <ScalarProperty Name="Centre_1" ColumnName="Centre 1" />
+          <ScalarProperty Name="Centre_2" ColumnName="Centre 2" />
+          <ScalarProperty Name="Centre_3" ColumnName="Centre 3" />
+          <ScalarProperty Name="Payee_Name" ColumnName="Payee Name" />
+          <ScalarProperty Name="Bank_Account_Number" ColumnName="Bank Account Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VendorMasters">
+      <EntityTypeMapping TypeName="ClinicalTrialsDBModelContext.VendorMaster">
+        <MappingFragment StoreEntitySet="VendorMaster">
+          <ScalarProperty Name="Center_No" ColumnName="Center No" />
+          <ScalarProperty Name="Vendor_Name" ColumnName="Vendor Name" />
+          <ScalarProperty Name="Vendor_Type" ColumnName="Vendor Type" />
+          <ScalarProperty Name="Street_Address" ColumnName="Street Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Post_code" ColumnName="Post code" />
+          <ScalarProperty Name="Specialties" ColumnName="Specialties" />
+          <ScalarProperty Name="Office_Phone" ColumnName="Office Phone" />
+          <ScalarProperty Name="Mobile_Phone" ColumnName="Mobile Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Primary_Email" ColumnName="Primary Email" />
+          <ScalarProperty Name="Secondary_Email" ColumnName="Secondary Email" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Equipments" ColumnName="Equipments" />
+          <ScalarProperty Name="Payee_Name" ColumnName="Payee Name" />
+          <ScalarProperty Name="Bank_Account_Number" ColumnName="Bank Account Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

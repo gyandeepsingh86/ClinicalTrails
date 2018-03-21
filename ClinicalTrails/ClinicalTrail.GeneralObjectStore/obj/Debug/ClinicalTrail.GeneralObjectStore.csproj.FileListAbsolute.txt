@@ -1,0 +1,8 @@
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\bin\Debug\ClinicalTrail.GeneralObjectStore.dll
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\bin\Debug\ClinicalTrail.GeneralObjectStore.pdb
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\obj\Debug\ClinicalTrail.GeneralObjectStore.EnumResources.resources
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\obj\Debug\ClinicalTrail.GeneralObjectStore.Errors.resources
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\obj\Debug\ClinicalTrail.GeneralObjectStore.GlobalResources.resources
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\obj\Debug\ClinicalTrail.GeneralObjectStore.csproj.GenerateResource.Cache
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\obj\Debug\ClinicalTrail.GeneralObjectStore.dll
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\obj\Debug\ClinicalTrail.GeneralObjectStore.pdb

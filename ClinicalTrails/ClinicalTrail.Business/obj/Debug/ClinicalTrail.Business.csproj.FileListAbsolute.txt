@@ -1,0 +1,4 @@
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\bin\Debug\ClinicalTrail.Business.dll
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\bin\Debug\ClinicalTrail.Business.pdb
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\obj\Debug\ClinicalTrail.Business.dll
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\obj\Debug\ClinicalTrail.Business.pdb
