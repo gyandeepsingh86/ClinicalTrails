@@ -1,0 +1,9 @@
+F:\Projects\External Projects\CTWebApi.Interface\CT.GeneralObjectResource\bin\Debug\CT.GeneralObjectResource.dll
+F:\Projects\External Projects\CTWebApi.Interface\CT.GeneralObjectResource\bin\Debug\CT.GeneralObjectResource.pdb
+F:\Projects\External Projects\CTWebApi.Interface\CT.GeneralObjectResource\obj\Debug\CT.GeneralObjectResource.csprojResolveAssemblyReference.cache
+F:\Projects\External Projects\CTWebApi.Interface\CT.GeneralObjectResource\obj\Debug\CT.GeneralObjectResource.EnumResources.resources
+F:\Projects\External Projects\CTWebApi.Interface\CT.GeneralObjectResource\obj\Debug\CT.GeneralObjectResource.Errors.resources
+F:\Projects\External Projects\CTWebApi.Interface\CT.GeneralObjectResource\obj\Debug\CT.GeneralObjectResource.GlobalResources.resources
+F:\Projects\External Projects\CTWebApi.Interface\CT.GeneralObjectResource\obj\Debug\CT.GeneralObjectResource.csproj.GenerateResource.Cache
+F:\Projects\External Projects\CTWebApi.Interface\CT.GeneralObjectResource\obj\Debug\CT.GeneralObjectResource.dll
+F:\Projects\External Projects\CTWebApi.Interface\CT.GeneralObjectResource\obj\Debug\CT.GeneralObjectResource.pdb

@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PageSize_50" xml:space="preserve">
+    <value>50</value>
+  </data>
+  <data name="PageSize_5" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="PageSize_10" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="PageSize_20" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="ApproverType_ComplianceOfficer" xml:space="preserve">
+    <value>Compliance Officer</value>
+  </data>
+  <data name="ApproverType_ComplianceManager" xml:space="preserve">
+    <value>Compliance Manager</value>
+  </data>
+  <data name="ReportMonth_April" xml:space="preserve">
+    <value>April</value>
+  </data>
+  <data name="ReportMonth_August" xml:space="preserve">
+    <value>August</value>
+  </data>
+  <data name="ReportMonth_December" xml:space="preserve">
+    <value>December</value>
+  </data>
+  <data name="ReportMonth_February" xml:space="preserve">
+    <value>February</value>
+  </data>
+  <data name="ReportMonth_January" xml:space="preserve">
+    <value>January</value>
+  </data>
+  <data name="ReportMonth_July" xml:space="preserve">
+    <value>July</value>
+  </data>
+  <data name="ReportMonth_June" xml:space="preserve">
+    <value>June</value>
+  </data>
+  <data name="ReportMonth_March" xml:space="preserve">
+    <value>March</value>
+  </data>
+  <data name="ReportMonth_May" xml:space="preserve">
+    <value>May</value>
+  </data>
+  <data name="ReportMonth_November" xml:space="preserve">
+    <value>November</value>
+  </data>
+  <data name="ReportMonth_October" xml:space="preserve">
+    <value>October</value>
+  </data>
+  <data name="ReportMonth_September" xml:space="preserve">
+    <value>September</value>
+  </data>
+  <data name="Gender_Female" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="Gender_Male" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="Gender_Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="RemiderStartTimeInHours_Eight" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="RemiderStartTimeInHours_Eighteen" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="RemiderStartTimeInHours_Eleven" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="RemiderStartTimeInHours_Fifteen" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="RemiderStartTimeInHours_Five" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="RemiderStartTimeInHours_Four" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="RemiderStartTimeInHours_Fourteen" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="RemiderStartTimeInHours_Nine" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="RemiderStartTimeInHours_Nineteen" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="RemiderStartTimeInHours_One" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RemiderStartTimeInHours_Seven" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="RemiderStartTimeInHours_Seventeen" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="RemiderStartTimeInHours_Six" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="RemiderStartTimeInHours_Sixteen" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="RemiderStartTimeInHours_Ten" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="RemiderStartTimeInHours_Thirteen" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="RemiderStartTimeInHours_Three" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RemiderStartTimeInHours_Twelve" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="RemiderStartTimeInHours_Twenty" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="RemiderStartTimeInHours_Twentyfive" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="RemiderStartTimeInHours_Twentyfour" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="RemiderStartTimeInHours_Twentyone" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="RemiderStartTimeInHours_Twentythree" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="RemiderStartTimeInHours_Twentytwo" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="RemiderStartTimeInHours_Two" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Status_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Status_InActive" xml:space="preserve">
+    <value>In Active</value>
+  </data>
+  <data name="Status_Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="ProcessingStatus_Pending" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+  <data name="ProcessingStatus_Processed" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="ProcessingStatus_Failed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="ProcessingStatus_InProgress" xml:space="preserve">
+    <value>In progress</value>
+  </data>
+  <data name="RequestStatus_PendingForSell" xml:space="preserve">
+    <value>Pending For Sell</value>
+  </data>
+  <data name="TransactionType_Buy" xml:space="preserve">
+    <value>Buy</value>
+  </data>
+  <data name="TransactionType_Sell" xml:space="preserve">
+    <value>Sell</value>
+  </data>
+  <data name="AdminType_HeadOfEquity" xml:space="preserve">
+    <value>Head of Equity</value>
+  </data>
+  <data name="AdminType_HeadOfOffShore" xml:space="preserve">
+    <value>Head of Offshore</value>
+  </data>
+  <data name="AdminType_ITAdmin" xml:space="preserve">
+    <value>IT Admin</value>
+  </data>
+  <data name="RequestStatus_Approved" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+  <data name="RequestStatus_Completed" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="RequestStatus_Overdue" xml:space="preserve">
+    <value>Overdue</value>
+  </data>
+  <data name="RequestStatus_Pending" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+  <data name="RequestStatus_Rejected" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+  <data name="RequestStatus_SMI" xml:space="preserve">
+    <value>SMI</value>
+  </data>
+  <data name="RequestStatus_TransactionNotDone" xml:space="preserve">
+    <value>Transaction Not Done</value>
+  </data>
+  <data name="RequestStatus_Unresolved" xml:space="preserve">
+    <value>Unresolved</value>
+  </data>
+  <data name="UploadStatus_Failed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="UploadStatus_InProgress" xml:space="preserve">
+    <value>In progress</value>
+  </data>
+  <data name="UploadStatus_Pending" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+  <data name="UploadStatus_Processed" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="DetailTransactionType_Buy" xml:space="preserve">
+    <value>Buy</value>
+  </data>
+  <data name="DetailTransactionType_Sell" xml:space="preserve">
+    <value>Sell</value>
+  </data>
+  <data name="ParentRequestId" xml:space="preserve">
+    <value>Parent RequestId</value>
+  </data>
+</root>

@@ -1,0 +1,6 @@
+F:\Projects\External Projects\CTWebApi.Interface\CTWebApi.Interface\bin\CTWebApi.Interface.dll.config
+F:\Projects\External Projects\CTWebApi.Interface\CTWebApi.Interface\bin\CTWebApi.Interface.dll
+F:\Projects\External Projects\CTWebApi.Interface\CTWebApi.Interface\bin\CTWebApi.Interface.pdb
+F:\Projects\External Projects\CTWebApi.Interface\CTWebApi.Interface\obj\Debug\CTWebApi.Interface.dll
+F:\Projects\External Projects\CTWebApi.Interface\CTWebApi.Interface\obj\Debug\CTWebApi.Interface.pdb
+F:\Projects\External Projects\CTWebApi.Interface\CTWebApi.Interface\obj\Debug\CTWebApi.Interface.csprojResolveAssemblyReference.cache
