@@ -60,3 +60,4 @@ D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WebAPI\bin\Micro
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WebAPI\bin\System.Web.Http.Owin.xml
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WebAPI\obj\Debug\ClinicalTrail.Services.WebAPI.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WebAPI\obj\Debug\ClinicalTrail.Services.WebAPI.pdb
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WebAPI\obj\Debug\ClinicalTrail.Services.WebAPI.csprojResolveAssemblyReference.cache

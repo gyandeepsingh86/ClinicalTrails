@@ -18,8 +18,7 @@
     <asp:ScriptManager runat="server">
         <Scripts>
             <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=272931&clcid=0x409 --%>
-            <%--Framework Scripts--%>
-            
+            <%--Framework Scripts--%>            
             <asp:ScriptReference Name="MsAjaxBundle" />
             <asp:ScriptReference Name="jquery" />
             <asp:ScriptReference Name="jquery.ui.combined" />
@@ -40,7 +39,9 @@
         <div class="content-wrapper">
             <div class="float-left">
                 <p class="site-title">
-                    <a runat="server" href="~/">your logo here</a>
+                    <a runat="server" href="~/">
+                        <img alt="Clinical Trails" src="Images/ClinicalTrails.png" />
+                    </a>
                 </p>
             </div>
             <div class="float-right">
