@@ -173,10 +173,19 @@
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="Content\bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="Content\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="Content\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\bootstrap\js\bootstrap.min.js" />
     <Content Include="Content\css\bootstrap-responsive.css" />
     <Content Include="Content\css\bootstrap-responsive.min.css" />
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\CTrials.css" />
     <Content Include="Content\img\glyphicons-halflings-white.png" />
     <Content Include="Content\img\glyphicons-halflings.png" />
     <Content Include="Content\js\bootstrap.js" />
@@ -244,6 +253,8 @@
     <Content Include="Content\themes\font-awesome\font\fontawesome-webfont.svg" />
     <Content Include="Content\themes\images\ajax-loader.gif" />
     <Content Include="Content\themes\images\banner_2.jpg" />
+    <Content Include="Content\themes\images\CliniTriLogo.png" />
+    <Content Include="Content\themes\images\CliTriLogo.png" />
     <Content Include="Content\themes\images\eight.jpg" />
     <Content Include="Content\themes\images\five.jpg" />
     <Content Include="Content\themes\images\four.jpg" />
@@ -325,7 +336,6 @@
     <Content Include="Content\themes\font-awesome\less\mixins.less" />
     <Content Include="Content\themes\font-awesome\less\path.less" />
     <Content Include="Content\themes\font-awesome\less\variables.less" />
-    <Content Include="Content\themes\images\.DS_Store" />
     <Content Include="Content\themes\images\logo.psd" />
     <Content Include="Content\themes\images\prettyPhoto\.DS_Store" />
     <Content Include="Content\themes\images\prettyPhoto\default\.DS_Store" />

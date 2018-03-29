@@ -1,149 +1,159 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ClinicalTrailMaster.master.cs" Inherits="ClinicalTrail.Application.WebApplication.MasterPages.ClinicalTrailMaster"
-    %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ClinicalTrailMaster.master.cs" Inherits="ClinicalTrail.Application.WebApplication.MasterPages.ClinicalTrailMaster" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<html lang="en">
+<head runat="server" class="headerSection">
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../Content/bootstrap.css" type="text/css" />
-    <link rel="stylesheet" href="../Content/bootstrap-responsive.css" type="text/css" />
-    <link rel="stylesheet" href="../Content/themes/css/prettyPhoto.css" type="text/css" />
+    <link href="../Content/themes/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="../Content/themes/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+    <%--<link href="../Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />--%>
+    <link href="../Content/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <%--<link href="../Content/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />--%>
+    <link href="../Content/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
+
+    <link href="../Content/themes/css/prettyPhoto.css" rel="stylesheet" />
+
     <link rel="stylesheet/less" href="../Content/themes/css/main.less" />
-    <script src="../Content/themes/js/less.js" type="text/javascript"></script>
+    <script src="../Content/themes/js/less.js"></script>
+
+
     <link rel="stylesheet" href="../Content/themes/font-awesome/css/font-awesome.min.css" />
-    <%--<link charset="utf-8" href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" media="screen" rel="stylesheet" />
-    <link charset="utf-8" href="//fonts.googleapis.com/css?family=Roboto%20Condensed:400" media="screen" rel="stylesheet" />--%>
-    <script charset="utf-8" src="//www.gstatic.com/external_hosted/modernizr/modernizr.js"></script>
+    <link rel="stylesheet" href="../Content/themes/font-awesome/css/font-awesome.css" />
+
+    <link href="../Content/CTrials.css" rel="stylesheet" />
+
     <script src="../Content/themes/js/jquery-1.9.1.min.js"></script>
-    <script src="../Content/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../Content/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="../Content/themes/js/jquery.scrollTo-1.4.3.1-min.js" type="text/javascript"></script>
     <script src="../Content/themes/js/jquery.easing-1.3.min.js"></script>
     <script src="../Content/themes/js/jquery.scrollTo-1.4.3.1-min.js"></script>
     <script src="../Content/themes/js/jquery.prettyPhoto.js"></script>
     <script src="../Content/themes/js/custom.js" type="text/javascript"></script>
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body data-spy="scroll" data-target=".navbar">
     <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
         <section class="headerSection">
-            <div class="topmostSection">
-                <div id="myCarouselTop" class="carousel slide">
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <i class="icon-quote-left"></i>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
-		Nullam id dolor id nibh ultricies vehicula ut id elit.<i class="icon-quote-right"></i>  - John Doe <a class="close" data-dismiss="alert" href="#">&times;</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="menuSection">
-                <div class="container">
-                    <div class="navbar">
-                        <div class="container">
-                            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <a class="brand" title="Surya Web Solution Ltd." href="#bodySection">&nbsp;<img class="pull-left" src="themes/images/logo.png"></a>
-                            <div class="nav-collapse pull-right">
-                                <ul class="nav">
-                                    <li class="relative active"><a href="#bodySection" title="App Store Home">App Store</a></li>
-                                    <li class="relative"><a href="#featureSectiom" title="Features">Features</a></li>
-                                    <li class="relative"><a href="#pricing" title="Plans and pricing">Plans & Pricing</a> </li>
-                                    <li class="relative"><a href="#newapp" title="New release">New release</a></li>
-                                    <li class="relative"><a href="#footerSection" title="Support">Support</a></li>
-                                </ul>
+            <div class="bodySection">
+                <div class="menuSection">
+                    <div class="container">
+                        <div class="navbar">
+                            <div class="container">
+                                <a class="brand" title="Clinical Trails P Ltd." href="#bodySection">&nbsp;<img class="pull-left" src="../../Content/themes/images/CliniTriLogo.png"></a>
+                                <div class="categorySection">
+                                    <nav id="colorNav">
+                                        <ul>
+                                            <li class="green">
+                                                <a href="../../Default.aspx" class="icon-home"></a>                                                
+                                            </li>
+                                            <li class="yellow">
+                                                <a href="#" class="icon-beaker"></a>
+                                                <ul>
+                                                    <li><a href="#">PHP tutorials</a></li>
+                                                    <li><a href="#">jQuery techniques</a></li>
+                                                    <li><a href="#">CSS articles</a></li>
+                                                    <li><a href="#">Everything else</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="icon-map-marker"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="icon-book"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="icon-truck"></i></a>
+                                                <ul>
+                                                    <li><a href="#">Back to the tutorial</a></li>
+                                                    <li><a href="#">Get help</a></li>
+                                                    <li><a href="#">Download this example</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="icon-book"></i></a>
+                                            </li>
+                                            <li class="red">
+                                                <a href="#" class="icon-cogs"></a>
+                                                <ul>
+                                                    <li><a href="~/Views/InvestigatorMaster/InvestigatorMaster">Investor Master</a></li>
+                                                    <li><a href="#">Vendor Master</a></li>
+                                                    <li><a href="#">Payment Master</a></li>
+                                                    <li><a href="#">Account Settings</a></li>
+                                                    <li><a href="../../About">About Clinical Trails</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <%--<div class="categorySection">
+                                    <div class="container">
+                                        <ul>
+                                            <li>
+                                                <a href="#"><i class="icon-home"></i></a>
+                                                <p>Home</p>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="icon-map-marker"></i></a>
+                                                <p>Dashboard</p>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="icon-book"></i></a>
+                                                <p>Study</p>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="icon-truck"></i></a>
+                                                <p>Dealership</p>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="icon-stethoscope"></i></a>
+                                                <p>Health</p>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="icon-legal"></i></a>
+                                                <p>Law</p>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="icon-music"></i></a>
+                                                <p>Music</p>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="icon-book"></i></a>
+                                                <p>Publishing</p>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="icon-food"></i></a>
+                                                <p>Restaurant</p>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="icon-user"></i></a>
+                                                <p>Masters</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>--%>
+                            </div>
+                            <div class="container">
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
         <section class="bodySection" id="bodySection">
-            <div class="heroSection">
-                <div class="container text-center">
-                    <br>
-                    <h1>Reach Your Customers With A Mobile App</h1>
-                    <h3>Over 350,000 Apps Created</h3>
-
-                    <div class="gallery">
-                        <a class="rounded" href="http://youtu.be/eWtBma5dnlg" rel="prettyPhoto" title="YouTube demo">
-                            <span><i class="icon-play"></i></span>
-                        </a>
-                    </div>
-                    <br>
-                    <div class="freeBtnWrapper">
-                        <a class="btn btn-primary btn-large" href="#" title="">START FREE</a>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="categorySection">
-                <div class="container">
-                    <ul>
-                        <li>
-                            <a href="#"><i class="icon-map-marker"></i></a>
-                            <p>Church</p>
-                        </li>
-                        <li>
-                            <a href="#"><i class="icon-shopping-cart"></i></a>
-                            <p>Commerce</p>
-                        </li>
-                        <li>
-                            <a href="#"><i class="icon-truck"></i></a>
-                            <p>Dealership</p>
-                        </li>
-                        <li>
-                            <a href="#"><i class="icon-stethoscope"></i></a>
-                            <p>Health</p>
-                        </li>
-                        <li>
-                            <a href="#"><i class="icon-legal"></i></a>
-                            <p>Law</p>
-                        </li>
-                        <li>
-                            <a href="#"><i class="icon-music"></i></a>
-                            <p>Music</p>
-                        </li>
-                        <li>
-                            <a href="#"><i class="icon-book"></i></a>
-                            <p>Publishing</p>
-                        </li>
-                        <li>
-                            <a href="#"><i class="icon-home"></i></a>
-                            <p>Real Estate</p>
-                        </li>
-                        <li>
-                            <a href="#"><i class="icon-food"></i></a>
-                            <p>Restaurant</p>
-                        </li>
-                        <li>
-                            <a href="#"><i class="icon-bookmark-empty"></i></a>
-                            <p>Sports</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </section>
 
         <section class="gray-bg featureSectiom" id="featureSectiom">
             <div class="container text-center">
                 <div class="section-heading">
-                    <h2 class="pageTitle">Powerful Features</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
                 </div>
-                <div class="row">
+                <%--   <div class="row">
                     <div class="span4">
                         <h2><i class="icon-code"></i></h2>
                         <h3>Easy. Fast. Beautiful</h3>
@@ -216,7 +226,7 @@
 			
                         </p>
                     </div>
-                </div>
+                </div>--%>
             </div>
         </section>
 
@@ -239,20 +249,15 @@
                                 <p class="actualPrice">$0.00</p>
                             </div>
                             <ul>
-                                <li>Up To 5 Users</li>
-                                <li>Unlimited Disk Space</li>
-                                <li>Unlimited Email Acounts</li>
-                                <li>Unlimited Subdomains</li>
-                                <li>Enchaned Security</li>
-                                <li>Unlimited Bandwidth</li>
-                                <li>Unlimited Databases</li>
+                                <li>Up To 5 Users</li>                               
+                                
                                 <li><a class="btn btn-default btn-large btn-block">ORDER NOW </a></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="span3">
-                        <div class="plan over selected">
+                        <div class="plan over">
                             <div class="header">
                                 <h3>Basic</h3>
                                 <p>Small Business</p>
@@ -264,12 +269,7 @@
                             </div>
                             <ul>
                                 <li>Up To 50 Users</li>
-                                <li>Unlimited Disk Space</li>
-                                <li>Unlimited Email Acounts</li>
-                                <li>Unlimited Subdomains</li>
-                                <li>Enchaned Security</li>
-                                <li>Unlimited Bandwidth</li>
-                                <li>Unlimited Databases</li>
+                                
                                 <li><a class="btn btn-default btn-large btn-block">ORDER NOW </a></li>
                             </ul>
                         </div>
@@ -288,12 +288,7 @@
                             </div>
                             <ul>
                                 <li>Up To 500 Users</li>
-                                <li>Unlimited Disk Space</li>
-                                <li>Unlimited Email Acounts</li>
-                                <li>Unlimited Subdomains</li>
-                                <li>Enchaned Security</li>
-                                <li>Unlimited Bandwidth</li>
-                                <li>Unlimited Databases</li>
+                                
                                 <li><a class="btn btn-default btn-large btn-block">ORDER NOW </a></li>
                             </ul>
                         </div>
@@ -312,12 +307,7 @@
                             </div>
                             <ul>
                                 <li>Unlimited Users</li>
-                                <li>Unlimited Disk Space</li>
-                                <li>Unlimited Email Acounts</li>
-                                <li>Unlimited Subdomains</li>
-                                <li>Enchaned Security</li>
-                                <li>Unlimited Bandwidth</li>
-                                <li>Unlimited Databases</li>
+                                
                                 <li><a class="btn btn-default btn-large btn-block">ORDER NOW </a></li>
                             </ul>
                         </div>
@@ -342,21 +332,21 @@
                                             <br>
                                             <br>
                                             <br>
-                                            <img src="themes/images/five.jpg"></a>
+                                            <img src="../../Content/themes/images/five.jpg"></a>
                                     </div>
                                     <div class="item">
                                         <a href="themes/images/two.jpg" rel="prettyPhoto[gallery1]" title=" ">
                                             <br>
                                             <br>
                                             <br>
-                                            <img src="themes/images/two.jpg"></a>
+                                            <img src="../../Content/themes/images/two.jpg"></a>
                                     </div>
                                     <div class="item">
                                         <a href="themes/images/seven.jpg" rel="prettyPhoto[gallery1]" title=" ">
                                             <br>
                                             <br>
                                             <br>
-                                            <img src="themes/images/seven.jpg"></a>
+                                            <img src="../../Content/themes/images/seven.jpg"></a>
                                     </div>
                                 </div>
                             </div>
@@ -378,7 +368,7 @@
                     <div class="row">
                         <div class="span3">
                             <br>
-                            <img src="themes/images/eight.jpg">
+                            <img src="../../Content/themes/images/eight.jpg">
                         </div>
                         <div class="span9">
                             <h3>Select Which Plan is Right for You</h3>
@@ -396,7 +386,7 @@
                     <div class="row">
                         <div class="span3">
                             <br>
-                            <img src="themes/images/six.jpg">
+                            <img src="../../Content/themes/images/six.jpg">
                         </div>
                         <div class="span9">
                             <h3>Select Which Plan is Right for You</h3>
@@ -424,7 +414,7 @@
                         <div class="span3">
                             <div class="card">
                                 <a href="themes/images/one.jpg" rel="prettyPhoto[gallery1]" title=" ">
-                                    <img src="themes/images/one.jpg">
+                                    <img src="../../Content/themes/images/one.jpg">
                                 </a>
                                 <div class="card-body">
                                     <h3>Lorem Ipsum</h3>
@@ -437,7 +427,7 @@
                         <div class="span3">
                             <div class="card">
                                 <a href="themes/images/two.jpg" rel="prettyPhoto[gallery1]" title=" ">
-                                    <img src="themes/images/two.jpg">
+                                    <img src="../../Content/themes/images/two.jpg">
                                 </a>
                                 <div class="card-body">
                                     <h3>Lorem Ipsum</h3>
@@ -450,7 +440,7 @@
                         <div class="span3">
                             <div class="card">
                                 <a href="themes/images/three.jpg" rel="prettyPhoto[gallery1]" title=" ">
-                                    <img src="themes/images/three.jpg">
+                                    <img src="../../Content/themes/images/three.jpg">
                                 </a>
                                 <div class="card-body">
                                     <h3>Lorem Ipsum</h3>
@@ -463,7 +453,7 @@
                         <div class="span3">
                             <div class="card">
                                 <a href="themes/images/four.jpg" rel="prettyPhoto[gallery1]" title=" ">
-                                    <img src="themes/images/four.jpg">
+                                    <img src="../../Content/themes/images/four.jpg">
                                 </a>
                                 <div class="card-body">
                                     <h3>Lorem Ipsum</h3>
@@ -506,10 +496,10 @@
                             <div class="row">
                                 <div class="gallery clearfix">
                                     <a href="themes/images/one.jpg" rel="prettyPhoto[gallery1]" title=" ">
-                                        <img class="span2" src="themes/images/one.jpg" alt="Bootstrap free templates">
+                                        <img class="span2" src="../../Content/themes/images/one.jpg" alt="Bootstrap free templates">
                                     </a>
                                     <a href="themes/images/two.jpg" rel="prettyPhoto[gallery1]" title=" ">
-                                        <img class="span2" src="themes/images/two.jpg" alt="Download bootstrap free templates">
+                                        <img class="span2" src="../../Content/themes/images/two.jpg" alt="Download bootstrap free templates">
                                     </a>
                                 </div>
                             </div>
@@ -596,9 +586,11 @@
                                         <form>
                                             <div class="row-fluid">
                                                 <div class="span6">
-                                                    <input class="block" value="Name" onclick="this.value = ''"></div>
+                                                    <input class="block" value="Name" onclick="this.value = ''">
+                                                </div>
                                                 <div class="span6">
-                                                    <input class="block" value="Email" onclick="this.value = ''"></div>
+                                                    <input class="block" value="Email" onclick="this.value = ''">
+                                                </div>
                                             </div>
                                             <div class="row-fluid">
                                                 <div class="span12">
@@ -628,7 +620,6 @@
         </section>
 
         <a href="#" class="go-top" style="display: none;"><i class="icon-double-angle-up"></i></a>
-
     </form>
 </body>
 </html>
