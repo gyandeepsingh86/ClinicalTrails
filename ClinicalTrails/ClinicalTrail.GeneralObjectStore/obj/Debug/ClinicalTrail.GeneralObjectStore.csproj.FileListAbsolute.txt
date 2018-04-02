@@ -6,4 +6,15 @@ D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\obj\De
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\obj\Debug\ClinicalTrail.GeneralObjectStore.csproj.GenerateResource.Cache
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\obj\Debug\ClinicalTrail.GeneralObjectStore.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\obj\Debug\ClinicalTrail.GeneralObjectStore.pdb
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\bin\Debug\AtlasCopco.Framework.Objects.dll
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\bin\Debug\NLog.dll
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\bin\Debug\Microsoft.Practices.Unity.dll
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\bin\Debug\AtlasCopco.Framework.Objects.pdb
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\bin\Debug\Microsoft.Practices.Unity.Interception.xml
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\bin\Debug\NLog.xml
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\bin\Debug\Microsoft.Practices.Unity.xml
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\bin\Debug\Microsoft.Practices.ServiceLocation.xml
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\obj\Debug\ClinicalTrail.GeneralObjectStore.csprojResolveAssemblyReference.cache

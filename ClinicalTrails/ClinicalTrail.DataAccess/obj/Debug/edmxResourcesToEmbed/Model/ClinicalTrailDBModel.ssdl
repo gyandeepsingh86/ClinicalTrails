@@ -1,19 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ClinicalTrialsDBModelContext.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'ClinicalTrials.dbo.CenterMaster' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="CenterMaster">
     <Key>
       <PropertyRef Name="Center No" />
-      <PropertyRef Name="Center Name" />
-      <PropertyRef Name="Street Address" />
-      <PropertyRef Name="City" />
-      <PropertyRef Name="State" />
-      <PropertyRef Name="Country" />
-      <PropertyRef Name="Post code" />
-      <PropertyRef Name="Specialties" />
-      <PropertyRef Name="Office Phone" />
-      <PropertyRef Name="Email" />
     </Key>
     <Property Name="Center No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Center Name" Type="varchar" MaxLength="100" Nullable="false" />
@@ -120,31 +109,7 @@ warning 6002: The table/view 'ClinicalTrials.dbo.VendorMaster' does not have a p
     <Property Name="Bank Account Number" Type="varchar" MaxLength="100" Nullable="false" />
   </EntityType>
   <EntityContainer Name="ClinicalTrialsDBModelContextStoreContainer">
-    <EntitySet Name="CenterMaster" EntityType="Self.CenterMaster" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [CenterMaster].[Center No] AS [Center No], 
-    [CenterMaster].[Center Name] AS [Center Name], 
-    [CenterMaster].[Center Type] AS [Center Type], 
-    [CenterMaster].[Street Address] AS [Street Address], 
-    [CenterMaster].[City] AS [City], 
-    [CenterMaster].[State] AS [State], 
-    [CenterMaster].[Country] AS [Country], 
-    [CenterMaster].[Post code] AS [Post code], 
-    [CenterMaster].[Specialties] AS [Specialties], 
-    [CenterMaster].[Office Phone] AS [Office Phone], 
-    [CenterMaster].[Mobile Phone] AS [Mobile Phone], 
-    [CenterMaster].[Email] AS [Email], 
-    [CenterMaster].[Primary Email] AS [Primary Email], 
-    [CenterMaster].[Secondary Email] AS [Secondary Email], 
-    [CenterMaster].[Website] AS [Website], 
-    [CenterMaster].[Equipments] AS [Equipments], 
-    [CenterMaster].[Investigator 1] AS [Investigator 1], 
-    [CenterMaster].[Investigator 2] AS [Investigator 2], 
-    [CenterMaster].[Investigator 3] AS [Investigator 3], 
-    [CenterMaster].[Payee Name] AS [Payee Name], 
-    [CenterMaster].[Bank Account Number] AS [Bank Account Number]
-    FROM [dbo].[CenterMaster] AS [CenterMaster]</DefiningQuery>
-    </EntitySet>
+    <EntitySet Name="CenterMaster" EntityType="Self.CenterMaster" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="InvestigatorMaster" EntityType="Self.InvestigatorMaster" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [InvestigatorMaster].[ID] AS [ID], 

@@ -110,7 +110,7 @@
 
 @media (min-width: 1200px) {
   .row {
-    margin-left: -30px;
+    margin-left:  0px;
     *zoom: 1;
   }
   .row:before,
@@ -131,10 +131,10 @@
   .navbar-static-top .container,
   .navbar-fixed-top .container,
   .navbar-fixed-bottom .container {
-    width: 1170px;
+    width: h: 870px;
   }
-  .span12 {
-    width: 1170px;
+  .span8 {
+    width: 770px;;
   }
   .span11 {
     width: 1070px;

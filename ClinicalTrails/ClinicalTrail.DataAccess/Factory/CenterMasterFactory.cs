@@ -15,5 +15,19 @@ namespace ClinicalTrail.DataAccess.Factory
         {
             _context = entities;
         }
+
+        public List<CenterMaster> GetAllCenterMaster()
+        {
+            var cm = from resp in _context.CenterMasters
+                     select resp;
+
+            return cm.ToList();
+        }
+
+        public void AddCenterManager(CenterMaster centermanager)
+        {
+            _context.CenterMasters.Add(centermanager);
+            _context.SaveChanges();
+        }
     }
 }

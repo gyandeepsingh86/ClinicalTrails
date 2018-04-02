@@ -25,8 +25,8 @@ namespace ClinicalTrail.DataAccess.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<CenterMaster> CenterMasters { get; set; }
         public virtual DbSet<InvestigatorMaster> InvestigatorMasters { get; set; }
         public virtual DbSet<VendorMaster> VendorMasters { get; set; }
+        public virtual DbSet<CenterMaster> CenterMasters { get; set; }
     }
 }

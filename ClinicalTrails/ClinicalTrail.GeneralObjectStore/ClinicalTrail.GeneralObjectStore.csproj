@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AtlasCopco.Framework.Objects">
+      <HintPath>F:\Git\TESS\WantForDistributors\Development\trunk\Tools\AtlasCopco.Framework.Objects.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,6 +45,7 @@
     <Compile Include="EnumResources.Designer.cs" />
     <Compile Include="Errors.Designer.cs" />
     <Compile Include="GlobalResources.Designer.cs" />
+    <Compile Include="Logger\IAmLoggable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
