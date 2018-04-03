@@ -82,6 +82,13 @@
     <EntitySet Name="InvestigatorMasters" EntityType="Self.InvestigatorMaster" />
     <EntitySet Name="VendorMasters" EntityType="Self.VendorMaster" />
     <EntitySet Name="CenterMasters" EntityType="ClinicalTrialsDBModelContext.CenterMaster" />
+    <EntitySet Name="CityMasters" EntityType="ClinicalTrialsDBModelContext.CityMaster" />
+    <EntitySet Name="CountryMasters" EntityType="ClinicalTrialsDBModelContext.CountryMaster" />
+    <EntitySet Name="StateMasters" EntityType="ClinicalTrialsDBModelContext.StateMaster" />
+    <AssociationSet Name="FK_StateMaster_CountryMaster" Association="ClinicalTrialsDBModelContext.FK_StateMaster_CountryMaster">
+      <End Role="CountryMaster" EntitySet="CountryMasters" />
+      <End Role="StateMaster" EntitySet="StateMasters" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="CenterMaster">
     <Key>
@@ -109,4 +116,42 @@
     <Property Name="Payee_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="Bank_Account_Number" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
+  <EntityType Name="CityMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StateID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CountryMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CountryCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="StateMasters" Relationship="ClinicalTrialsDBModelContext.FK_StateMaster_CountryMaster" FromRole="CountryMaster" ToRole="StateMaster" />
+  </EntityType>
+  <EntityType Name="StateMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CountryID" Type="Int32" />
+    <NavigationProperty Name="CountryMaster" Relationship="ClinicalTrialsDBModelContext.FK_StateMaster_CountryMaster" FromRole="StateMaster" ToRole="CountryMaster" />
+  </EntityType>
+  <Association Name="FK_StateMaster_CountryMaster">
+    <End Type="ClinicalTrialsDBModelContext.CountryMaster" Role="CountryMaster" Multiplicity="0..1" />
+    <End Type="ClinicalTrialsDBModelContext.StateMaster" Role="StateMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CountryMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StateMaster">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

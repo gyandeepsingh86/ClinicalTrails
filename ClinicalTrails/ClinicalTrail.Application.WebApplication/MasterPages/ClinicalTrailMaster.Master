@@ -4,12 +4,12 @@
 <head runat="server" class="headerSection">
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../Content/themes/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link href="../Content/themes/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <%--<link href="../Content/themes/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="../Content/themes/font-awesome/css/font-awesome.min.css" rel="stylesheet" />--%>
 
     <link href="../Content/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="../Content/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
-    <%--<link href="../Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />--%>
+    <link href="../Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../Content/themes/css/prettyPhoto.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="../Content/themes/font-awesome/css/font-awesome.min.css" />
@@ -19,7 +19,6 @@
     <script src="../Content/themes/js/less.js"></script>
 
     <link href="../Content/CTrials.css" rel="stylesheet" />
-
     <script src="../Content/themes/js/jquery-1.9.1.min.js"></script>
     <script src="../Content/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="../Content/themes/js/jquery.scrollTo-1.4.3.1-min.js" type="text/javascript"></script>
@@ -28,18 +27,93 @@
     <script src="../Content/themes/js/jquery.prettyPhoto.js"></script>
     <script src="../Content/themes/js/custom.js" type="text/javascript"></script>
     <%--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">--%>
-
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap Js CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body data-spy="scroll" data-target=".navbar">
     <form id="form1" runat="server">
-        <section class="headerSection">
-            <div class="menuSection">
-                <div class="container">
-                    <div class="navbar">
-                        <div class="container">
-                            <a class="brand" title="Clinical Trails P Ltd." href="#bodySection">&nbsp;<img class="pull-left" src="../../Content/themes/images/CliniTriLogo.png"></a>
+        <asp:ScriptManager ID="smClinicalTrails" runat="server"></asp:ScriptManager>
+        <div class="wrapper">
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('#sidebarCollapse').on('click', function () {
+                        $('#sidebar').toggleClass('active');
+                    });
+                });
+
+            </script>
+            <nav id="sidebar" class="active">
+                <div class="sidebar-header">
+                    <h3><a class="brand" title="Clinical Trails P Ltd." href="#bodySection">
+                        <img class="img-thumbnail" src="../../Content/themes/images/CliniTriLogo.png"></a></h3>
+                    <strong>CT</strong>
+                </div>
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+                            <i class="icon icon-home"></i>
+                            CTMS
+                        </a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Documents</a></li>
+                            <li><a href="../CenterMaster/CenterMasterSearch">Search</a></li>
+                            <li><a href="#">Reports</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Bookmark</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Workflow</a></li>
+                            <li><a href="#">Administrator</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-briefcase"></i>
+                            ETMF
+                        </a>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
+                            <i class="icon-pencil"></i>
+                            IVRS
+                        </a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li><a href="#">Page 1</a></li>
+                            <li><a href="#">Page 2</a></li>
+                            <li><a href="#">Page 3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-user"></i>
+                            Profile
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-link"></i>
+                            Contact
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-anchor"></i>
+                            About
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="bodySection">
+                <div class="navbar">
+                    <nav class="navbar navbar-default">
+                        <div class="">
+                            <div class="navbar-header">
+                                <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn ">
+                                    <i class="icon-align-left"></i>
+                                </button>
+                            </div>
                             <div class="categorySection">
                                 <nav id="colorNav">
                                     <ul>
@@ -94,406 +168,15 @@
                                     </ul>
                                 </nav>
                             </div>
-                            <%--<div class="categorySection">
-                                    <div class="container">
-                                        <ul>
-                                            <li>
-                                                <a href="#"><i class="icon-home"></i></a>
-                                                <p>Home</p>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="icon-map-marker"></i></a>
-                                                <p>Dashboard</p>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="icon-book"></i></a>
-                                                <p>Study</p>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="icon-truck"></i></a>
-                                                <p>Dealership</p>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="icon-stethoscope"></i></a>
-                                                <p>Health</p>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="icon-legal"></i></a>
-                                                <p>Law</p>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="icon-music"></i></a>
-                                                <p>Music</p>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="icon-book"></i></a>
-                                                <p>Publishing</p>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="icon-food"></i></a>
-                                                <p>Restaurant</p>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="icon-user"></i></a>
-                                                <p>Masters</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>--%>
                         </div>
-                        <div class="container">
-                        </div>
-                    </div>
+                    </nav>
                 </div>
+                <section class="bodySection" id="bodySection">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </section>
             </div>
-        </section>
-
-        <section class="bodySection" id="bodySection">
-            <div class="sidenav">
-                <a href="#contact" class="icon-map-marker"> Dashboard</a>
-                <a href="#about" class="icon-home"> CTMS</a>
-                <a href="#services" class="icon-desktop"> ETMF</a>
-                <a href="#clients" class="icon-inbox"> IVRS</a>
-            </div>
-            <div class="main">
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                </asp:ContentPlaceHolder>
-            </div>
-        </section>
-
-        <%-- <section class="gray-bg featureSectiom" id="featureSectiom">
-            <div class="container text-center">
-                <div class="section-heading">
-                    
-                </div>
-                   <div class="row">
-                    <div class="span4">
-                        <h2><i class="icon-code"></i></h2>
-                        <h3>Easy. Fast. Beautiful</h3>
-                        <p class="gray-text">No coding needed</p>
-                        <p>
-                            Just click to edit anything and create<br />
-                            your own website in minutes!
-				
-                        </p>
-                    </div>
-
-                    <div class="span4 vBorder">
-                        <div class="vBorderL">
-                            <h2><i class="icon-html5"></i></h2>
-                            <h3>Advanced HTML5 Technology</h3>
-                            <p class="gray-text">To create a site.</p>
-                            <p>
-                                Bootstrappage is the only drag n' drop website editor<br />
-                                that offers you HTML5 capabilities.
-				
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="span4">
-                        <h2><i class="icon-css3"></i></h2>
-                        <h3>100s of Stunning Designs</h3>
-                        <p class="gray-text">Just for you.</p>
-                        <p>
-                            Whether you need a business website or<br />
-                            a personal portfolio.
-				
-                        </p>
-                    </div>
-                </div>
-                <br>
-                <br>
-                <div class="row">
-                    <div class="span4">
-                        <h2><i class="icon-mobile-phone"></i></h2>
-                        <h3>Your Website</h3>
-                        <p class="gray-text">Your way.</p>
-                        <p>
-                            Change colors, text, backgrounds, pics<br />
-                            &amp; more to create your own unique site.
-			
-                        </p>
-                    </div>
-
-                    <div class="span4 vBorder">
-                        <div class="vBorderL">
-                            <h2><i class="icon-desktop"></i></h2>
-                            <h3>Top Grade Hosting</h3>
-                            <p class="gray-text">100% Free.</p>
-                            <p>
-                                bootstrappage is dedicated to providing you with the<br />
-                                best, most reliable hosting, 100% FREE.
-			
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="span4">
-                        <h2><i class="icon-tablet"></i></h2>
-                        <h3>Mobile. Facebook. Blog</h3>
-                        <p class="gray-text">Full web presence.</p>
-                        <p>
-                            All you need in one place. Create websites,<br />
-                            mobile sites, Facebook pages &amp; blogs too.
-			
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="light-bg text-center" id="pricing">
-            <div class="container">
-                <div class="section-heading">
-                    <h2 class="pageTitle">Select Which Plan is Right for You</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                </div>
-                <div class="row">
-                    <div class="span3">
-                        <div class="plan over">
-                            <div class="header">
-                                <h3>Novice</h3>
-                                <p>Entrepreneure & Freelancers</p>
-                            </div>
-                            <div class="planOverView">
-                                <span class="reducedPrice">$0.00</span> /month
-						
-                                <p class="actualPrice">$0.00</p>
-                            </div>
-                            <ul>
-                                <li>Up To 5 Users</li>                               
-                                
-                                <li><a class="btn btn-default btn-large btn-block">ORDER NOW </a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="span3">
-                        <div class="plan over">
-                            <div class="header">
-                                <h3>Basic</h3>
-                                <p>Small Business</p>
-                            </div>
-                            <div class="planOverView">
-                                <span class="reducedPrice">$18</span> /month
-						
-                                <p class="actualPrice">$28.90</p>
-                            </div>
-                            <ul>
-                                <li>Up To 50 Users</li>
-                                
-                                <li><a class="btn btn-default btn-large btn-block">ORDER NOW </a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="span3">
-                        <div class="plan over">
-                            <div class="header">
-                                <h3>Delux</h3>
-                                <p>Medium Business</p>
-                            </div>
-                            <div class="planOverView">
-                                <span class="reducedPrice">$36</span> /month
-						
-                                <p class="actualPrice">$56.00</p>
-                            </div>
-                            <ul>
-                                <li>Up To 500 Users</li>
-                                
-                                <li><a class="btn btn-default btn-large btn-block">ORDER NOW </a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="span3">
-                        <div class="plan over">
-                            <div class="header">
-                                <h3>Ultimate</h3>
-                                <p>Extra Large Business</p>
-                            </div>
-                            <div class="planOverView">
-                                <span class="reducedPrice">$54</span> /month
-							
-                                <p class="actualPrice">$80.00</p>
-                            </div>
-                            <ul>
-                                <li>Unlimited Users</li>
-                                
-                                <li><a class="btn btn-default btn-large btn-block">ORDER NOW </a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="gray-bg" id="newapp">
-            <div class="container">
-                <div class="section-heading">
-                    <h2 class="pageTitle">Featured App</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                </div>
-                <div class="row-wrap">
-                    <div class="row">
-                        <div class="span3">
-                            <div id="myCarousel" class="carousel slide">
-                                <div class="carousel-inner gallery">
-                                    <div class="active item">
-                                        <a href="themes/images/five.jpg" rel="prettyPhoto[gallery1]" title=" ">
-                                            <br>
-                                            <br>
-                                            <br>
-                                            <img src="../../Content/themes/images/five.jpg"></a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="themes/images/two.jpg" rel="prettyPhoto[gallery1]" title=" ">
-                                            <br>
-                                            <br>
-                                            <br>
-                                            <img src="../../Content/themes/images/two.jpg"></a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="themes/images/seven.jpg" rel="prettyPhoto[gallery1]" title=" ">
-                                            <br>
-                                            <br>
-                                            <br>
-                                            <img src="../../Content/themes/images/seven.jpg"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="span9">
-                            <br>
-                            <h3>Select Which Plan is Right for You</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                            <p>
-                                when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br>
-                                <br>
-                                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially remaining essentially unchanged unchanged.remaining essentially unchanged.
-			
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row-wrap">
-                    <div class="row">
-                        <div class="span3">
-                            <br>
-                            <img src="../../Content/themes/images/eight.jpg">
-                        </div>
-                        <div class="span9">
-                            <h3>Select Which Plan is Right for You</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                            <p>
-                                when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br>
-                                <br>
-                                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially remaining essentially unchanged unchanged.remaining essentially unchanged.
-			
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row-wrap">
-                    <div class="row">
-                        <div class="span3">
-                            <br>
-                            <img src="../../Content/themes/images/six.jpg">
-                        </div>
-                        <div class="span9">
-                            <h3>Select Which Plan is Right for You</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                            <p>
-                                when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br>
-                                <br>
-                                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially remaining essentially unchanged unchanged.remaining essentially unchanged.
-			
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="moreappSection light-bg">
-            <div class="container">
-                <div class="section-heading">
-                    <h2 class="pageTitle">Featured App</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                </div>
-                <div class="row-wrap">
-                    <div class="row">
-                        <div class="span3">
-                            <div class="card">
-                                <a href="themes/images/one.jpg" rel="prettyPhoto[gallery1]" title=" ">
-                                    <img src="../../Content/themes/images/one.jpg">
-                                </a>
-                                <div class="card-body">
-                                    <h3>Lorem Ipsum</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                                    <a class="btn btn-default" href="#">read more</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="span3">
-                            <div class="card">
-                                <a href="themes/images/two.jpg" rel="prettyPhoto[gallery1]" title=" ">
-                                    <img src="../../Content/themes/images/two.jpg">
-                                </a>
-                                <div class="card-body">
-                                    <h3>Lorem Ipsum</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                                    <a class="btn btn-default" href="#">read more</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="span3">
-                            <div class="card">
-                                <a href="themes/images/three.jpg" rel="prettyPhoto[gallery1]" title=" ">
-                                    <img src="../../Content/themes/images/three.jpg">
-                                </a>
-                                <div class="card-body">
-                                    <h3>Lorem Ipsum</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                                    <a class="btn btn-default" href="#">read more</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="span3">
-                            <div class="card">
-                                <a href="themes/images/four.jpg" rel="prettyPhoto[gallery1]" title=" ">
-                                    <img src="../../Content/themes/images/four.jpg">
-                                </a>
-                                <div class="card-body">
-                                    <h3>Lorem Ipsum</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                                    <a class="btn btn-default" href="#">read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>--%>
-
-        <%--<section class="footerSection" id="footerSection">
-            <footer>                
-                <div class="footerMenu">
-                    <div class="container">
-                        <a href="#" title="">News</a> |
-
-                        <a href="#" title="">App Store</a> |
-
-                        <a href="#" title="">Marketplace</a>
-                        <span class="pull-right">&copy; 2018-2019 Clinical Trails P Ltd, India</span>
-                    </div>
-                </div>
-            </footer>
-        </section>--%>
+        </div>
     </form>
 </body>
 </html>

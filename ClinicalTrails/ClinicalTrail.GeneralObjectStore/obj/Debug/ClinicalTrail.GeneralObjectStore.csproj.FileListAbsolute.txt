@@ -1,11 +1,5 @@
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\bin\Debug\ClinicalTrail.GeneralObjectStore.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\bin\Debug\ClinicalTrail.GeneralObjectStore.pdb
-D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\obj\Debug\ClinicalTrail.GeneralObjectStore.EnumResources.resources
-D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\obj\Debug\ClinicalTrail.GeneralObjectStore.Errors.resources
-D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\obj\Debug\ClinicalTrail.GeneralObjectStore.GlobalResources.resources
-D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\obj\Debug\ClinicalTrail.GeneralObjectStore.csproj.GenerateResource.Cache
-D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\obj\Debug\ClinicalTrail.GeneralObjectStore.dll
-D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\obj\Debug\ClinicalTrail.GeneralObjectStore.pdb
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\bin\Debug\AtlasCopco.Framework.Objects.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\bin\Debug\Microsoft.Practices.Unity.Interception.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\bin\Debug\NLog.dll
@@ -17,4 +11,9 @@ D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\bin\De
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\bin\Debug\Microsoft.Practices.Unity.xml
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\bin\Debug\Microsoft.Practices.ServiceLocation.xml
-D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\obj\Debug\ClinicalTrail.GeneralObjectStore.csprojResolveAssemblyReference.cache
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\obj\Debug\ClinicalTrail.GeneralObjectStore.EnumResources.resources
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\obj\Debug\ClinicalTrail.GeneralObjectStore.Errors.resources
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\obj\Debug\ClinicalTrail.GeneralObjectStore.GlobalResources.resources
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\obj\Debug\ClinicalTrail.GeneralObjectStore.csproj.GenerateResource.Cache
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\obj\Debug\ClinicalTrail.GeneralObjectStore.dll
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.GeneralObjectStore\obj\Debug\ClinicalTrail.GeneralObjectStore.pdb

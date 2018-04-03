@@ -17,12 +17,13 @@ namespace ClinicalTrail.Application.WebApplication.Mapper
             return to.ToList();
         }
 
-        private static CenterMasterModel Map(CenterMasterDto source)
+        internal static CenterMasterModel Map(CenterMasterDto source)
         {
             var to = new CenterMasterModel();
 
             to.Bank_Account_Number = source.Bank_Account_Number;
             to.Center_Name = source.Center_Name;
+            to.Center_No = source.Center_No;
             to.Center_Type = source.Center_Type;
             to.City = source.City;
             to.Country = source.Country;
@@ -50,6 +51,7 @@ namespace ClinicalTrail.Application.WebApplication.Mapper
             var to = new CenterMasterDto();
 
             to.Bank_Account_Number = source.Bank_Account_Number;
+            to.Center_No = source.Center_No;
             to.Center_Name = source.Center_Name;
             to.Center_Type = source.Center_Type;
             to.City = source.City;
@@ -73,6 +75,5 @@ namespace ClinicalTrail.Application.WebApplication.Mapper
             return to;
         }
 
-        
     }
 }

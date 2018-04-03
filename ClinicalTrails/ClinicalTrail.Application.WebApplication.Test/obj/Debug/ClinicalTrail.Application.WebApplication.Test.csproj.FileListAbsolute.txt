@@ -1,6 +1,7 @@
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\ClinicalTrail.Application.WebApplication.Test.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\ClinicalTrail.Application.WebApplication.Test.pdb
-D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\obj\Debug\ClinicalTrail.Application.WebApplication.Test.dll
-D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\obj\Debug\ClinicalTrail.Application.WebApplication.Test.pdb
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\NLog.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\NLog.xml
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\obj\Debug\ClinicalTrail.Application.WebApplication.Test.csprojResolveAssemblyReference.cache
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\obj\Debug\ClinicalTrail.Application.WebApplication.Test.dll
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\obj\Debug\ClinicalTrail.Application.WebApplication.Test.pdb

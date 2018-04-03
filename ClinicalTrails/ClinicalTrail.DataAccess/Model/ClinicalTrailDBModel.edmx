@@ -31,6 +31,22 @@
           <Property Name="Payee Name" Type="varchar" MaxLength="100" />
           <Property Name="Bank Account Number" Type="varchar" MaxLength="100" />
         </EntityType>
+        <EntityType Name="CityMaster">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="StateID" Type="int" />
+        </EntityType>
+        <EntityType Name="CountryMaster">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="CountryCode" Type="varchar" MaxLength="5" />
+        </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'ClinicalTrials.dbo.InvestigatorMaster' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="InvestigatorMaster">
@@ -77,6 +93,14 @@ warning 6002: The table/view 'ClinicalTrials.dbo.InvestigatorMaster' does not ha
           <Property Name="Payee Name" Type="nvarchar" MaxLength="100" />
           <Property Name="Bank Account Number" Type="nvarchar" MaxLength="100" />
         </EntityType>
+        <EntityType Name="StateMaster">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="CountryID" Type="int" />
+        </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'ClinicalTrials.dbo.VendorMaster' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="VendorMaster">
@@ -113,8 +137,23 @@ warning 6002: The table/view 'ClinicalTrials.dbo.VendorMaster' does not have a p
           <Property Name="Payee Name" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="Bank Account Number" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
+        <Association Name="FK_StateMaster_CountryMaster">
+          <End Role="CountryMaster" Type="Self.CountryMaster" Multiplicity="0..1" />
+          <End Role="StateMaster" Type="Self.StateMaster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CountryMaster">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="StateMaster">
+              <PropertyRef Name="CountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="ClinicalTrialsDBModelContextStoreContainer">
           <EntitySet Name="CenterMaster" EntityType="Self.CenterMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CityMaster" EntityType="Self.CityMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CountryMaster" EntityType="Self.CountryMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StateMaster" EntityType="Self.StateMaster" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="InvestigatorMaster" EntityType="Self.InvestigatorMaster" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [InvestigatorMaster].[ID] AS [ID], 
@@ -167,6 +206,10 @@ warning 6002: The table/view 'ClinicalTrials.dbo.VendorMaster' does not have a p
     [VendorMaster].[Bank Account Number] AS [Bank Account Number]
     FROM [dbo].[VendorMaster] AS [VendorMaster]</DefiningQuery>
           </EntitySet>
+          <AssociationSet Name="FK_StateMaster_CountryMaster" Association="Self.FK_StateMaster_CountryMaster">
+            <End Role="CountryMaster" EntitySet="CountryMaster" />
+            <End Role="StateMaster" EntitySet="StateMaster" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -254,6 +297,13 @@ warning 6002: The table/view 'ClinicalTrials.dbo.VendorMaster' does not have a p
           <EntitySet Name="InvestigatorMasters" EntityType="Self.InvestigatorMaster" />
           <EntitySet Name="VendorMasters" EntityType="Self.VendorMaster" />
           <EntitySet Name="CenterMasters" EntityType="ClinicalTrialsDBModelContext.CenterMaster" />
+          <EntitySet Name="CityMasters" EntityType="ClinicalTrialsDBModelContext.CityMaster" />
+          <EntitySet Name="CountryMasters" EntityType="ClinicalTrialsDBModelContext.CountryMaster" />
+          <EntitySet Name="StateMasters" EntityType="ClinicalTrialsDBModelContext.StateMaster" />
+          <AssociationSet Name="FK_StateMaster_CountryMaster" Association="ClinicalTrialsDBModelContext.FK_StateMaster_CountryMaster">
+            <End Role="CountryMaster" EntitySet="CountryMasters" />
+            <End Role="StateMaster" EntitySet="StateMasters" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="CenterMaster">
           <Key>
@@ -281,6 +331,44 @@ warning 6002: The table/view 'ClinicalTrials.dbo.VendorMaster' does not have a p
           <Property Name="Payee_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Bank_Account_Number" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="CityMaster">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StateID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="CountryMaster">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CountryCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="StateMasters" Relationship="ClinicalTrialsDBModelContext.FK_StateMaster_CountryMaster" FromRole="CountryMaster" ToRole="StateMaster" />
+        </EntityType>
+        <EntityType Name="StateMaster">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CountryID" Type="Int32" />
+          <NavigationProperty Name="CountryMaster" Relationship="ClinicalTrialsDBModelContext.FK_StateMaster_CountryMaster" FromRole="StateMaster" ToRole="CountryMaster" />
+        </EntityType>
+        <Association Name="FK_StateMaster_CountryMaster">
+          <End Type="ClinicalTrialsDBModelContext.CountryMaster" Role="CountryMaster" Multiplicity="0..1" />
+          <End Type="ClinicalTrialsDBModelContext.StateMaster" Role="StateMaster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CountryMaster">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="StateMaster">
+              <PropertyRef Name="CountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -367,6 +455,33 @@ warning 6002: The table/view 'ClinicalTrials.dbo.VendorMaster' does not have a p
                 <ScalarProperty Name="Center_Type" ColumnName="Center Type" />
                 <ScalarProperty Name="Center_Name" ColumnName="Center Name" />
                 <ScalarProperty Name="Center_No" ColumnName="Center No" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CityMasters">
+            <EntityTypeMapping TypeName="ClinicalTrialsDBModelContext.CityMaster">
+              <MappingFragment StoreEntitySet="CityMaster">
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CountryMasters">
+            <EntityTypeMapping TypeName="ClinicalTrialsDBModelContext.CountryMaster">
+              <MappingFragment StoreEntitySet="CountryMaster">
+                <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StateMasters">
+            <EntityTypeMapping TypeName="ClinicalTrialsDBModelContext.StateMaster">
+              <MappingFragment StoreEntitySet="StateMaster">
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

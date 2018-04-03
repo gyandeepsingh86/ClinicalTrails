@@ -25,5 +25,10 @@ namespace ClinicalTrail.Application.WebApplication.Manager
         {
             _centermanager.Add(CenterMasterModelMapper.Map(centermastermodel));
          }
+
+        internal CenterMasterModel GetCenterManager(int CentNo)
+        {
+            return CenterMasterModelMapper.Map(_centermanager.GetCenterManager(CentNo));
+        }
     }
 }

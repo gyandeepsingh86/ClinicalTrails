@@ -20,7 +20,7 @@ namespace ClinicalTrail.Business.Mappers
             return to.ToList();
         }
 
-        private static CenterMasterDto Map(CenterMaster source)
+        internal static CenterMasterDto Map(CenterMaster source)
         {
             var to = new CenterMasterDto();
 
@@ -75,6 +75,13 @@ namespace ClinicalTrail.Business.Mappers
             to.Street_Address = source.Street_Address;
             to.Website = source.Website;
 
+            return to;
+        }
+
+        internal static CenterMasterDto Map(int CentNo)
+        {
+            var to = new CenterMasterDto();
+            to.Center_No = CentNo;
             return to;
         }
     }

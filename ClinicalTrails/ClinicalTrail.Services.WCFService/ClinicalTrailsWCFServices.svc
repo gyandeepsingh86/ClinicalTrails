@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="ClinicalTrail.Services.ServiceImplementation.ClinicalTrailsWCFServices" CodeBehind="ClinicalTrail.Services.ServiceImplementation.ClinicalTrailsWCFServices" %>

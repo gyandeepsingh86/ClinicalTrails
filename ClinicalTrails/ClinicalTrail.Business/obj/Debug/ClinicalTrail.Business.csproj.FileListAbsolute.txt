@@ -1,9 +1,6 @@
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\bin\Debug\ClinicalTrail.Business.dll.config
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\bin\Debug\ClinicalTrail.Business.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\bin\Debug\ClinicalTrail.Business.pdb
-D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\obj\Debug\ClinicalTrail.Business.dll
-D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\obj\Debug\ClinicalTrail.Business.pdb
-D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\obj\Debug\ClinicalTrail.Business.csprojResolveAssemblyReference.cache
-D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\bin\Debug\ClinicalTrail.Business.dll.config
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\bin\Debug\AtlasCopco.Framework.Objects.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\bin\Debug\ClinicalTrail.DataAccess.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\bin\Debug\ClinicalTrail.GeneralObjectStore.dll
@@ -22,11 +19,12 @@ D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\bin\Debug\Clinic
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\bin\Debug\AtlasCopco.Framework.Objects.pdb
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\bin\Debug\EntityFramework.xml
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\bin\Debug\EntityFramework.SqlServer.xml
-D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.xml
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\bin\Debug\Microsoft.Practices.ServiceLocation.xml
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\bin\Debug\Microsoft.Practices.Unity.xml
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
-D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\bin\Debug\Microsoft.Practices.Unity.Interception.xml
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\bin\Debug\NLog.xml
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\obj\Debug\ClinicalTrail.Business.csprojResolveAssemblyReference.cache
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\obj\Debug\ClinicalTrail.Business.dll
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Business\obj\Debug\ClinicalTrail.Business.pdb

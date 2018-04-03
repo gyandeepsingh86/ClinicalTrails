@@ -35,6 +35,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +45,11 @@
   <ItemGroup>
     <Compile Include="EnumResources.Designer.cs" />
     <Compile Include="Errors.Designer.cs" />
+    <Compile Include="Exceptions\ClientException.cs" />
+    <Compile Include="Exceptions\ClientExceptionCodes.cs" />
+    <Compile Include="Extensions\ControlClearing.cs" />
+    <Compile Include="Extensions\QueryableExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="GlobalResources.Designer.cs" />
     <Compile Include="Logger\IAmLoggable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

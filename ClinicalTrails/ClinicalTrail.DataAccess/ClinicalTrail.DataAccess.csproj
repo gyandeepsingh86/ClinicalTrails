@@ -56,6 +56,9 @@
     <Compile Include="Model\CenterMaster.cs">
       <DependentUpon>ClinicalTrailDBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\CityMaster.cs">
+      <DependentUpon>ClinicalTrailDBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\ClinicalTrailDBModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -71,7 +74,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ClinicalTrailDBModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Model\CountryMaster.cs">
+      <DependentUpon>ClinicalTrailDBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\InvestigatorMaster.cs">
+      <DependentUpon>ClinicalTrailDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\StateMaster.cs">
       <DependentUpon>ClinicalTrailDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\VendorMaster.cs">

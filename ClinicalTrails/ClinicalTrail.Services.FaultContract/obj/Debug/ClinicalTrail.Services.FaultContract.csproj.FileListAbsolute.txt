@@ -1,0 +1,4 @@
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.FaultContract\bin\Debug\ClinicalTrail.Services.FaultContract.dll
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.FaultContract\bin\Debug\ClinicalTrail.Services.FaultContract.pdb
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.FaultContract\obj\Debug\ClinicalTrail.Services.FaultContract.dll
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.FaultContract\obj\Debug\ClinicalTrail.Services.FaultContract.pdb

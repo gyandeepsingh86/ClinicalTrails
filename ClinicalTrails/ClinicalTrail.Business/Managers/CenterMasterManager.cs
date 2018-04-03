@@ -27,5 +27,10 @@ namespace ClinicalTrail.Business.Managers
         {
             _centermasterfactory.AddCenterManager(CenterMasterMapper.Map(centermanagerlist));
         }
+
+        public CenterMasterDto GetCenterManager(int CentNo)
+        {
+            return CenterMasterMapper.Map(_centermasterfactory.GetCenterManager(CentNo));
+        }
     }
 }

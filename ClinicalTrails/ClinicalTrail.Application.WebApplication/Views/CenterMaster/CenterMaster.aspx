@@ -2,17 +2,36 @@
     Inherits="ClinicalTrail.Application.WebApplication.Views.CenterMaster.CenterMaster" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
-
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <%--<asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
+        <ProgressTemplate>
+            <div class="modal">
+                <div class="center">
+                    <img alt="" src="loader.gif" />
+                </div>
+            </div>
+        </ProgressTemplate>
+    </asp:UpdateProgress>--%>
     <div class="container">
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <asp:Label ID="lblCeneterMasterTitle" runat="server" Text="Please Enter The Center Master Details"></asp:Label>
+            </div>
+            <div class="row" id="divCenterNumberTab" runat="server" visible="false">
+                <div class="column15">
+                    <asp:Label ID="lblMode" runat="server" CssClass="label left" Text="Mode"></asp:Label>
+                </div>
+                <div class="column30">
+                    <asp:TextBox ID="txtMode" runat="server" CssClass="form-control text-left fulllength" Enabled="false"></asp:TextBox>
+                </div>
+
+                <div class="column15">
+                    <asp:Label ID="lblCenterNo" runat="server" CssClass="label left" Text="Center Number"></asp:Label>
+                </div>
+                <div class="column30">
+                    <asp:TextBox ID="txtCenterNumber" runat="server" CssClass="form-control text-left fulllength"></asp:TextBox>
+                </div>
             </div>
             <div class="row">
                 <div class="column15">
@@ -168,6 +187,7 @@
                 <div class="column100">
                     <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-info" OnClick="btnCancel_Click" />
                     <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-info" OnClick="btnSave_Click" />
+                    <asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn btn-info" OnClick="btnUpdate_Click" Visible="false" />
                     <%--<input type="submit" class="btn btn-info" value="Cancel">
                     <input type="submit" class="btn btn-info" value="Save">--%>
                 </div>
@@ -210,17 +230,16 @@
                 <div class="column100">
                     <div class="col-lg-6 col-sm-6 col-12">
                         <div class="input-group">
+                            <input type="text" class="form-control">
                             <label class="input-group-btn">
-                                <span class="btn btn-primary">Browse&hellip;
-                                    <input type="file" style="display: none;" multiple>
+                                <span class="btn btn-primary">
+                                    <asp:Button ID="file" runat="server" Text="Browse" />
                                 </span>
                             </label>
-                            <input type="text" class="form-control">
                         </div>
                     </div>
                     <div class="col-lg-6 col-sm-6 col-12">
                         <asp:Button ID="btnUpload" runat="server" Text="Upload" CssClass="btn btn-info" OnClick="btnUpload_Click" />
-                        <%--<input type="submit" class="btn btn-info" value="Upload">--%>
                     </div>
                 </div>
             </div>
@@ -237,64 +256,62 @@
                         <Columns>
                             <asp:TemplateField HeaderText="Center No">
                                 <ItemTemplate>
-                                    <asp:Label ID="lblCenterNo" runat="server"
+                                    <asp:Label ID="grvlblCenterNo" runat="server"
                                         Text='<%#Eval("Center_No")%>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Center Name">
                                 <ItemTemplate>
-                                    <asp:Label ID="lblCenterName" runat="server"
+                                    <asp:Label ID="grvlblCenterName" runat="server"
                                         Text='<%#Eval("Center_Name")%>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Center Type">
                                 <ItemTemplate>
-                                    <asp:Label ID="lblCenterType" runat="server"
+                                    <asp:Label ID="grvlblCenterType" runat="server"
                                         Text='<%#Eval("Center_Type")%>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Street Address">
                                 <ItemTemplate>
-                                    <asp:Label ID="lblStreetAddress" runat="server"
+                                    <asp:Label ID="grvlblStreetAddress" runat="server"
                                         Text='<%#Eval("Street_Address")%>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Specialties">
                                 <ItemTemplate>
-                                    <asp:Label ID="lblSpecialties" runat="server"
+                                    <asp:Label ID="grvlblSpecialties" runat="server"
                                         Text='<%#Eval("Specialties")%>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Mobile">
                                 <ItemTemplate>
-                                    <asp:Label ID="lblMobilePhone" runat="server"
+                                    <asp:Label ID="grvlblMobilePhone" runat="server"
                                         Text='<%#Eval("Mobile_Phone")%>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Email">
                                 <ItemTemplate>
-                                    <asp:Label ID="lblEmail" runat="server"
+                                    <asp:Label ID="grvlblEmail" runat="server"
                                         Text='<%#Eval("Email")%>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Equipments">
                                 <ItemTemplate>
-                                    <asp:Label ID="lblEquipments" runat="server"
+                                    <asp:Label ID="grvlblEquipments" runat="server"
                                         Text='<%#Eval("Equipments")%>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <%--<asp:TemplateField  HeaderText="Payee Name">
-                                <ItemTemplate>
-                                    <asp:Label ID="lblID" runat="server"
-                                        Text='<%#Eval("Payee_Name")%>'></asp:Label>
-                                </ItemTemplate>
-                            </asp:TemplateField>--%>
                             <asp:TemplateField HeaderText="Action">
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="btnEdit" runat="server" ToolTip="Edit" CommandName="Edit"><span class="icon-edit"></asp:LinkButton>
-                                    <asp:LinkButton ID="btnUpdate" runat="server" Visible="false" ToolTip="Update" CommandName="Update"><span class="icon-save"></asp:LinkButton>
-                                    <asp:LinkButton ID="btnDelete" runat="server" ToolTip="Delete" CommandName="Delete"><span class="icon-trash"></asp:LinkButton>
-                                    <asp:LinkButton ID="btnCancel" runat="server" Visible="false" ToolTip="Cancel" CommandName="Cancle"><span class="icon-remove"></asp:LinkButton>
+                                    <asp:LinkButton ID="btnEdit" runat="server" ToolTip="Edit" CommandName="Edit" CommandArgument='<%#Eval("Center_No")%>'>
+                                        <span class="icon-edit"></asp:LinkButton>
+                                    <asp:LinkButton ID="btnUpdate" runat="server" Visible="false" ToolTip="Update" CommandName="Update">
+                                        <span class="icon-save"></asp:LinkButton>
+                                    <asp:LinkButton ID="btnDelete" runat="server" ToolTip="Delete" CommandName="Delete" CommandArgument='<%#Eval("Center_No")%>' OnClientClick="return confirm('Are you sure you?');">
+                                        <span class="icon-trash" ></asp:LinkButton>
+                                    <asp:LinkButton ID="btnCancel" runat="server" Visible="false" ToolTip="Cancel" CommandName="Cancle">
+                                        <span class="icon-remove"></asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>

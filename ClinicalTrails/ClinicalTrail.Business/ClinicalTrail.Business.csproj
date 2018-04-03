@@ -79,6 +79,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataContract\CenterMasterDto.cs" />
+    <Compile Include="DataContract\CityMasterDto.cs" />
+    <Compile Include="DataContract\CountryMasterDto.cs" />
+    <Compile Include="DataContract\StateMasterDto.cs" />
     <Compile Include="Managers\CenterMasterManager.cs" />
     <Compile Include="Managers\Manager.cs" />
     <Compile Include="Mappers\CenterMasterMapper.cs" />

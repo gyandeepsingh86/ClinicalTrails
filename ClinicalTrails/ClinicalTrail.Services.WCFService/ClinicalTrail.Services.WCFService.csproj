@@ -59,18 +59,41 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Service1.svc" />
+    <Content Include="ClinicalTrailsWCFServices.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Service1.svc.cs">
-      <DependentUpon>Service1.svc</DependentUpon>
-    </Compile>
-    <Compile Include="IService1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <ProjectReference Include="..\ClinicalTrail.Business\ClinicalTrail.Business.csproj">
+      <Project>{402dc0b5-1edd-45ef-98f2-67cf8ed893fe}</Project>
+      <Name>ClinicalTrail.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClinicalTrail.DataAccess\ClinicalTrail.DataAccess.csproj">
+      <Project>{d2b2d7be-0901-4290-8652-1ede4f40841d}</Project>
+      <Name>ClinicalTrail.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClinicalTrail.GeneralObjectStore\ClinicalTrail.GeneralObjectStore.csproj">
+      <Project>{e91dcf10-4e52-496b-87b3-6e2463de713d}</Project>
+      <Name>ClinicalTrail.GeneralObjectStore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClinicalTrail.Services.FaultContract\ClinicalTrail.Services.FaultContract.csproj">
+      <Project>{460d93b0-9c47-43b1-bc0b-1f4118c887fe}</Project>
+      <Name>ClinicalTrail.Services.FaultContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClinicalTrail.Services.MessageContract\ClinicalTrail.Services.MessageContracts.csproj">
+      <Project>{e9ebc0e5-e26f-41ad-a78c-8020901b60a4}</Project>
+      <Name>ClinicalTrail.Services.MessageContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClinicalTrail.Services.ServiceContract\ClinicalTrail.Services.ServiceContracts.csproj">
+      <Project>{99aa1b5c-e256-4ed9-89ab-4ed2075a5df7}</Project>
+      <Name>ClinicalTrail.Services.ServiceContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClinicalTrail.Services.ServiceImplementation\ClinicalTrail.Services.ServiceImplementation.csproj">
+      <Project>{d5c3e687-6129-4259-b17b-6087032e1a2a}</Project>
+      <Name>ClinicalTrail.Services.ServiceImplementation</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">
