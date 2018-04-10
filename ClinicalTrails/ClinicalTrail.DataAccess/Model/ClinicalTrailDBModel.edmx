@@ -5,6 +5,13 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="ClinicalTrialsDBModelContext.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AddressType">
+          <Key>
+            <PropertyRef Name="AddressTypeID" />
+          </Key>
+          <Property Name="AddressTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AddressTypeName" Type="nvarchar" MaxLength="20" />
+        </EntityType>
         <EntityType Name="CenterMaster">
           <Key>
             <PropertyRef Name="Center No" />
@@ -30,6 +37,7 @@
           <Property Name="Investigator 3" Type="varchar" MaxLength="100" />
           <Property Name="Payee Name" Type="varchar" MaxLength="100" />
           <Property Name="Bank Account Number" Type="varchar" MaxLength="100" />
+          <Property Name="IsActive" Type="bit" />
         </EntityType>
         <EntityType Name="CityMaster">
           <Key>
@@ -47,24 +55,9 @@
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
           <Property Name="CountryCode" Type="varchar" MaxLength="5" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'ClinicalTrials.dbo.InvestigatorMaster' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="InvestigatorMaster">
           <Key>
             <PropertyRef Name="ID" />
-            <PropertyRef Name="Title" />
-            <PropertyRef Name="Investigator First Name" />
-            <PropertyRef Name="Investigator Last Name" />
-            <PropertyRef Name="Degree" />
-            <PropertyRef Name="Address Type" />
-            <PropertyRef Name="Street Address" />
-            <PropertyRef Name="City" />
-            <PropertyRef Name="State" />
-            <PropertyRef Name="Country" />
-            <PropertyRef Name="Post Code" />
-            <PropertyRef Name="Office Phone" />
-            <PropertyRef Name="Mobile Phone" />
-            <PropertyRef Name="Email ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
@@ -72,7 +65,7 @@ warning 6002: The table/view 'ClinicalTrials.dbo.InvestigatorMaster' does not ha
           <Property Name="Investigator Middle Name" Type="nvarchar" MaxLength="100" />
           <Property Name="Investigator Last Name" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Degree" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="Address Type" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Address Type" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Institute Name" Type="nvarchar" MaxLength="100" />
           <Property Name="Street Address" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="City" Type="nvarchar" MaxLength="100" Nullable="false" />
@@ -92,6 +85,7 @@ warning 6002: The table/view 'ClinicalTrials.dbo.InvestigatorMaster' does not ha
           <Property Name="Centre 3" Type="nvarchar" MaxLength="100" />
           <Property Name="Payee Name" Type="nvarchar" MaxLength="100" />
           <Property Name="Bank Account Number" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsActive" Type="bit" />
         </EntityType>
         <EntityType Name="StateMaster">
           <Key>
@@ -100,6 +94,26 @@ warning 6002: The table/view 'ClinicalTrials.dbo.InvestigatorMaster' does not ha
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
           <Property Name="CountryID" Type="int" />
+        </EntityType>
+        <EntityType Name="UserMaster">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="5" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="First Name" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="Middle Name" Type="nvarchar" MaxLength="20" />
+          <Property Name="Last Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DOB" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="Joining Date" Type="datetime" Nullable="false" />
+          <Property Name="Address ID" Type="int" Nullable="false" />
+          <Property Name="Contact ID" Type="int" Nullable="false" />
+          <Property Name="Last Login Time" Type="datetime" Nullable="false" />
+          <Property Name="IsLoggedOut" Type="bit" Nullable="false" />
+          <Property Name="UserType" Type="nvarchar" MaxLength="1" />
+          <Property Name="UserPageAccess" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'ClinicalTrials.dbo.VendorMaster' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -137,6 +151,18 @@ warning 6002: The table/view 'ClinicalTrials.dbo.VendorMaster' does not have a p
           <Property Name="Payee Name" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="Bank Account Number" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
+        <Association Name="FK_InvestigatorMaster_InvestigatorMaster">
+          <End Role="InvestigatorMaster" Type="Self.InvestigatorMaster" Multiplicity="1" />
+          <End Role="InvestigatorMaster1" Type="Self.InvestigatorMaster" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="InvestigatorMaster">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="InvestigatorMaster1">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_StateMaster_CountryMaster">
           <End Role="CountryMaster" Type="Self.CountryMaster" Multiplicity="0..1" />
           <End Role="StateMaster" Type="Self.StateMaster" Multiplicity="*" />
@@ -150,40 +176,13 @@ warning 6002: The table/view 'ClinicalTrials.dbo.VendorMaster' does not have a p
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="ClinicalTrialsDBModelContextStoreContainer">
+          <EntitySet Name="AddressType" EntityType="Self.AddressType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CenterMaster" EntityType="Self.CenterMaster" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CityMaster" EntityType="Self.CityMaster" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CountryMaster" EntityType="Self.CountryMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InvestigatorMaster" EntityType="Self.InvestigatorMaster" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StateMaster" EntityType="Self.StateMaster" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="InvestigatorMaster" EntityType="Self.InvestigatorMaster" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [InvestigatorMaster].[ID] AS [ID], 
-    [InvestigatorMaster].[Title] AS [Title], 
-    [InvestigatorMaster].[Investigator First Name] AS [Investigator First Name], 
-    [InvestigatorMaster].[Investigator Middle Name] AS [Investigator Middle Name], 
-    [InvestigatorMaster].[Investigator Last Name] AS [Investigator Last Name], 
-    [InvestigatorMaster].[Degree] AS [Degree], 
-    [InvestigatorMaster].[Address Type] AS [Address Type], 
-    [InvestigatorMaster].[Institute Name] AS [Institute Name], 
-    [InvestigatorMaster].[Street Address] AS [Street Address], 
-    [InvestigatorMaster].[City] AS [City], 
-    [InvestigatorMaster].[State] AS [State], 
-    [InvestigatorMaster].[Country] AS [Country], 
-    [InvestigatorMaster].[Post Code] AS [Post Code], 
-    [InvestigatorMaster].[Office Phone] AS [Office Phone], 
-    [InvestigatorMaster].[Mobile Phone] AS [Mobile Phone], 
-    [InvestigatorMaster].[Fax No.] AS [Fax No.], 
-    [InvestigatorMaster].[Email ID] AS [Email ID], 
-    [InvestigatorMaster].[Primary Email] AS [Primary Email], 
-    [InvestigatorMaster].[Secondary Email ID] AS [Secondary Email ID], 
-    [InvestigatorMaster].[Certification] AS [Certification], 
-    [InvestigatorMaster].[Speciality] AS [Speciality], 
-    [InvestigatorMaster].[Centre 1] AS [Centre 1], 
-    [InvestigatorMaster].[Centre 2] AS [Centre 2], 
-    [InvestigatorMaster].[Centre 3] AS [Centre 3], 
-    [InvestigatorMaster].[Payee Name] AS [Payee Name], 
-    [InvestigatorMaster].[Bank Account Number] AS [Bank Account Number]
-    FROM [dbo].[InvestigatorMaster] AS [InvestigatorMaster]</DefiningQuery>
-          </EntitySet>
+          <EntitySet Name="UserMaster" EntityType="Self.UserMaster" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VendorMaster" EntityType="Self.VendorMaster" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [VendorMaster].[Center No] AS [Center No], 
@@ -206,6 +205,10 @@ warning 6002: The table/view 'ClinicalTrials.dbo.VendorMaster' does not have a p
     [VendorMaster].[Bank Account Number] AS [Bank Account Number]
     FROM [dbo].[VendorMaster] AS [VendorMaster]</DefiningQuery>
           </EntitySet>
+          <AssociationSet Name="FK_InvestigatorMaster_InvestigatorMaster" Association="Self.FK_InvestigatorMaster_InvestigatorMaster">
+            <End Role="InvestigatorMaster" EntitySet="InvestigatorMaster" />
+            <End Role="InvestigatorMaster1" EntitySet="InvestigatorMaster" />
+          </AssociationSet>
           <AssociationSet Name="FK_StateMaster_CountryMaster" Association="Self.FK_StateMaster_CountryMaster">
             <End Role="CountryMaster" EntitySet="CountryMaster" />
             <End Role="StateMaster" EntitySet="StateMaster" />
@@ -215,50 +218,6 @@ warning 6002: The table/view 'ClinicalTrials.dbo.VendorMaster' does not have a p
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ClinicalTrialsDBModelContext" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="InvestigatorMaster">
-          <Key>
-            <PropertyRef Name="ID" />
-            <PropertyRef Name="Title" />
-            <PropertyRef Name="Investigator_First_Name" />
-            <PropertyRef Name="Investigator_Last_Name" />
-            <PropertyRef Name="Degree" />
-            <PropertyRef Name="Address_Type" />
-            <PropertyRef Name="Street_Address" />
-            <PropertyRef Name="City" />
-            <PropertyRef Name="State" />
-            <PropertyRef Name="Country" />
-            <PropertyRef Name="Post_Code" />
-            <PropertyRef Name="Office_Phone" />
-            <PropertyRef Name="Mobile_Phone" />
-            <PropertyRef Name="Email_ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Investigator_First_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Investigator_Middle_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Investigator_Last_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Degree" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Address_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Institute_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Street_Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="City" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="State" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Country" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Post_Code" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Office_Phone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Mobile_Phone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Fax_No_" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Email_ID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Primary_Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Secondary_Email_ID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Certification" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Speciality" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Centre_1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Centre_2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Centre_3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Payee_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Bank_Account_Number" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityType Name="VendorMaster">
           <Key>
             <PropertyRef Name="Center_No" />
@@ -294,9 +253,7 @@ warning 6002: The table/view 'ClinicalTrials.dbo.VendorMaster' does not have a p
           <Property Name="Bank_Account_Number" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityContainer Name="ClinicalTrialsDBEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="InvestigatorMasters" EntityType="Self.InvestigatorMaster" />
           <EntitySet Name="VendorMasters" EntityType="Self.VendorMaster" />
-          <EntitySet Name="CenterMasters" EntityType="ClinicalTrialsDBModelContext.CenterMaster" />
           <EntitySet Name="CityMasters" EntityType="ClinicalTrialsDBModelContext.CityMaster" />
           <EntitySet Name="CountryMasters" EntityType="ClinicalTrialsDBModelContext.CountryMaster" />
           <EntitySet Name="StateMasters" EntityType="ClinicalTrialsDBModelContext.StateMaster" />
@@ -304,33 +261,15 @@ warning 6002: The table/view 'ClinicalTrials.dbo.VendorMaster' does not have a p
             <End Role="CountryMaster" EntitySet="CountryMasters" />
             <End Role="StateMaster" EntitySet="StateMasters" />
           </AssociationSet>
+          <EntitySet Name="UserMasters" EntityType="ClinicalTrialsDBModelContext.UserMaster" />
+          <EntitySet Name="AddressTypes" EntityType="ClinicalTrialsDBModelContext.AddressType" />
+          <EntitySet Name="CenterMasters" EntityType="ClinicalTrialsDBModelContext.CenterMaster" />
+          <EntitySet Name="InvestigatorMasters" EntityType="ClinicalTrialsDBModelContext.InvestigatorMaster" />
+          <AssociationSet Name="FK_InvestigatorMaster_InvestigatorMaster" Association="ClinicalTrialsDBModelContext.FK_InvestigatorMaster_InvestigatorMaster">
+            <End Role="InvestigatorMaster" EntitySet="InvestigatorMasters" />
+            <End Role="InvestigatorMaster1" EntitySet="InvestigatorMasters" />
+          </AssociationSet>          
         </EntityContainer>
-        <EntityType Name="CenterMaster">
-          <Key>
-            <PropertyRef Name="Center_No" />
-          </Key>
-          <Property Name="Center_No" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Center_Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Center_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Street_Address" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="City" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="State" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Country" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Post_code" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Specialties" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Office_Phone" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Mobile_Phone" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Primary_Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Secondary_Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Website" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Equipments" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Investigator_1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Investigator_2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Investigator_3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Payee_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Bank_Account_Number" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-        </EntityType>
         <EntityType Name="CityMaster">
           <Key>
             <PropertyRef Name="ID" />
@@ -369,44 +308,112 @@ warning 6002: The table/view 'ClinicalTrials.dbo.VendorMaster' does not have a p
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="UserMaster">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="First_Name" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Middle_Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Last_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DOB" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Joining_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Address_ID" Type="Int32" Nullable="false" />
+          <Property Name="Contact_ID" Type="Int32" Nullable="false" />
+          <Property Name="Last_Login_Time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsLoggedOut" Type="Boolean" Nullable="false" />
+          <Property Name="UserType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="UserPageAccess" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AddressType">
+          <Key>
+            <PropertyRef Name="AddressTypeID" />
+          </Key>
+          <Property Name="AddressTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AddressTypeName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CenterMaster">
+          <Key>
+            <PropertyRef Name="Center_No" />
+          </Key>
+          <Property Name="Center_No" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Center_Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Center_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Street_Address" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="State" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Country" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Post_code" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Specialties" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Office_Phone" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Mobile_Phone" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Primary_Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Secondary_Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Website" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Equipments" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Investigator_1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Investigator_2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Investigator_3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Payee_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Bank_Account_Number" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IsActive" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="InvestigatorMaster">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Investigator_First_Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Investigator_Middle_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Investigator_Last_Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Degree" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Address_Type" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Institute_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Street_Address" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Post_Code" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Office_Phone" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile_Phone" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Fax_No" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Email_ID" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Primary_Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Secondary_Email_ID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Certification" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Speciality" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Centre_1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Centre_2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Centre_3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Payee_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Bank_Account_Number" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <NavigationProperty Name="InvestigatorMaster1" Relationship="ClinicalTrialsDBModelContext.FK_InvestigatorMaster_InvestigatorMaster" FromRole="InvestigatorMaster" ToRole="InvestigatorMaster1" />
+          <NavigationProperty Name="InvestigatorMaster2" Relationship="ClinicalTrialsDBModelContext.FK_InvestigatorMaster_InvestigatorMaster" FromRole="InvestigatorMaster1" ToRole="InvestigatorMaster" />
+        </EntityType>
+        <Association Name="FK_InvestigatorMaster_InvestigatorMaster">
+          <End Type="ClinicalTrialsDBModelContext.InvestigatorMaster" Role="InvestigatorMaster" Multiplicity="1" />
+          <End Type="ClinicalTrialsDBModelContext.InvestigatorMaster" Role="InvestigatorMaster1" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="InvestigatorMaster">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="InvestigatorMaster1">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="ClinicalTrialsDBModelContextStoreContainer" CdmEntityContainer="ClinicalTrialsDBEntities">
-          <EntitySetMapping Name="InvestigatorMasters">
-            <EntityTypeMapping TypeName="ClinicalTrialsDBModelContext.InvestigatorMaster">
-              <MappingFragment StoreEntitySet="InvestigatorMaster">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="Investigator_First_Name" ColumnName="Investigator First Name" />
-                <ScalarProperty Name="Investigator_Middle_Name" ColumnName="Investigator Middle Name" />
-                <ScalarProperty Name="Investigator_Last_Name" ColumnName="Investigator Last Name" />
-                <ScalarProperty Name="Degree" ColumnName="Degree" />
-                <ScalarProperty Name="Address_Type" ColumnName="Address Type" />
-                <ScalarProperty Name="Institute_Name" ColumnName="Institute Name" />
-                <ScalarProperty Name="Street_Address" ColumnName="Street Address" />
-                <ScalarProperty Name="City" ColumnName="City" />
-                <ScalarProperty Name="State" ColumnName="State" />
-                <ScalarProperty Name="Country" ColumnName="Country" />
-                <ScalarProperty Name="Post_Code" ColumnName="Post Code" />
-                <ScalarProperty Name="Office_Phone" ColumnName="Office Phone" />
-                <ScalarProperty Name="Mobile_Phone" ColumnName="Mobile Phone" />
-                <ScalarProperty Name="Fax_No_" ColumnName="Fax No." />
-                <ScalarProperty Name="Email_ID" ColumnName="Email ID" />
-                <ScalarProperty Name="Primary_Email" ColumnName="Primary Email" />
-                <ScalarProperty Name="Secondary_Email_ID" ColumnName="Secondary Email ID" />
-                <ScalarProperty Name="Certification" ColumnName="Certification" />
-                <ScalarProperty Name="Speciality" ColumnName="Speciality" />
-                <ScalarProperty Name="Centre_1" ColumnName="Centre 1" />
-                <ScalarProperty Name="Centre_2" ColumnName="Centre 2" />
-                <ScalarProperty Name="Centre_3" ColumnName="Centre 3" />
-                <ScalarProperty Name="Payee_Name" ColumnName="Payee Name" />
-                <ScalarProperty Name="Bank_Account_Number" ColumnName="Bank Account Number" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="VendorMasters">
             <EntityTypeMapping TypeName="ClinicalTrialsDBModelContext.VendorMaster">
               <MappingFragment StoreEntitySet="VendorMaster">
@@ -428,33 +435,6 @@ warning 6002: The table/view 'ClinicalTrials.dbo.VendorMaster' does not have a p
                 <ScalarProperty Name="Equipments" ColumnName="Equipments" />
                 <ScalarProperty Name="Payee_Name" ColumnName="Payee Name" />
                 <ScalarProperty Name="Bank_Account_Number" ColumnName="Bank Account Number" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="CenterMasters">
-            <EntityTypeMapping TypeName="ClinicalTrialsDBModelContext.CenterMaster">
-              <MappingFragment StoreEntitySet="CenterMaster">
-                <ScalarProperty Name="Bank_Account_Number" ColumnName="Bank Account Number" />
-                <ScalarProperty Name="Payee_Name" ColumnName="Payee Name" />
-                <ScalarProperty Name="Investigator_3" ColumnName="Investigator 3" />
-                <ScalarProperty Name="Investigator_2" ColumnName="Investigator 2" />
-                <ScalarProperty Name="Investigator_1" ColumnName="Investigator 1" />
-                <ScalarProperty Name="Equipments" ColumnName="Equipments" />
-                <ScalarProperty Name="Website" ColumnName="Website" />
-                <ScalarProperty Name="Secondary_Email" ColumnName="Secondary Email" />
-                <ScalarProperty Name="Primary_Email" ColumnName="Primary Email" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Mobile_Phone" ColumnName="Mobile Phone" />
-                <ScalarProperty Name="Office_Phone" ColumnName="Office Phone" />
-                <ScalarProperty Name="Specialties" ColumnName="Specialties" />
-                <ScalarProperty Name="Post_code" ColumnName="Post code" />
-                <ScalarProperty Name="Country" ColumnName="Country" />
-                <ScalarProperty Name="State" ColumnName="State" />
-                <ScalarProperty Name="City" ColumnName="City" />
-                <ScalarProperty Name="Street_Address" ColumnName="Street Address" />
-                <ScalarProperty Name="Center_Type" ColumnName="Center Type" />
-                <ScalarProperty Name="Center_Name" ColumnName="Center Name" />
-                <ScalarProperty Name="Center_No" ColumnName="Center No" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -481,6 +461,96 @@ warning 6002: The table/view 'ClinicalTrials.dbo.VendorMaster' does not have a p
               <MappingFragment StoreEntitySet="StateMaster">
                 <ScalarProperty Name="CountryID" ColumnName="CountryID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserMasters">
+            <EntityTypeMapping TypeName="ClinicalTrialsDBModelContext.UserMaster">
+              <MappingFragment StoreEntitySet="UserMaster">
+                <ScalarProperty Name="UserPageAccess" ColumnName="UserPageAccess" />
+                <ScalarProperty Name="UserType" ColumnName="UserType" />
+                <ScalarProperty Name="IsLoggedOut" ColumnName="IsLoggedOut" />
+                <ScalarProperty Name="Last_Login_Time" ColumnName="Last Login Time" />
+                <ScalarProperty Name="Contact_ID" ColumnName="Contact ID" />
+                <ScalarProperty Name="Address_ID" ColumnName="Address ID" />
+                <ScalarProperty Name="Joining_Date" ColumnName="Joining Date" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last Name" />
+                <ScalarProperty Name="Middle_Name" ColumnName="Middle Name" />
+                <ScalarProperty Name="First_Name" ColumnName="First Name" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AddressTypes">
+            <EntityTypeMapping TypeName="ClinicalTrialsDBModelContext.AddressType">
+              <MappingFragment StoreEntitySet="AddressType">
+                <ScalarProperty Name="AddressTypeName" ColumnName="AddressTypeName" />
+                <ScalarProperty Name="AddressTypeID" ColumnName="AddressTypeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CenterMasters">
+            <EntityTypeMapping TypeName="ClinicalTrialsDBModelContext.CenterMaster">
+              <MappingFragment StoreEntitySet="CenterMaster">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Bank_Account_Number" ColumnName="Bank Account Number" />
+                <ScalarProperty Name="Payee_Name" ColumnName="Payee Name" />
+                <ScalarProperty Name="Investigator_3" ColumnName="Investigator 3" />
+                <ScalarProperty Name="Investigator_2" ColumnName="Investigator 2" />
+                <ScalarProperty Name="Investigator_1" ColumnName="Investigator 1" />
+                <ScalarProperty Name="Equipments" ColumnName="Equipments" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="Secondary_Email" ColumnName="Secondary Email" />
+                <ScalarProperty Name="Primary_Email" ColumnName="Primary Email" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mobile_Phone" ColumnName="Mobile Phone" />
+                <ScalarProperty Name="Office_Phone" ColumnName="Office Phone" />
+                <ScalarProperty Name="Specialties" ColumnName="Specialties" />
+                <ScalarProperty Name="Post_code" ColumnName="Post code" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Street_Address" ColumnName="Street Address" />
+                <ScalarProperty Name="Center_Type" ColumnName="Center Type" />
+                <ScalarProperty Name="Center_Name" ColumnName="Center Name" />
+                <ScalarProperty Name="Center_No" ColumnName="Center No" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InvestigatorMasters">
+            <EntityTypeMapping TypeName="ClinicalTrialsDBModelContext.InvestigatorMaster">
+              <MappingFragment StoreEntitySet="InvestigatorMaster">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Bank_Account_Number" ColumnName="Bank Account Number" />
+                <ScalarProperty Name="Payee_Name" ColumnName="Payee Name" />
+                <ScalarProperty Name="Centre_3" ColumnName="Centre 3" />
+                <ScalarProperty Name="Centre_2" ColumnName="Centre 2" />
+                <ScalarProperty Name="Centre_1" ColumnName="Centre 1" />
+                <ScalarProperty Name="Speciality" ColumnName="Speciality" />
+                <ScalarProperty Name="Certification" ColumnName="Certification" />
+                <ScalarProperty Name="Secondary_Email_ID" ColumnName="Secondary Email ID" />
+                <ScalarProperty Name="Primary_Email" ColumnName="Primary Email" />
+                <ScalarProperty Name="Email_ID" ColumnName="Email ID" />
+                <ScalarProperty Name="Fax_No" ColumnName="Fax No." />
+                <ScalarProperty Name="Mobile_Phone" ColumnName="Mobile Phone" />
+                <ScalarProperty Name="Office_Phone" ColumnName="Office Phone" />
+                <ScalarProperty Name="Post_Code" ColumnName="Post Code" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Street_Address" ColumnName="Street Address" />
+                <ScalarProperty Name="Institute_Name" ColumnName="Institute Name" />
+                <ScalarProperty Name="Address_Type" ColumnName="Address Type" />
+                <ScalarProperty Name="Degree" ColumnName="Degree" />
+                <ScalarProperty Name="Investigator_Last_Name" ColumnName="Investigator Last Name" />
+                <ScalarProperty Name="Investigator_Middle_Name" ColumnName="Investigator Middle Name" />
+                <ScalarProperty Name="Investigator_First_Name" ColumnName="Investigator First Name" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

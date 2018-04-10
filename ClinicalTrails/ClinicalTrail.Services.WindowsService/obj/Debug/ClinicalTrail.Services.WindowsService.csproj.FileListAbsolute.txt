@@ -1,6 +1,6 @@
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WindowsService\bin\Debug\ClinicalTrail.Services.WindowsService.exe.config
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WindowsService\bin\Debug\ClinicalTrail.Services.WindowsService.exe
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WindowsService\bin\Debug\ClinicalTrail.Services.WindowsService.pdb
-D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WindowsService\obj\Debug\ClinicalTrail.Services.WindowsService.csprojResolveAssemblyReference.cache
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WindowsService\obj\Debug\ClinicalTrail.Services.WindowsService.exe
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WindowsService\obj\Debug\ClinicalTrail.Services.WindowsService.pdb
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WindowsService\obj\Debug\ClinicalTrail.Services.WindowsService.csprojResolveAssemblyReference.cache

@@ -1,5 +1,9 @@
 ﻿using ClinicalTrail.DataAccess.Model;
 using System;
+using System.ComponentModel;
+using System.Data.EntityClient;
+using System.Data.Objects;
+using System.Data.Objects.DataClasses;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +23,7 @@ namespace ClinicalTrail.DataAccess.Factory
         public List<CenterMaster> GetAllCenterMaster()
         {
             var cm = from resp in _context.CenterMasters
+                     where resp.IsActive != false
                      select resp;
 
             return cm.ToList();
@@ -26,7 +31,7 @@ namespace ClinicalTrail.DataAccess.Factory
 
         public void AddCenterManager(CenterMaster centermanager)
         {
-            if (!string.IsNullOrEmpty(centermanager.Center_No.ToString()))
+            if (!string.IsNullOrEmpty(centermanager.Center_No.ToString()) && centermanager.Center_No != 0)
             {
                 var result = (from resp in _context.CenterMasters
                               where resp.Center_No == centermanager.Center_No
@@ -67,103 +72,127 @@ namespace ClinicalTrail.DataAccess.Factory
             return cm.FirstOrDefault();
         }
 
-        ///// <summary>
-        ///// Change status of all the master controles used in the page
-        ///// </summary>
-        ///// <param name="ctrl"></param>
-        ///// <param name="masterpagecontrlstatus"></param>
-        ///// <param name="childpagecontrolstatus"></param>
-        //public void FindControls()
-        //{
-        //    foreach (Control item in ctrl.Controls)
-        //    {
-        //        if (item is TextBox)
-        //        {
-        //            TextBox txb = (TextBox)item;
-        //            txb.Enabled = masterpagecontrlstatus;
-        //        }
-        //        if (item is DropDownList)
-        //        {
-        //            DropDownList ddl = (DropDownList)item;
-        //            ddl.Enabled = masterpagecontrlstatus;
-        //        }
-        //        if (item is CheckBox)
-        //        {
-        //            CheckBox chk = (CheckBox)item;
-        //            chk.Enabled = masterpagecontrlstatus;
-        //        }
-        //        if (item is Button)
-        //        {
-        //            Button btn = (Button)item;
-        //            btn.Enabled = masterpagecontrlstatus;
-        //        }
-        //        if (item is RadioButtonList)
-        //        {
-        //            RadioButtonList rbtnl = (RadioButtonList)item;
-        //            rbtnl.Enabled = masterpagecontrlstatus;
-        //        }
-        //        if (item is LinkButton)
-        //        {
-        //            LinkButton lbtn = (LinkButton)item;
-        //            lbtn.Enabled = masterpagecontrlstatus;
-        //        }
-        //        if (item is Panel)
-        //        {
-        //            Panel pnl = (Panel)item;
-        //            pnl.Enabled = masterpagecontrlstatus;
-        //        }
-        //        FindChildControls(item, childpagecontrolstatus);
-        //    }
-        //}
+        public List<CenterMaster> FilterCenterManager(CenterMaster filter)
+        {
+            return FilterCenterManagerList(filter).ToList();
+        }
 
-        ///// <summary>
-        ///// Change status of all the child controles used in the page
-        ///// </summary>
-        ///// <param name="ctrl"></param>
-        ///// <param name="childpagecontrolstatus"></param>
-        //public void FindChildControls(Control ctrl, bool childpagecontrolstatus)
-        //{
-        //    foreach (Control item in ctrl.Controls)
-        //    {
-        //        if (item is TextBox)
-        //        {
-        //            TextBox txb = (TextBox)item;
-        //            txb.Enabled = childpagecontrolstatus;
-        //        }
-        //        if (item is DropDownList)
-        //        {
-        //            DropDownList ddl = (DropDownList)item;
-        //            ddl.Enabled = childpagecontrolstatus;
-        //        }
-        //        if (item is CheckBox)
-        //        {
-        //            CheckBox chk = (CheckBox)item;
-        //            chk.Enabled = childpagecontrolstatus;
-        //        }
-        //        if (item is Button)
-        //        {
-        //            Button btn = (Button)item;
-        //            btn.Enabled = childpagecontrolstatus;
-        //            btn.Visible = childpagecontrolstatus;
-        //        }
-        //        if (item is RadioButtonList)
-        //        {
-        //            RadioButtonList rbtnl = (RadioButtonList)item;
-        //            rbtnl.Enabled = childpagecontrolstatus;
-        //        }
-        //        if (item is LinkButton)
-        //        {
-        //            LinkButton lbtn = (LinkButton)item;
-        //            lbtn.Enabled = childpagecontrolstatus;
-        //        }
+        public IQueryable<CenterMaster> FilterCenterManagerList(CenterMaster filter)
+        {
+            IQueryable<CenterMaster> query = _context.CenterMasters;
 
-        //        if (item is Panel)
-        //        {
-        //            Panel pnl = (Panel)item;
-        //            pnl.Enabled = childpagecontrolstatus;
-        //        }
-        //        FindChildControls(item, childpagecontrolstatus);
-        //    }
-        //}
+            //query = query.Like(a => a.Bank_Account_Number, filter.Email, true);
+            //query = query.Like(a => a.Center_Name, filter.Primary_Email, true);
+            //query = query.Like(a => a.Center_No, filter.Secondary_Email, true);
+            //query = query.Like(a => a.Center_Type, filter.Payee_Name, true);
+
+            //query = query.Equals(a => a., filter.Bank_Account_Number);
+            //query = query.Equals(a => a.Center_Name, filter.Center_Name);
+            //query = query.Equals(a => a.Center_No, filter.Center_No);
+            //query = query.Equals(a => a.Center_Type, filter.Center_Type);
+            //query = query.Equals(a => a.Report_HandledBy, filter.City);
+            //query = query.Equals(a => a.Report_FailAreaCode, filter.Country);
+            //query = query.Equals(a => a.Report_FailComponentCode, filter.FailComponentCode, true);
+            //query = query.Equals(a => a.Report_FailReasonCode, filter.FailReasonCode, true);
+
+            //query = query.IsMember(a => a.Report_FamCode, filter.FamCode);
+
+            if (!string.IsNullOrEmpty(filter.Bank_Account_Number))
+                query = query.Where(a => a.Bank_Account_Number == null || a.Bank_Account_Number == filter.Bank_Account_Number);
+
+            if (!string.IsNullOrEmpty(filter.Center_Name))
+                query = query.Where(a => a.Center_Name == null || a.Center_Name.Contains(filter.Center_Name));
+
+            if (filter.Center_No >= 0)
+                query = query.Where(a => a.Center_No == null || a.Center_No == filter.Center_No);
+
+            if (!string.IsNullOrEmpty(filter.Center_Type))
+                query = query.Where(a => a.Center_Type == null || a.Center_Type.Contains(filter.Center_Type));
+
+            if (!string.IsNullOrEmpty(filter.City))
+                query = query.Where(a => a.City == null || a.City == filter.City);
+
+            if (!string.IsNullOrEmpty(filter.Country))
+                query = query.Where(a => a.Country == null || a.Country == filter.Country);
+
+            if (!string.IsNullOrEmpty(filter.Email))
+                query = query.Where(a => a.Email == null || a.Email.Contains(filter.Email));
+
+            if (!string.IsNullOrEmpty(filter.Equipments))
+                query = query.Where(a => a.Equipments == null || a.Equipments.Contains(filter.Equipments));
+
+            if (!string.IsNullOrEmpty(filter.Investigator_1))
+                query = query.Where(a => a.Investigator_1 == null || a.Investigator_1.Contains(filter.Investigator_1));
+
+            if (!string.IsNullOrEmpty(filter.Investigator_2))
+                query = query.Where(a => a.Investigator_2 == null || a.Investigator_2.Contains(filter.Investigator_2));
+
+            if (!string.IsNullOrEmpty(filter.Investigator_3))
+                query = query.Where(a => a.Investigator_3 == null || a.Investigator_3.Contains(filter.Investigator_3));
+
+            if (!string.IsNullOrEmpty(filter.Mobile_Phone))
+                query = query.Where(a => a.Mobile_Phone == null || a.Mobile_Phone == filter.Mobile_Phone);
+
+            if (!string.IsNullOrEmpty(filter.Office_Phone))
+                query = query.Where(a => a.Office_Phone == null || a.Post_code == filter.Office_Phone);
+
+            if (!string.IsNullOrEmpty(filter.Payee_Name))
+                query = query.Where(a => a.Payee_Name == null || a.Payee_Name.Contains(filter.Payee_Name));
+
+            if (!string.IsNullOrEmpty(filter.Post_code))
+                query = query.Where(a => a.Post_code == null || a.Post_code == filter.Post_code);
+
+            if (!string.IsNullOrEmpty(filter.Post_code))
+                query = query.Where(a => a.Post_code == null || a.Post_code == filter.Post_code);
+
+            if (!string.IsNullOrEmpty(filter.Primary_Email))
+                query = query.Where(a => a.Primary_Email == null || a.Primary_Email == filter.Primary_Email);
+
+            if (!string.IsNullOrEmpty(filter.Secondary_Email))
+                query = query.Where(a => a.Secondary_Email == null || a.Secondary_Email == filter.Secondary_Email);
+
+            if (!string.IsNullOrEmpty(filter.Specialties))
+                query = query.Where(a => filter.Specialties.Contains(a.Specialties));
+
+            if (!string.IsNullOrEmpty(filter.State))
+                query = query.Where(a => a.State != null && a.State == filter.State);
+
+            if (!string.IsNullOrEmpty(filter.Street_Address))
+                query = query.Where(a => a.Street_Address != null && a.Street_Address.Contains(filter.Street_Address));
+
+            if (!string.IsNullOrEmpty(filter.Website))
+                query = query.Where(a => a.Website != null || filter.Website.Contains(a.Website));
+
+
+            //// shows you the sql query
+            //string aa = ((ObjectQuery)query).ToTraceString();
+            //string b = aa;
+            //Console.WriteLine(b);
+
+            return query;
+        }
+
+        public List<CityMaster> GetAllCityMaster()
+        {
+            var list = from lst in _context.CityMasters
+                       select lst;
+
+            return list.Take(50).ToList();
+        }
+
+        public bool DeleteCenterManager(int centno)
+        {
+            CenterMaster cm = GetCenterManager(centno);
+            if (cm != null)
+            {
+                cm.IsActive = false;
+                _context.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

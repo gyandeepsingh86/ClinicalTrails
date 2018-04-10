@@ -17,14 +17,14 @@ namespace ClinicalTrail.Services.ServiceContracts
 
         [OperationContract]
         [FaultContract(typeof(ClinicalTrailFaultContract))]
-        ExtractAllCityResponse ExtractAllCityService(ExtractAllCity extractallcityrequest);
+        GetAllCity_Response GetAllCity(GetAllCity_Request req);
 
         [OperationContract]
         [FaultContract(typeof(ClinicalTrailFaultContract))]
-        ExtractAllStateResponse ExtractAllStateService(ExtractAllState extractallstaterequest);
+        GetAllState_Response GetAllState(GetAllState_Request request);
 
         [OperationContract]
         [FaultContract(typeof(ClinicalTrailFaultContract))]
-        ExtractAllCountryResponse ExtractAllCountryService(ExtractAllCountry extractallcountryrequest);
+        GetAllCountry_Response GetAllCountry(GetAllCountry_Request request);
     }
 }

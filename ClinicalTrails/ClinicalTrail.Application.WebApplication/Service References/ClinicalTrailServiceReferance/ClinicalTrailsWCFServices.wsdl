@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ClinicalTrailsWCFServices" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/WCFServices/ClinicalTrailsWCFServices.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/WCFServices/ClinicalTrailsWCFServices.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ClinicalTrail.Services.FaultContract" />
+      <xsd:import schemaLocation="http://localhost/WCFServices/ClinicalTrailsWCFServices.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="VoidRequest">
+    <wsdl:part name="parameters" element="tns:VoidRequest" />
+  </wsdl:message>
+  <wsdl:message name="VoidResponse">
+    <wsdl:part name="parameters" element="tns:VoidResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCity_Request">
+    <wsdl:part name="parameters" element="tns:GetAllCity_Request" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCity_Response">
+    <wsdl:part name="parameters" element="tns:GetAllCity_Response" />
+  </wsdl:message>
+  <wsdl:message name="IClinicalTrailsWCFServices_GetAllCity_ClinicalTrailFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/ClinicalTrail.Services.FaultContract" name="detail" element="q1:ClinicalTrailFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="GetAllState_Request">
+    <wsdl:part name="parameters" element="tns:GetAllState_Request" />
+  </wsdl:message>
+  <wsdl:message name="GetAllState_Response">
+    <wsdl:part name="parameters" element="tns:GetAllState_Response" />
+  </wsdl:message>
+  <wsdl:message name="IClinicalTrailsWCFServices_GetAllState_ClinicalTrailFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/ClinicalTrail.Services.FaultContract" name="detail" element="q2:ClinicalTrailFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCountry_Request">
+    <wsdl:part name="parameters" element="tns:GetAllCountry_Request" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCountry_Response">
+    <wsdl:part name="parameters" element="tns:GetAllCountry_Response" />
+  </wsdl:message>
+  <wsdl:message name="IClinicalTrailsWCFServices_GetAllCountry_ClinicalTrailFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/ClinicalTrail.Services.FaultContract" name="detail" element="q3:ClinicalTrailFaultContract" />
+  </wsdl:message>
+  <wsdl:portType name="IClinicalTrailsWCFServices">
+    <wsdl:operation name="TestConnection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClinicalTrailsWCFServices/TestConnection" name="VoidRequest" message="tns:VoidRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClinicalTrailsWCFServices/TestConnectionResponse" name="VoidResponse" message="tns:VoidResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClinicalTrailsWCFServices/GetAllCity" name="GetAllCity_Request" message="tns:GetAllCity_Request" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClinicalTrailsWCFServices/GetAllCityResponse" name="GetAllCity_Response" message="tns:GetAllCity_Response" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IClinicalTrailsWCFServices/GetAllCityClinicalTrailFaultContractFault" name="ClinicalTrailFaultContractFault" message="tns:IClinicalTrailsWCFServices_GetAllCity_ClinicalTrailFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClinicalTrailsWCFServices/GetAllState" name="GetAllState_Request" message="tns:GetAllState_Request" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClinicalTrailsWCFServices/GetAllStateResponse" name="GetAllState_Response" message="tns:GetAllState_Response" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IClinicalTrailsWCFServices/GetAllStateClinicalTrailFaultContractFault" name="ClinicalTrailFaultContractFault" message="tns:IClinicalTrailsWCFServices_GetAllState_ClinicalTrailFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClinicalTrailsWCFServices/GetAllCountry" name="GetAllCountry_Request" message="tns:GetAllCountry_Request" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClinicalTrailsWCFServices/GetAllCountryResponse" name="GetAllCountry_Response" message="tns:GetAllCountry_Response" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IClinicalTrailsWCFServices/GetAllCountryClinicalTrailFaultContractFault" name="ClinicalTrailFaultContractFault" message="tns:IClinicalTrailsWCFServices_GetAllCountry_ClinicalTrailFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IClinicalTrailsWCFServices" type="tns:IClinicalTrailsWCFServices">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TestConnection">
+      <soap:operation soapAction="http://tempuri.org/IClinicalTrailsWCFServices/TestConnection" style="document" />
+      <wsdl:input name="VoidRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="VoidResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCity">
+      <soap:operation soapAction="http://tempuri.org/IClinicalTrailsWCFServices/GetAllCity" style="document" />
+      <wsdl:input name="GetAllCity_Request">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAllCity_Response">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ClinicalTrailFaultContractFault">
+        <soap:fault use="literal" name="ClinicalTrailFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllState">
+      <soap:operation soapAction="http://tempuri.org/IClinicalTrailsWCFServices/GetAllState" style="document" />
+      <wsdl:input name="GetAllState_Request">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAllState_Response">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ClinicalTrailFaultContractFault">
+        <soap:fault use="literal" name="ClinicalTrailFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCountry">
+      <soap:operation soapAction="http://tempuri.org/IClinicalTrailsWCFServices/GetAllCountry" style="document" />
+      <wsdl:input name="GetAllCountry_Request">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAllCountry_Response">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ClinicalTrailFaultContractFault">
+        <soap:fault use="literal" name="ClinicalTrailFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ClinicalTrailsWCFServices">
+    <wsdl:port name="BasicHttpBinding_IClinicalTrailsWCFServices" binding="tns:BasicHttpBinding_IClinicalTrailsWCFServices">
+      <soap:address location="http://localhost/WCFServices/ClinicalTrailsWCFServices.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

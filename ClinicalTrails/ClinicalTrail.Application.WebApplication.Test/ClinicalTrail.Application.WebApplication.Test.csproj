@@ -35,10 +35,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="NLog">
       <HintPath>F:\Git\TESS\WantForDistributors\Development\trunk\packages\NLog.4.4.5\lib\net40\NLog.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -55,8 +67,94 @@
   <ItemGroup>
     <Compile Include="Controllers\CenterMasterTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ClinicalTrailWCFService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Services\WCFServices\CityMaster.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Service References\ClinicalTrailWCFService\ClinicalTrailsWCFServices1.wsdl" />
+    <None Include="Service References\ClinicalTrailWCFService\ClinicalTrailsWCFServices4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ClinicalTrailWCFService\ClinicalTrailsWCFServices41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ClinicalTrailWCFService\ClinicalTrailsWCFServices42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ClinicalTrailWCFService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ClinicalTrailWCFService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ClinicalTrailWCFService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ClinicalTrailWCFService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClinicalTrail.Application.WebApplication\ClinicalTrail.Application.WebApplication.csproj">
+      <Project>{038996a5-c6ab-4698-a19c-979538dd1152}</Project>
+      <Name>ClinicalTrail.Application.WebApplication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClinicalTrail.Business\ClinicalTrail.Business.csproj">
+      <Project>{402dc0b5-1edd-45ef-98f2-67cf8ed893fe}</Project>
+      <Name>ClinicalTrail.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClinicalTrail.DataAccess\ClinicalTrail.DataAccess.csproj">
+      <Project>{d2b2d7be-0901-4290-8652-1ede4f40841d}</Project>
+      <Name>ClinicalTrail.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClinicalTrail.GeneralObjectStore\ClinicalTrail.GeneralObjectStore.csproj">
+      <Project>{e91dcf10-4e52-496b-87b3-6e2463de713d}</Project>
+      <Name>ClinicalTrail.GeneralObjectStore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClinicalTrail.Services.FaultContract\ClinicalTrail.Services.FaultContract.csproj">
+      <Project>{460d93b0-9c47-43b1-bc0b-1f4118c887fe}</Project>
+      <Name>ClinicalTrail.Services.FaultContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClinicalTrail.Services.MessageContract\ClinicalTrail.Services.MessageContracts.csproj">
+      <Project>{e9ebc0e5-e26f-41ad-a78c-8020901b60a4}</Project>
+      <Name>ClinicalTrail.Services.MessageContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClinicalTrail.Services.ServiceContract\ClinicalTrail.Services.ServiceContracts.csproj">
+      <Project>{99aa1b5c-e256-4ed9-89ab-4ed2075a5df7}</Project>
+      <Name>ClinicalTrail.Services.ServiceContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClinicalTrail.Services.ServiceImplementation\ClinicalTrail.Services.ServiceImplementation.csproj">
+      <Project>{d5c3e687-6129-4259-b17b-6087032e1a2a}</Project>
+      <Name>ClinicalTrail.Services.ServiceImplementation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClinicalTrail.Services.WCFService\ClinicalTrail.Services.WCFService.csproj">
+      <Project>{6406bd4d-6313-4c09-a46b-c530e4d8e5db}</Project>
+      <Name>ClinicalTrail.Services.WCFService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClinicalTrail.Services.WebAPI\ClinicalTrail.Services.WebAPI.csproj">
+      <Project>{ce3dde4e-ead3-4c5e-b95c-62a0f8f9a6bb}</Project>
+      <Name>ClinicalTrail.Services.WebAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClinicalTrail.Services.WindowsService\ClinicalTrail.Services.WindowsService.csproj">
+      <Project>{ebacf56c-ef89-4e63-9ba6-c962a8e2d62f}</Project>
+      <Name>ClinicalTrail.Services.WindowsService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ClinicalTrailWCFService\ClinicalTrailsWCFServices1.disco" />
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

@@ -399,6 +399,25 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Service References\ClinicalTrailServiceReferance\ClinicalTrail.Application.WebApplication.ClinicalTrailServiceReferance.GetAllCity_Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ClinicalTrailServiceReferance\ClinicalTrail.Application.WebApplication.ClinicalTrailServiceReferance.GetAllCountry_Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ClinicalTrailServiceReferance\ClinicalTrail.Application.WebApplication.ClinicalTrailServiceReferance.GetAllState_Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ClinicalTrailServiceReferance\ClinicalTrail.Application.WebApplication.ClinicalTrailServiceReferance.VoidResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ClinicalTrailServiceReferance\ClinicalTrailsWCFServices.disco" />
+    <None Include="Service References\ClinicalTrailServiceReferance\configuration91.svcinfo" />
+    <None Include="Service References\ClinicalTrailServiceReferance\configuration.svcinfo" />
+    <None Include="Service References\ClinicalTrailServiceReferance\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Views\CenterMaster\CenterMaster.aspx" />
     <Content Include="Views\CenterMaster\CenterMasterSearch.aspx" />
@@ -425,6 +444,16 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\web.config" />
     <Content Include="Views\CenterMaster\Index.cshtml" />
+    <None Include="Service References\ClinicalTrailServiceReferance\ClinicalTrailsWCFServices.wsdl" />
+    <None Include="Service References\ClinicalTrailServiceReferance\ClinicalTrailsWCFServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ClinicalTrailServiceReferance\ClinicalTrailsWCFServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ClinicalTrailServiceReferance\ClinicalTrailsWCFServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -496,8 +525,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Manager\AddressTypeModelManager.cs" />
     <Compile Include="Manager\CenterMasterModelManager.cs" />
+    <Compile Include="Manager\CityMasterModelManager.cs" />
+    <Compile Include="Manager\InvestigatorMasterModelManager.cs" />
+    <Compile Include="Mapper\AddressTypeModelMapper.cs" />
     <Compile Include="Mapper\CenterMasterModelMapper.cs" />
+    <Compile Include="Mapper\CityMasterModelMapper.cs" />
+    <Compile Include="Mapper\InvestigatorMasterModelMapper.cs" />
     <Compile Include="MasterPages\ClinicalTrailMaster.Master.cs">
       <DependentUpon>ClinicalTrailMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -505,8 +540,16 @@
     <Compile Include="MasterPages\ClinicalTrailMaster.Master.designer.cs">
       <DependentUpon>ClinicalTrailMaster.Master</DependentUpon>
     </Compile>
-    <Compile Include="Models\CenterMaster\CenterMasterModel.cs" />
+    <Compile Include="Models\AddressType.cs" />
+    <Compile Include="Models\CenterMasterModel.cs" />
+    <Compile Include="Models\CityMasterModel.cs" />
+    <Compile Include="Models\InvestigatorMasterModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ClinicalTrailServiceReferance\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -570,6 +613,12 @@
       <Project>{e91dcf10-4e52-496b-87b3-6e2463de713d}</Project>
       <Name>ClinicalTrail.GeneralObjectStore</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ClinicalTrailServiceReferance\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

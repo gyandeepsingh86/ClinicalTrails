@@ -10,6 +10,6 @@ namespace ClinicalTrail.Business.DataContract
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public Nullable<int> StateID { get; set; }
+        public int? StateID { get; set; }
     }
 }

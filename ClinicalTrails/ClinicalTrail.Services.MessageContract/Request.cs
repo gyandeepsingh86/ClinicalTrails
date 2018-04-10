@@ -13,8 +13,8 @@ namespace ClinicalTrail.Services.MessageContracts
     [MessageContract]
     public abstract class BaseRequest
     {
-        [MessageBodyMember(Order = 0)]
-        public Guid AuthenticationUser { get; set; }
+        //[MessageBodyMember(Order = 0)]
+        //public Guid AuthenticationUser { get; set; }
     }
 
     [MessageContract]
@@ -23,23 +23,26 @@ namespace ClinicalTrail.Services.MessageContracts
     }
 
     [MessageContract]
-    public abstract class ExtractAllCity : BaseRequest
+    public abstract class GetAllCity_Request : BaseRequest
     {
-        [MessageBodyMember(Order = 0)]
-        public List<CityMasterDto> CityList { get; set; }
+        
     }
 
     [MessageContract]
-    public abstract class ExtractAllState : BaseRequest
+    public abstract class GetAllState_Request: BaseRequest
     {
         [MessageBodyMember(Order = 0)]
-        public List<StateMasterDto> CityList { get; set; }
+        public int ID { get; set; }
+        [MessageBodyMember(Order = 1)]
+        public string Name { get; set; }
+        [MessageBodyMember(Order = 2)]
+        public int? StateId { get; set; }
     }
 
     [MessageContract]
-    public abstract class ExtractAllCountry : BaseRequest
+    public abstract class GetAllCountry_Request: BaseRequest
     {
-        [MessageBodyMember(Order = 0)]
-        public List<CountryMasterDto> CityList { get; set; }
+        //[MessageBodyMember(Order = 0)]
+        //public List<CountryMasterDto> CityList { get; set; }
     }
 }

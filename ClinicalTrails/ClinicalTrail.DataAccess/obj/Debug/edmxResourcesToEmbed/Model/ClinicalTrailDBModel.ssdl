@@ -1,5 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ClinicalTrialsDBModelContext.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AddressType">
+    <Key>
+      <PropertyRef Name="AddressTypeID" />
+    </Key>
+    <Property Name="AddressTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AddressTypeName" Type="nvarchar" MaxLength="20" />
+  </EntityType>
   <EntityType Name="CenterMaster">
     <Key>
       <PropertyRef Name="Center No" />
@@ -25,6 +32,7 @@
     <Property Name="Investigator 3" Type="varchar" MaxLength="100" />
     <Property Name="Payee Name" Type="varchar" MaxLength="100" />
     <Property Name="Bank Account Number" Type="varchar" MaxLength="100" />
+    <Property Name="IsActive" Type="bit" />
   </EntityType>
   <EntityType Name="CityMaster">
     <Key>
@@ -42,24 +50,9 @@
     <Property Name="Name" Type="nvarchar" MaxLength="50" />
     <Property Name="CountryCode" Type="varchar" MaxLength="5" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'ClinicalTrials.dbo.InvestigatorMaster' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="InvestigatorMaster">
     <Key>
       <PropertyRef Name="ID" />
-      <PropertyRef Name="Title" />
-      <PropertyRef Name="Investigator First Name" />
-      <PropertyRef Name="Investigator Last Name" />
-      <PropertyRef Name="Degree" />
-      <PropertyRef Name="Address Type" />
-      <PropertyRef Name="Street Address" />
-      <PropertyRef Name="City" />
-      <PropertyRef Name="State" />
-      <PropertyRef Name="Country" />
-      <PropertyRef Name="Post Code" />
-      <PropertyRef Name="Office Phone" />
-      <PropertyRef Name="Mobile Phone" />
-      <PropertyRef Name="Email ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
@@ -67,7 +60,7 @@ warning 6002: The table/view 'ClinicalTrials.dbo.InvestigatorMaster' does not ha
     <Property Name="Investigator Middle Name" Type="nvarchar" MaxLength="100" />
     <Property Name="Investigator Last Name" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="Degree" Type="nvarchar" MaxLength="100" Nullable="false" />
-    <Property Name="Address Type" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Address Type" Type="nvarchar" MaxLength="20" Nullable="false" />
     <Property Name="Institute Name" Type="nvarchar" MaxLength="100" />
     <Property Name="Street Address" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="City" Type="nvarchar" MaxLength="100" Nullable="false" />
@@ -87,6 +80,7 @@ warning 6002: The table/view 'ClinicalTrials.dbo.InvestigatorMaster' does not ha
     <Property Name="Centre 3" Type="nvarchar" MaxLength="100" />
     <Property Name="Payee Name" Type="nvarchar" MaxLength="100" />
     <Property Name="Bank Account Number" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsActive" Type="bit" />
   </EntityType>
   <EntityType Name="StateMaster">
     <Key>
@@ -95,6 +89,26 @@ warning 6002: The table/view 'ClinicalTrials.dbo.InvestigatorMaster' does not ha
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="50" />
     <Property Name="CountryID" Type="int" />
+  </EntityType>
+  <EntityType Name="UserMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="5" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="First Name" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Middle Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="Last Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DOB" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Joining Date" Type="datetime" Nullable="false" />
+    <Property Name="Address ID" Type="int" Nullable="false" />
+    <Property Name="Contact ID" Type="int" Nullable="false" />
+    <Property Name="Last Login Time" Type="datetime" Nullable="false" />
+    <Property Name="IsLoggedOut" Type="bit" Nullable="false" />
+    <Property Name="UserType" Type="nvarchar" MaxLength="1" />
+    <Property Name="UserPageAccess" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <!--Errors Found During Generation:
 warning 6002: The table/view 'ClinicalTrials.dbo.VendorMaster' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -132,6 +146,18 @@ warning 6002: The table/view 'ClinicalTrials.dbo.VendorMaster' does not have a p
     <Property Name="Payee Name" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="Bank Account Number" Type="varchar" MaxLength="100" Nullable="false" />
   </EntityType>
+  <Association Name="FK_InvestigatorMaster_InvestigatorMaster">
+    <End Role="InvestigatorMaster" Type="Self.InvestigatorMaster" Multiplicity="1" />
+    <End Role="InvestigatorMaster1" Type="Self.InvestigatorMaster" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="InvestigatorMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="InvestigatorMaster1">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_StateMaster_CountryMaster">
     <End Role="CountryMaster" Type="Self.CountryMaster" Multiplicity="0..1" />
     <End Role="StateMaster" Type="Self.StateMaster" Multiplicity="*" />
@@ -145,40 +171,13 @@ warning 6002: The table/view 'ClinicalTrials.dbo.VendorMaster' does not have a p
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="ClinicalTrialsDBModelContextStoreContainer">
+    <EntitySet Name="AddressType" EntityType="Self.AddressType" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CenterMaster" EntityType="Self.CenterMaster" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CityMaster" EntityType="Self.CityMaster" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CountryMaster" EntityType="Self.CountryMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InvestigatorMaster" EntityType="Self.InvestigatorMaster" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="StateMaster" EntityType="Self.StateMaster" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="InvestigatorMaster" EntityType="Self.InvestigatorMaster" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [InvestigatorMaster].[ID] AS [ID], 
-    [InvestigatorMaster].[Title] AS [Title], 
-    [InvestigatorMaster].[Investigator First Name] AS [Investigator First Name], 
-    [InvestigatorMaster].[Investigator Middle Name] AS [Investigator Middle Name], 
-    [InvestigatorMaster].[Investigator Last Name] AS [Investigator Last Name], 
-    [InvestigatorMaster].[Degree] AS [Degree], 
-    [InvestigatorMaster].[Address Type] AS [Address Type], 
-    [InvestigatorMaster].[Institute Name] AS [Institute Name], 
-    [InvestigatorMaster].[Street Address] AS [Street Address], 
-    [InvestigatorMaster].[City] AS [City], 
-    [InvestigatorMaster].[State] AS [State], 
-    [InvestigatorMaster].[Country] AS [Country], 
-    [InvestigatorMaster].[Post Code] AS [Post Code], 
-    [InvestigatorMaster].[Office Phone] AS [Office Phone], 
-    [InvestigatorMaster].[Mobile Phone] AS [Mobile Phone], 
-    [InvestigatorMaster].[Fax No.] AS [Fax No.], 
-    [InvestigatorMaster].[Email ID] AS [Email ID], 
-    [InvestigatorMaster].[Primary Email] AS [Primary Email], 
-    [InvestigatorMaster].[Secondary Email ID] AS [Secondary Email ID], 
-    [InvestigatorMaster].[Certification] AS [Certification], 
-    [InvestigatorMaster].[Speciality] AS [Speciality], 
-    [InvestigatorMaster].[Centre 1] AS [Centre 1], 
-    [InvestigatorMaster].[Centre 2] AS [Centre 2], 
-    [InvestigatorMaster].[Centre 3] AS [Centre 3], 
-    [InvestigatorMaster].[Payee Name] AS [Payee Name], 
-    [InvestigatorMaster].[Bank Account Number] AS [Bank Account Number]
-    FROM [dbo].[InvestigatorMaster] AS [InvestigatorMaster]</DefiningQuery>
-    </EntitySet>
+    <EntitySet Name="UserMaster" EntityType="Self.UserMaster" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="VendorMaster" EntityType="Self.VendorMaster" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [VendorMaster].[Center No] AS [Center No], 
@@ -201,6 +200,10 @@ warning 6002: The table/view 'ClinicalTrials.dbo.VendorMaster' does not have a p
     [VendorMaster].[Bank Account Number] AS [Bank Account Number]
     FROM [dbo].[VendorMaster] AS [VendorMaster]</DefiningQuery>
     </EntitySet>
+    <AssociationSet Name="FK_InvestigatorMaster_InvestigatorMaster" Association="Self.FK_InvestigatorMaster_InvestigatorMaster">
+      <End Role="InvestigatorMaster" EntitySet="InvestigatorMaster" />
+      <End Role="InvestigatorMaster1" EntitySet="InvestigatorMaster" />
+    </AssociationSet>
     <AssociationSet Name="FK_StateMaster_CountryMaster" Association="Self.FK_StateMaster_CountryMaster">
       <End Role="CountryMaster" EntitySet="CountryMaster" />
       <End Role="StateMaster" EntitySet="StateMaster" />

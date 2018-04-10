@@ -1,6 +1,8 @@
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication\obj\Debug\ClinicalTrail.Application.WebApplication.csprojResolveAssemblyReference.cache
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication\bin\ClinicalTrail.Application.WebApplication.dll.config
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication\bin\ClinicalTrail.Application.WebApplication.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication\bin\ClinicalTrail.Application.WebApplication.pdb
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication\bin\AjaxControlToolkit.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication\bin\Antlr3.Runtime.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication\bin\AspNet.ScriptManager.jQuery.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
@@ -64,7 +66,5 @@ D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplicatio
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication\bin\Microsoft.Practices.Unity.xml
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication\bin\Microsoft.Practices.ServiceLocation.pdb
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication\bin\Microsoft.Practices.ServiceLocation.xml
-D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication\obj\Debug\ClinicalTrail.Application.WebApplication.csprojResolveAssemblyReference.cache
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication\obj\Debug\ClinicalTrail.Application.WebApplication.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication\obj\Debug\ClinicalTrail.Application.WebApplication.pdb
-D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication\bin\AjaxControlToolkit.dll

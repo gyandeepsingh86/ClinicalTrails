@@ -913,6 +913,11 @@ background: #f0f0f0;
     padding: 10px;
     float:left;
 }
+.column35 {
+    width: 35%;
+    padding: 10px;
+    float:left;
+}
 .column40 {
     width: 40%;
     padding: 10px;
@@ -1040,7 +1045,7 @@ i, span {
 }
 
 #sidebar.active {
-    min-width: 8%;
+    min-width: 5%;
     max-width: 10%;
     text-align: center;
 }

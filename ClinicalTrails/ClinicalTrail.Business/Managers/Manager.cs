@@ -5,9 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClinicalTrail.DataAccess.Model;
-using ClinicalTrail.GeneralObjectStore.Logger;
 using AtlasCopco.Framework.Objects.Logging;
-
 namespace ClinicalTrail.Business.Managers
 {
     public abstract class Manager: IDisposable

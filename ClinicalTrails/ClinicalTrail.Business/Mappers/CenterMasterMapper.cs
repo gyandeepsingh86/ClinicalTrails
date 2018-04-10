@@ -20,6 +20,14 @@ namespace ClinicalTrail.Business.Mappers
             return to.ToList();
         }
 
+        internal static List<CenterMasterDto> Map(IQueryable<CenterMaster> list)
+        {
+            var to = from c in list
+                     select Map(c);
+
+            return to.ToList();
+        }
+
         internal static CenterMasterDto Map(CenterMaster source)
         {
             var to = new CenterMasterDto();
@@ -84,5 +92,6 @@ namespace ClinicalTrail.Business.Mappers
             to.Center_No = CentNo;
             return to;
         }
+                
     }
 }

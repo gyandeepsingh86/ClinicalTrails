@@ -30,11 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AtlasCopco.Framework.Objects">
-      <HintPath>F:\Git\TESS\WantForDistributors\Development\trunk\Tools\AtlasCopco.Framework.Objects.dll</HintPath>
+    <Reference Include="NLog">
+      <HintPath>F:\Git\TESS\WantForDistributors\Development\trunk\packages\NLog.4.4.5\lib\net40\NLog.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,7 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\ServerControl.cs" />
     <Compile Include="EnumResources.Designer.cs" />
+    <Compile Include="Enums\DataSource.cs" />
+    <Compile Include="ErrorHandler\ErrorHandler.cs" />
     <Compile Include="Errors.Designer.cs" />
     <Compile Include="Exceptions\ClientException.cs" />
     <Compile Include="Exceptions\ClientExceptionCodes.cs" />
@@ -52,6 +58,9 @@
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="GlobalResources.Designer.cs" />
     <Compile Include="Logger\IAmLoggable.cs" />
+    <Compile Include="Logger\ILogger.cs" />
+    <Compile Include="Logger\LoggerFactory.cs" />
+    <Compile Include="Logger\NLogLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

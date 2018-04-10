@@ -13,17 +13,29 @@ namespace ClinicalTrail.Services.MessageContracts
     }
 
     [MessageContract]
-    public class ExtractAllCityResponse
+    public class GetAllCity_Response
     {
+        [MessageBodyMember(Order = 0)]
+        public int ID { get; set; }
+        [MessageBodyMember(Order = 1)]
+        public string Name { get; set; }
+        [MessageBodyMember(Order = 2)]
+        public int? StateId { get; set; }
     }
 
     [MessageContract]
-    public class ExtractAllStateResponse
+    public class GetAllState_Response
     {
+        [MessageBodyMember(Order = 0)]
+        public int ID { get; set; }
+        [MessageBodyMember(Order = 1)]
+        public string Name { get; set; }
+        [MessageBodyMember(Order = 2)]
+        public int? StateId { get; set; }
     }
 
     [MessageContract]
-    public class ExtractAllCountryResponse
+    public class GetAllCountry_Response
     {
     }
 }

@@ -1,5 +1,5 @@
-﻿using AtlasCopco.Framework.Objects.Logging;
-using ClinicalTrail.GeneralObjectStore.Exceptions;
+﻿using ClinicalTrail.GeneralObjectStore.Exceptions;
+using ClinicalTrail.GeneralObjectStore.Logger;
 using ClinicalTrail.Services.FaultContract;
 using System;
 using System.Collections.Generic;

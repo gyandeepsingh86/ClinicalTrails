@@ -250,9 +250,10 @@
             </div>
             <div class="row">
                 <div class="column100">
-                    <asp:GridView ID="grvCenterMaster" CssClass="table table-striped table-bordered table-hover" runat="server" PageSize="10"
-                        AutoGenerateColumns="false" ShowFooter="true"
-                        OnRowEditing="grvCenterMaster_RowEditing" OnRowCommand="grvCenterMaster_RowCommand" OnRowDataBound="grvCenterMaster_RowDataBound">
+                    <asp:GridView ID="grvCenterMaster" CssClass="table table-striped table-bordered table-hover" runat="server" PageSize="5"
+                        AutoGenerateColumns="false" ShowFooter="true" AllowSorting="True"
+                        OnRowEditing="grvCenterMaster_RowEditing" OnRowCommand="grvCenterMaster_RowCommand" OnRowDataBound="grvCenterMaster_RowDataBound"
+                        OnRowDeleting="grvCenterMaster_RowDeleting" OnRowCancelingEdit="grvCenterMaster_RowCancelingEdit" OnRowUpdating="grvCenterMaster_RowUpdating">
                         <Columns>
                             <asp:TemplateField HeaderText="Center No">
                                 <ItemTemplate>
@@ -306,13 +307,15 @@
                                 <ItemTemplate>
                                     <asp:LinkButton ID="btnEdit" runat="server" ToolTip="Edit" CommandName="Edit" CommandArgument='<%#Eval("Center_No")%>'>
                                         <span class="icon-edit"></asp:LinkButton>
-                                    <asp:LinkButton ID="btnUpdate" runat="server" Visible="false" ToolTip="Update" CommandName="Update">
-                                        <span class="icon-save"></asp:LinkButton>
                                     <asp:LinkButton ID="btnDelete" runat="server" ToolTip="Delete" CommandName="Delete" CommandArgument='<%#Eval("Center_No")%>' OnClientClick="return confirm('Are you sure you?');">
                                         <span class="icon-trash" ></asp:LinkButton>
-                                    <asp:LinkButton ID="btnCancel" runat="server" Visible="false" ToolTip="Cancel" CommandName="Cancle">
-                                        <span class="icon-remove"></asp:LinkButton>
                                 </ItemTemplate>
+                                <EditItemTemplate>
+                                    <asp:LinkButton ID="btnUpdate" runat="server" ToolTip="Update" CommandName="Update" CommandArgument='<%#Eval("Center_No")%>'>
+                                        <span class="icon-refresh"></asp:LinkButton>
+                                    <asp:LinkButton ID="btnCancel" runat="server" ToolTip="Cancel" CommandName="Cancle">
+                                        <span class="icon-remove"></asp:LinkButton>
+                                </EditItemTemplate>
                             </asp:TemplateField>
                         </Columns>
                     </asp:GridView>

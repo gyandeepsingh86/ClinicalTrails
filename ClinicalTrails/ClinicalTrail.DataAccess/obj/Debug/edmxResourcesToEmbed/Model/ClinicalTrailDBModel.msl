@@ -1,38 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="ClinicalTrialsDBModelContextStoreContainer" CdmEntityContainer="ClinicalTrialsDBEntities">
-    <EntitySetMapping Name="InvestigatorMasters">
-      <EntityTypeMapping TypeName="ClinicalTrialsDBModelContext.InvestigatorMaster">
-        <MappingFragment StoreEntitySet="InvestigatorMaster">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="Title" ColumnName="Title" />
-          <ScalarProperty Name="Investigator_First_Name" ColumnName="Investigator First Name" />
-          <ScalarProperty Name="Investigator_Middle_Name" ColumnName="Investigator Middle Name" />
-          <ScalarProperty Name="Investigator_Last_Name" ColumnName="Investigator Last Name" />
-          <ScalarProperty Name="Degree" ColumnName="Degree" />
-          <ScalarProperty Name="Address_Type" ColumnName="Address Type" />
-          <ScalarProperty Name="Institute_Name" ColumnName="Institute Name" />
-          <ScalarProperty Name="Street_Address" ColumnName="Street Address" />
-          <ScalarProperty Name="City" ColumnName="City" />
-          <ScalarProperty Name="State" ColumnName="State" />
-          <ScalarProperty Name="Country" ColumnName="Country" />
-          <ScalarProperty Name="Post_Code" ColumnName="Post Code" />
-          <ScalarProperty Name="Office_Phone" ColumnName="Office Phone" />
-          <ScalarProperty Name="Mobile_Phone" ColumnName="Mobile Phone" />
-          <ScalarProperty Name="Fax_No_" ColumnName="Fax No." />
-          <ScalarProperty Name="Email_ID" ColumnName="Email ID" />
-          <ScalarProperty Name="Primary_Email" ColumnName="Primary Email" />
-          <ScalarProperty Name="Secondary_Email_ID" ColumnName="Secondary Email ID" />
-          <ScalarProperty Name="Certification" ColumnName="Certification" />
-          <ScalarProperty Name="Speciality" ColumnName="Speciality" />
-          <ScalarProperty Name="Centre_1" ColumnName="Centre 1" />
-          <ScalarProperty Name="Centre_2" ColumnName="Centre 2" />
-          <ScalarProperty Name="Centre_3" ColumnName="Centre 3" />
-          <ScalarProperty Name="Payee_Name" ColumnName="Payee Name" />
-          <ScalarProperty Name="Bank_Account_Number" ColumnName="Bank Account Number" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="VendorMasters">
       <EntityTypeMapping TypeName="ClinicalTrialsDBModelContext.VendorMaster">
         <MappingFragment StoreEntitySet="VendorMaster">
@@ -54,33 +22,6 @@
           <ScalarProperty Name="Equipments" ColumnName="Equipments" />
           <ScalarProperty Name="Payee_Name" ColumnName="Payee Name" />
           <ScalarProperty Name="Bank_Account_Number" ColumnName="Bank Account Number" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="CenterMasters">
-      <EntityTypeMapping TypeName="ClinicalTrialsDBModelContext.CenterMaster">
-        <MappingFragment StoreEntitySet="CenterMaster">
-          <ScalarProperty Name="Bank_Account_Number" ColumnName="Bank Account Number" />
-          <ScalarProperty Name="Payee_Name" ColumnName="Payee Name" />
-          <ScalarProperty Name="Investigator_3" ColumnName="Investigator 3" />
-          <ScalarProperty Name="Investigator_2" ColumnName="Investigator 2" />
-          <ScalarProperty Name="Investigator_1" ColumnName="Investigator 1" />
-          <ScalarProperty Name="Equipments" ColumnName="Equipments" />
-          <ScalarProperty Name="Website" ColumnName="Website" />
-          <ScalarProperty Name="Secondary_Email" ColumnName="Secondary Email" />
-          <ScalarProperty Name="Primary_Email" ColumnName="Primary Email" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Mobile_Phone" ColumnName="Mobile Phone" />
-          <ScalarProperty Name="Office_Phone" ColumnName="Office Phone" />
-          <ScalarProperty Name="Specialties" ColumnName="Specialties" />
-          <ScalarProperty Name="Post_code" ColumnName="Post code" />
-          <ScalarProperty Name="Country" ColumnName="Country" />
-          <ScalarProperty Name="State" ColumnName="State" />
-          <ScalarProperty Name="City" ColumnName="City" />
-          <ScalarProperty Name="Street_Address" ColumnName="Street Address" />
-          <ScalarProperty Name="Center_Type" ColumnName="Center Type" />
-          <ScalarProperty Name="Center_Name" ColumnName="Center Name" />
-          <ScalarProperty Name="Center_No" ColumnName="Center No" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -107,6 +48,96 @@
         <MappingFragment StoreEntitySet="StateMaster">
           <ScalarProperty Name="CountryID" ColumnName="CountryID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserMasters">
+      <EntityTypeMapping TypeName="ClinicalTrialsDBModelContext.UserMaster">
+        <MappingFragment StoreEntitySet="UserMaster">
+          <ScalarProperty Name="UserPageAccess" ColumnName="UserPageAccess" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="IsLoggedOut" ColumnName="IsLoggedOut" />
+          <ScalarProperty Name="Last_Login_Time" ColumnName="Last Login Time" />
+          <ScalarProperty Name="Contact_ID" ColumnName="Contact ID" />
+          <ScalarProperty Name="Address_ID" ColumnName="Address ID" />
+          <ScalarProperty Name="Joining_Date" ColumnName="Joining Date" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last Name" />
+          <ScalarProperty Name="Middle_Name" ColumnName="Middle Name" />
+          <ScalarProperty Name="First_Name" ColumnName="First Name" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AddressTypes">
+      <EntityTypeMapping TypeName="ClinicalTrialsDBModelContext.AddressType">
+        <MappingFragment StoreEntitySet="AddressType">
+          <ScalarProperty Name="AddressTypeName" ColumnName="AddressTypeName" />
+          <ScalarProperty Name="AddressTypeID" ColumnName="AddressTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CenterMasters">
+      <EntityTypeMapping TypeName="ClinicalTrialsDBModelContext.CenterMaster">
+        <MappingFragment StoreEntitySet="CenterMaster">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Bank_Account_Number" ColumnName="Bank Account Number" />
+          <ScalarProperty Name="Payee_Name" ColumnName="Payee Name" />
+          <ScalarProperty Name="Investigator_3" ColumnName="Investigator 3" />
+          <ScalarProperty Name="Investigator_2" ColumnName="Investigator 2" />
+          <ScalarProperty Name="Investigator_1" ColumnName="Investigator 1" />
+          <ScalarProperty Name="Equipments" ColumnName="Equipments" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Secondary_Email" ColumnName="Secondary Email" />
+          <ScalarProperty Name="Primary_Email" ColumnName="Primary Email" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Mobile_Phone" ColumnName="Mobile Phone" />
+          <ScalarProperty Name="Office_Phone" ColumnName="Office Phone" />
+          <ScalarProperty Name="Specialties" ColumnName="Specialties" />
+          <ScalarProperty Name="Post_code" ColumnName="Post code" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Street_Address" ColumnName="Street Address" />
+          <ScalarProperty Name="Center_Type" ColumnName="Center Type" />
+          <ScalarProperty Name="Center_Name" ColumnName="Center Name" />
+          <ScalarProperty Name="Center_No" ColumnName="Center No" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvestigatorMasters">
+      <EntityTypeMapping TypeName="ClinicalTrialsDBModelContext.InvestigatorMaster">
+        <MappingFragment StoreEntitySet="InvestigatorMaster">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Bank_Account_Number" ColumnName="Bank Account Number" />
+          <ScalarProperty Name="Payee_Name" ColumnName="Payee Name" />
+          <ScalarProperty Name="Centre_3" ColumnName="Centre 3" />
+          <ScalarProperty Name="Centre_2" ColumnName="Centre 2" />
+          <ScalarProperty Name="Centre_1" ColumnName="Centre 1" />
+          <ScalarProperty Name="Speciality" ColumnName="Speciality" />
+          <ScalarProperty Name="Certification" ColumnName="Certification" />
+          <ScalarProperty Name="Secondary_Email_ID" ColumnName="Secondary Email ID" />
+          <ScalarProperty Name="Primary_Email" ColumnName="Primary Email" />
+          <ScalarProperty Name="Email_ID" ColumnName="Email ID" />
+          <ScalarProperty Name="Fax_No" ColumnName="Fax No." />
+          <ScalarProperty Name="Mobile_Phone" ColumnName="Mobile Phone" />
+          <ScalarProperty Name="Office_Phone" ColumnName="Office Phone" />
+          <ScalarProperty Name="Post_Code" ColumnName="Post Code" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Street_Address" ColumnName="Street Address" />
+          <ScalarProperty Name="Institute_Name" ColumnName="Institute Name" />
+          <ScalarProperty Name="Address_Type" ColumnName="Address Type" />
+          <ScalarProperty Name="Degree" ColumnName="Degree" />
+          <ScalarProperty Name="Investigator_Last_Name" ColumnName="Investigator Last Name" />
+          <ScalarProperty Name="Investigator_Middle_Name" ColumnName="Investigator Middle Name" />
+          <ScalarProperty Name="Investigator_First_Name" ColumnName="Investigator First Name" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>

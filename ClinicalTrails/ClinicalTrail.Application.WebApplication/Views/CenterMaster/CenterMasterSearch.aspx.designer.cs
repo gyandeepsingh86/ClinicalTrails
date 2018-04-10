@@ -400,6 +400,24 @@ namespace ClinicalTrail.Application.WebApplication.Views.CenterMaster {
         protected global::System.Web.UI.WebControls.TextBox txtBankAccountNumbervarchar;
         
         /// <summary>
+        /// btnClear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnClear;
+        
+        /// <summary>
+        /// btnSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSearch;
+        
+        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -409,12 +427,12 @@ namespace ClinicalTrail.Application.WebApplication.Views.CenterMaster {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// grvCenterMaster control.
+        /// grvCenterMasterSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grvCenterMaster;
+        protected global::System.Web.UI.WebControls.GridView grvCenterMasterSearch;
     }
 }

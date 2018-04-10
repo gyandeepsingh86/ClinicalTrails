@@ -19,6 +19,8 @@ namespace ClinicalTrail.Application.WebApplication.Views.CenterMaster
         private readonly CenterMasterModelManager _centermastermanagermodel;
         string Userid = "";
 
+        #region "Page Event"
+
         public CenterMaster()
         {
             _centermastermanagermodel = new CenterMasterModelManager();
@@ -27,7 +29,106 @@ namespace ClinicalTrail.Application.WebApplication.Views.CenterMaster
         protected void Page_Load(object sender, EventArgs e)
         {
             GetAllCenterMaster();
+
+            GetCityMasterList();
         }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            ControlClearing.ClearAllControls(this.Page.Form);
+            divCenterNumberTab.Visible = false;
+            btnSave.Visible = true;
+            btnUpdate.Visible = false;
+        }
+
+        protected void btnSave_Click(object sender, EventArgs e)
+        {
+            LoadCenterMasterModel();
+            _centermastermanagermodel.Add(centermastermodel, Userid);
+            GetAllCenterMaster();
+        }
+
+        protected void btnUpload_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            LoadCenterMasterModel();
+            _centermastermanagermodel.Add(centermastermodel, Userid);
+            GetAllCenterMaster();
+            divCenterNumberTab.Visible = false;
+            btnSave.Visible = true;
+            btnUpdate.Visible = false;
+            ControlClearing.ClearAllControls(this.Page.Form);
+        }
+
+        #endregion
+
+        #region "Grid Center Master Enevts"
+
+        protected void grvCenterMaster_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            grvCenterMaster.EditIndex = e.NewEditIndex;
+            GetAllCenterMaster();
+            EditCenterMaster(e.NewEditIndex.ToString());
+        }
+
+        protected void grvCenterMaster_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "Update")
+            {
+                EditCenterMaster(e.CommandArgument.ToString());
+                btnSave.Visible = true;
+                btnUpdate.Visible = false;
+            }
+            if (e.CommandName == "Edit")
+            {
+                divCenterNumberTab.Visible = true;
+                btnSave.Visible = false;
+                btnUpdate.Visible = true;
+            }
+            if (e.CommandName == "Delete")
+            {
+                DeleteCenterMaster(e.CommandArgument.ToString());
+            }
+
+            if (e.CommandName == "Cancel")
+            {
+            }
+        }
+
+        protected void grvCenterMaster_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+        
+        }
+
+        protected void grvCenterMaster_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+
+        }
+
+        protected void grvCenterMaster_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            grvCenterMaster.EditIndex = -1;
+            GetAllCenterMaster();
+        }
+
+        protected void grvCenterMaster_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            LoadCenterMasterModel();
+            _centermastermanagermodel.Add(centermastermodel, Userid);
+            GetAllCenterMaster();
+            divCenterNumberTab.Visible = false;
+            btnSave.Visible = true;
+            btnUpdate.Visible = false;
+            ControlClearing.ClearAllControls(this.Page.Form);
+        }
+
+        #endregion
+
+        #region "Common Methods"
 
         public void GetAllCenterMaster()
         {
@@ -35,22 +136,6 @@ namespace ClinicalTrail.Application.WebApplication.Views.CenterMaster
             CenterMasterModelManager objCMM = new CenterMasterModelManager();
             grvCenterMaster.DataSource = objCMM.getCenterManagers();
             grvCenterMaster.DataBind();
-        }
-
-        protected void btnCancel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnSave_Click(object sender, EventArgs e)
-        {
-            LoadCenterMasterModel();
-            _centermastermanagermodel.Add(centermastermodel, Userid);
-        }
-
-        protected void btnUpload_Click(object sender, EventArgs e)
-        {
-
         }
 
         public void LoadCenterMasterModel()
@@ -86,55 +171,18 @@ namespace ClinicalTrail.Application.WebApplication.Views.CenterMaster
             }
         }
 
-        protected void grvCenterMaster_RowEditing(object sender, GridViewEditEventArgs e)
-        {
-            ViewState["Edit"] = "true";
-
-            //grvCenterMaster.EditIndex = e.NewEditIndex;
-            //LinkButton lnkbtnEdit = sender as LinkButton;
-            //GridViewRow rowEdit = (GridViewRow)lnkbtnEdit.NamingContainer;
-            //lnkbtnEdit.Visible = false;
-
-            //LinkButton lnkBtnDelete = sender as LinkButton;
-            //GridViewRow rowDelete = (GridViewRow)lnkBtnDelete.NamingContainer;
-            //lnkBtnDelete.Visible = false;
-
-            //LinkButton lnkBtnUpdate = sender as LinkButton;
-            //GridViewRow rowUpdate = (GridViewRow)lnkBtnUpdate.NamingContainer;
-            //lnkBtnUpdate.Visible = true;
-
-            //LinkButton lnkBtnCancel = sender as LinkButton;
-            //GridViewRow rowCancel = (GridViewRow)lnkBtnCancel.NamingContainer;
-            //lnkBtnCancel.Visible = true;
-
-            //LinkButton lnkBtnEdit = (LinkButton)e.Row.FindControl("btnedit");
-            //lnkBtnEdit.Visible = false;
-            //LinkButton lnkBtnUpdate = (LinkButton)e.Row.FindControl("btnUpdate");
-            //lnkBtnUpdate.Visible = true;
-            //LinkButton lnkBtnDelete = (LinkButton)e.Row.FindControl("btnDelete");
-            //lnkBtnDelete.Visible = false;
-            //LinkButton lnkBtnCancel = (LinkButton)e.Row.FindControl("btnCancel");
-            //lnkBtnCancel.Visible = true;
-
-            //string CenterNo = grvCenterMaster.Rows[e.NewEditIndex].Cells[0].Text;
-            //EditCenterMaster(CenterNo);
-        }
-
         private void ChangeButtonForEditing(int GridEditIndex)
         {
 
         }
 
-        private bool EditCenterMaster(string CenterNo)
+        private bool EditCenterMaster(string centerno)
         {
             try
             {
-                int CentNo = Convert.ToInt32(CenterNo);
+                int CentNo = Convert.ToInt32(centerno);
                 CenterMasterModelManager objCentManModMast = new CenterMasterModelManager();
-                centermastermodel = objCentManModMast.GetCenterManager(CentNo);
-                divCenterNumberTab.Visible = true;
-                btnSave.Visible = false;
-                btnUpdate.Visible = true;
+                centermastermodel = objCentManModMast.GetCenterManager(CentNo);                
                 SetCenterManager(centermastermodel);
             }
             catch (Exception ex)
@@ -170,226 +218,38 @@ namespace ClinicalTrail.Application.WebApplication.Views.CenterMaster
             txtWebsite.Text = centermastermodel.Website ?? "";
         }
 
-        protected void grvCenterMaster_RowCommand(object sender, GridViewCommandEventArgs e)
+        private void DeleteCenterMaster(string centerno)
         {
-            if (e.CommandName == "Update")
+            try
             {
-                //ChangeButtonForEditing(e.CommandArgument.ToString());
-                EditCenterMaster(e.CommandArgument.ToString());
-                btnSave.Visible = true;
-                btnUpdate.Visible = false;
-            }
-            if (e.CommandName == "Edit")
-            {
-                btnSave.Visible = false;
-                btnUpdate.Visible = true;
-                EditCenterMaster(e.CommandArgument.ToString());
-            }
-            if (e.CommandName == "Delete")
-            {
-                DeleteCenterMaster(e.CommandArgument.ToString());
-            }
-        }
-
-        private void DeleteCenterMaster(string p)
-        {
-
-        }
-
-        protected void grvCenterMaster_RowDataBound(object sender, GridViewRowEventArgs e)
-        {
-            if (e.Row.RowType == DataControlRowType.DataRow)
-            {
-                LinkButton lnkBtnEdit = (LinkButton)e.Row.FindControl("btnedit");
-                LinkButton lnkBtnUpdate = (LinkButton)e.Row.FindControl("btnUpdate");
-                LinkButton lnkBtnDelete = (LinkButton)e.Row.FindControl("btnDelete");
-                LinkButton lnkBtnCancel = (LinkButton)e.Row.FindControl("btnCancel");
-                if (ViewState["Edit"].ToString() == "true")
+                int centno = Convert.ToInt32(centerno);
+                CenterMasterModelManager objCentManModMast = new CenterMasterModelManager();
+                bool result = objCentManModMast.DeleteCenterManager(centno);
+                if (result)
                 {
-                    lnkBtnEdit.Visible = false;
-                    lnkBtnDelete.Visible = false;
-                    lnkBtnUpdate.Visible = true;
-                    lnkBtnCancel.Visible = true;
+                    //MessageBox.Show("Sucessfully Deleted");
+                    divCenterNumberTab.Visible = false;
+                    btnSave.Visible = true;
+                    btnUpdate.Visible = false;
+                    GetAllCenterMaster();
                 }
-                else
-                {
-                    lnkBtnEdit.Visible = true;
-                    lnkBtnDelete.Visible = true;
-                    lnkBtnUpdate.Visible = false;
-                    lnkBtnCancel.Visible = false;
-                }
+                //else
+                //    MessageBox.Show("Error While deliting the Center Master");
+            }
+            catch (Exception ex)
+            {
+                Logger.Error("CM000001|Error while deleting Center Master Details: " + ex.InnerException.InnerException);
             }
         }
 
-        protected void btnUpdate_Click(object sender, EventArgs e)
+        public void GetCityMasterList()
         {
-            LoadCenterMasterModel();
-            _centermastermanagermodel.Add(centermastermodel, Userid);
-            GetAllCenterMaster();
-            divCenterNumberTab.Visible = false;
-            btnSave.Visible = true;
-            btnUpdate.Visible = false;
-            FindControls(this.Page.Form, false);
-        }
-
-        //private void FindControls(Control htmlForm, bool p)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        private void ClearAllControls(System.Web.UI.HtmlControls.HtmlForm htmlForm)
-        {
-            foreach (System.Web.UI.Control control in htmlForm.Controls)
-            {
-                if (control is System.Web.UI.WebControls.TextBox)
-                {
-                    System.Web.UI.WebControls.TextBox txtbox = (System.Web.UI.WebControls.TextBox)control;
-                    txtbox.Text = string.Empty;
-                }
-                //else if (control is CheckBox)
-                //{
-                //    CheckBox chkbox = (CheckBox)control;
-                //    chkbox.Checked = false;
-                //}
-                //else if (control is RadioButton)
-                //{
-                //    RadioButton rdbtn = (RadioButton)control;
-                //    rdbtn.Checked = false;
-                //}
-                //else if (control is DateTimePicker)
-                //{
-                //    DateTimePicker dtp = (DateTimePicker)control;
-                //    dtp.Value = DateTime.Now;
-                //}
-            }
-        }
-
-        #region "Common Methods"
-
-        //public void ClearAllControls(Form form)
-        //{
-        //    foreach (System.Web.UI.Control control in form.Controls)
-        //    {
-        //        if (control is System.Web.UI.WebControls.TextBox)
-        //        {
-        //            System.Web.UI.WebControls.TextBox txtbox = (System.Web.UI.WebControls.TextBox)control;
-        //            txtbox.Text = string.Empty;
-        //        }
-        //        //else if (control is CheckBox)
-        //        //{
-        //        //    CheckBox chkbox = (CheckBox)control;
-        //        //    chkbox.Checked = false;
-        //        //}
-        //        //else if (control is RadioButton)
-        //        //{
-        //        //    RadioButton rdbtn = (RadioButton)control;
-        //        //    rdbtn.Checked = false;
-        //        //}
-        //        //else if (control is DateTimePicker)
-        //        //{
-        //        //    DateTimePicker dtp = (DateTimePicker)control;
-        //        //    dtp.Value = DateTime.Now;
-        //        //}
-        //    }
-        //}
-
-        /// <summary>
-        /// Change status of all the master controles used in the page
-        /// </summary>
-        /// <param name="ctrl"></param>
-        /// <param name="status"></param>
-        /// <param name="status"></param>
-        public void FindControls(Control ctrl,bool status)
-        {
-            foreach (System.Web.UI.Control item in ctrl.Controls)
-            {
-                if (item is TextBox)
-                {
-                    TextBox txb = (TextBox)item;
-                    txb.Text = "";
-                }
-                if (item is DropDownList)
-                {
-                    DropDownList ddl = (DropDownList)item;
-                    ddl.SelectedIndex = 0;
-                }
-                if (item is CheckBox)
-                {
-                    CheckBox chk = (CheckBox)item;
-                    chk.Checked = status;
-                }
-                //if (item is Button)
-                //{
-                //    Button btn = (Button)item;
-                //    btn.Visible = status;
-                //}
-                if (item is RadioButtonList)
-                {
-                    RadioButtonList rbtnl = (RadioButtonList)item;
-                    rbtnl.SelectedIndex = 0;
-                }
-                if (item is LinkButton)
-                {
-                    LinkButton lbtn = (LinkButton)item;
-                    lbtn.Text = "";
-                }
-                //if (item is Panel)
-                //{
-                //    Panel pnl = (Panel)item;
-                //    pnl.Visible = status;
-                //}
-                FindChildControls(item,status);
-            }
-        }
-
-        /// <summary>
-        /// Change status of all the child controles used in the page
-        /// </summary>
-        /// <param name="ctrl"></param>
-        /// <param name="status"></param>
-        public void FindChildControls(Control ctrl, bool status)
-        {
-            foreach (Control item in ctrl.Controls)
-            {
-                if (item is TextBox)
-                {
-                    TextBox txb = (TextBox)item;
-                    txb.Text = "";
-                }
-                if (item is DropDownList)
-                {
-                    DropDownList ddl = (DropDownList)item;
-                    ddl.SelectedIndex = 0;
-                }
-                if (item is CheckBox)
-                {
-                    CheckBox chk = (CheckBox)item;
-                    chk.Checked = status;
-                }
-                //if (item is Button)
-                //{
-                //    Button btn = (Button)item;
-                //    btn.Visible = status;
-                //}
-                if (item is RadioButtonList)
-                {
-                    RadioButtonList rbtnl = (RadioButtonList)item;
-                    rbtnl.SelectedIndex = 0;
-                }
-                if (item is LinkButton)
-                {
-                    LinkButton lbtn = (LinkButton)item;
-                    lbtn.Text = "";
-                }
-                //if (item is Panel)
-                //{
-                //    Panel pnl = (Panel)item;
-                //    pnl.Visible = status;
-                //}
-                FindChildControls(item, status);
-            }
+            //CityMasterModelManager _citymastermodelmanager = new CityMasterModelManager();
+            ////List<CityMasterModel> citymasterlist = _citymastermodelmanager.GetAllCityMaster();
+            //CityMasterModel citymasterlist1 = _citymastermodelmanager.GetStateByCityID();
         }
 
         #endregion
+
     }
 }

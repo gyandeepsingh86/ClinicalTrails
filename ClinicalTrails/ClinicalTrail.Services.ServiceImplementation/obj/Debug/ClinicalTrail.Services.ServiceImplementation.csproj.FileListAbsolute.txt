@@ -8,8 +8,8 @@ D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.ServiceImplement
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.ServiceImplementation\bin\Debug\ClinicalTrail.Services.ServiceContracts.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.ServiceImplementation\bin\Debug\ClinicalTrail.DataAccess.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.ServiceImplementation\bin\Debug\EntityFramework.dll
-D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.ServiceImplementation\bin\Debug\Microsoft.Practices.Unity.Interception.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.ServiceImplementation\bin\Debug\NLog.dll
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.ServiceImplementation\bin\Debug\Microsoft.Practices.Unity.Interception.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.ServiceImplementation\bin\Debug\Microsoft.Practices.Unity.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.ServiceImplementation\bin\Debug\Microsoft.Practices.ServiceLocation.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.ServiceImplementation\bin\Debug\ClinicalTrail.Business.pdb
@@ -20,8 +20,8 @@ D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.ServiceImplement
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.ServiceImplementation\bin\Debug\AtlasCopco.Framework.Objects.pdb
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.ServiceImplementation\bin\Debug\ClinicalTrail.DataAccess.pdb
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.ServiceImplementation\bin\Debug\EntityFramework.xml
-D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.ServiceImplementation\bin\Debug\Microsoft.Practices.Unity.Interception.xml
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.ServiceImplementation\bin\Debug\NLog.xml
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.ServiceImplementation\bin\Debug\Microsoft.Practices.Unity.Interception.xml
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.ServiceImplementation\bin\Debug\Microsoft.Practices.Unity.xml
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.ServiceImplementation\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.ServiceImplementation\bin\Debug\Microsoft.Practices.ServiceLocation.xml

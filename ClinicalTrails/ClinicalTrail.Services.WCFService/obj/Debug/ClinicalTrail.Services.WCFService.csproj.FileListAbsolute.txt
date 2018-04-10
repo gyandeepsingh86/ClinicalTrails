@@ -1,8 +1,6 @@
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\bin\ClinicalTrail.Services.WCFService.dll.config
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\bin\ClinicalTrail.Services.WCFService.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\bin\ClinicalTrail.Services.WCFService.pdb
-D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\obj\Debug\ClinicalTrail.Services.WCFService.dll
-D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\obj\Debug\ClinicalTrail.Services.WCFService.pdb
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\bin\ClinicalTrail.Business.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\bin\ClinicalTrail.DataAccess.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\bin\ClinicalTrail.GeneralObjectStore.dll
@@ -12,6 +10,7 @@ D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\bin\C
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\bin\ClinicalTrail.Services.ServiceImplementation.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\bin\AtlasCopco.Framework.Objects.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\bin\EntityFramework.dll
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\bin\NLog.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\bin\Microsoft.Practices.Unity.Interception.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\bin\Microsoft.Practices.Unity.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\bin\Microsoft.Practices.ServiceLocation.dll
@@ -24,7 +23,10 @@ D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\bin\C
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\bin\ClinicalTrail.Services.ServiceImplementation.pdb
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\bin\AtlasCopco.Framework.Objects.pdb
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\bin\EntityFramework.xml
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\bin\NLog.xml
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\bin\Microsoft.Practices.Unity.xml
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\bin\Microsoft.Practices.ServiceLocation.pdb
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\bin\Microsoft.Practices.ServiceLocation.xml
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\obj\Debug\ClinicalTrail.Services.WCFService.csprojResolveAssemblyReference.cache
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\obj\Debug\ClinicalTrail.Services.WCFService.dll
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Services.WCFService\obj\Debug\ClinicalTrail.Services.WCFService.pdb

@@ -29,7 +29,7 @@ namespace ClinicalTrail.DataAccess.Model
         public string Post_Code { get; set; }
         public string Office_Phone { get; set; }
         public string Mobile_Phone { get; set; }
-        public string Fax_No_ { get; set; }
+        public string Fax_No { get; set; }
         public string Email_ID { get; set; }
         public string Primary_Email { get; set; }
         public string Secondary_Email_ID { get; set; }
@@ -40,5 +40,9 @@ namespace ClinicalTrail.DataAccess.Model
         public string Centre_3 { get; set; }
         public string Payee_Name { get; set; }
         public string Bank_Account_Number { get; set; }
+        public Nullable<bool> IsActive { get; set; }
+    
+        public virtual InvestigatorMaster InvestigatorMaster1 { get; set; }
+        public virtual InvestigatorMaster InvestigatorMaster2 { get; set; }
     }
 }

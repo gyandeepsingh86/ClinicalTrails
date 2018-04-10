@@ -22,6 +22,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Presentation", "5. Presentation", "{53933B25-F41C-4223-8410-454258A0F6CD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicalTrail.Application.WebApplication", "ClinicalTrail.Application.WebApplication\ClinicalTrail.Application.WebApplication.csproj", "{038996A5-C6AB-4698-A19C-979538DD1152}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6406BD4D-6313-4C09-A46B-C530E4D8E5DB} = {6406BD4D-6313-4C09-A46B-C530E4D8E5DB}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicalTrail.Business", "ClinicalTrail.Business\ClinicalTrail.Business.csproj", "{402DC0B5-1EDD-45EF-98F2-67CF8ED893FE}"
 EndProject
@@ -36,6 +39,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicalTrail.Services.WindowsService", "ClinicalTrail.Services.WindowsService\ClinicalTrail.Services.WindowsService.csproj", "{EBACF56C-EF89-4E63-9BA6-C962A8E2D62F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicalTrail.Application.WebApplication.Test", "ClinicalTrail.Application.WebApplication.Test\ClinicalTrail.Application.WebApplication.Test.csproj", "{4D6452C0-1783-4D86-9664-DF9862BDA827}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6406BD4D-6313-4C09-A46B-C530E4D8E5DB} = {6406BD4D-6313-4C09-A46B-C530E4D8E5DB}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1 Service Logic", "1.1 Service Logic", "{F1BA525F-4AC4-4F5E-BEAD-053B9ED898C3}"
 EndProject

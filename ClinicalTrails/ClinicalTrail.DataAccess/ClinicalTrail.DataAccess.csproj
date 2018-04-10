@@ -41,6 +41,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -50,9 +51,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factory\AddressTypeFactory.cs" />
     <Compile Include="Factory\CenterMasterFactory.cs" />
+    <Compile Include="Factory\CityMasterFactory.cs" />
     <Compile Include="Factory\InvestigatorMasterFactory.cs" />
+    <Compile Include="Factory\UserMasterFactory.cs" />
     <Compile Include="Factory\VendorMasterFactory.cs" />
+    <Compile Include="Model\AddressType.cs">
+      <DependentUpon>ClinicalTrailDBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\CenterMaster.cs">
       <DependentUpon>ClinicalTrailDBModel.tt</DependentUpon>
     </Compile>
@@ -83,10 +90,14 @@
     <Compile Include="Model\StateMaster.cs">
       <DependentUpon>ClinicalTrailDBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\UserMaster.cs">
+      <DependentUpon>ClinicalTrailDBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\VendorMaster.cs">
       <DependentUpon>ClinicalTrailDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\CityMasterRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -113,6 +124,12 @@
       <DependentUpon>ClinicalTrailDBModel.edmx</DependentUpon>
       <LastGenOutput>ClinicalTrailDBModel.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClinicalTrail.GeneralObjectStore\ClinicalTrail.GeneralObjectStore.csproj">
+      <Project>{e91dcf10-4e52-496b-87b3-6e2463de713d}</Project>
+      <Name>ClinicalTrail.GeneralObjectStore</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

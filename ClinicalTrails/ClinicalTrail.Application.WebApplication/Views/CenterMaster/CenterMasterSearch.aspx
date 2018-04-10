@@ -156,19 +156,18 @@
             </div>
             <div class="row">
                 <div class="column100">
-                    <%--<asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-info" OnClick="btnCancel_Click" />
-                    <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-info" OnClick="btnSave_Click" />
-                    <asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn btn-info" OnClick="btnUpdate_Click" Visible="false" />--%>
+                    <asp:Button ID="btnClear" runat="server" Text="Clear" CssClass="btn btn-info" OnClick="btnClear_Click" />
+                    <asp:Button ID="btnSearch" runat="server" Text="Search" CssClass="btn btn-info" OnClick="btnSearch_Click" />
                 </div>
             </div>
         </div>
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <asp:Label ID="Label1" runat="server" Text="Center Master Data"></asp:Label>
+                <asp:Label ID="Label1" runat="server" Text="Center Master Search Result"></asp:Label>
             </div>
             <div class="row">
                 <div class="column100">
-                    <asp:GridView ID="grvCenterMaster" CssClass="table table-striped table-bordered table-hover" runat="server" PageSize="10"
+                    <asp:GridView ID="grvCenterMasterSearch" CssClass="table table-striped table-bordered table-hover" runat="server" PageSize="10"
                         AutoGenerateColumns="false" ShowFooter="true">
                         <Columns>
                             <asp:TemplateField HeaderText="Center No">
@@ -218,20 +217,10 @@
                                     <asp:Label ID="grvlblEquipments" runat="server"
                                         Text='<%#Eval("Equipments")%>'></asp:Label>
                                 </ItemTemplate>
-                            </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Action">
-                                <ItemTemplate>
-                                    <asp:LinkButton ID="btnEdit" runat="server" ToolTip="Edit" CommandName="Edit" CommandArgument='<%#Eval("Center_No")%>'>
-                                        <span class="icon-edit"></asp:LinkButton>
-                                    <asp:LinkButton ID="btnUpdate" runat="server" Visible="false" ToolTip="Update" CommandName="Update">
-                                        <span class="icon-save"></asp:LinkButton>
-                                    <asp:LinkButton ID="btnDelete" runat="server" ToolTip="Delete" CommandName="Delete" CommandArgument='<%#Eval("Center_No")%>' OnClientClick="return confirm('Are you sure you?');">
-                                        <span class="icon-trash" ></asp:LinkButton>
-                                    <asp:LinkButton ID="btnCancel" runat="server" Visible="false" ToolTip="Cancel" CommandName="Cancle">
-                                        <span class="icon-remove"></asp:LinkButton>
-                                </ItemTemplate>
-                            </asp:TemplateField>
+                            </asp:TemplateField>                           
                         </Columns>
+                        <EmptyDataTemplate>
+                            <asp:Label ID="lblEmptyGridMessage" runat="server" CssClass="info text-center fulllength" Text="Oops!! No Record Found, please try with different key" ></asp:Label></EmptyDataTemplate>
                     </asp:GridView>
                 </div>
             </div>
