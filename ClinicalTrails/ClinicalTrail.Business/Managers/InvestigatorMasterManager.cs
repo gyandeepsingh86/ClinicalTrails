@@ -28,9 +28,27 @@ namespace ClinicalTrail.Business.Managers
             return InvestigatorMasterMapper.Map(_factory.GetInvestigatorMasterByID(id));
         }
 
-        public void CRUDInvestigatorMaster(InvestigatorMasterDto investigatorMasterDto, string mode)
+        public void CRUDInvestigatorMaster(InvestigatorMasterDto investigatormasterdto, string mode)
         {
-            _factory.CRUDInvestigatorMaster(InvestigatorMasterMapper.Map(investigatorMasterDto),mode);
+            _factory.CRUDInvestigatorMaster(InvestigatorMasterMapper.Map(investigatormasterdto), mode);
+        }
+
+        public void DeleteInvestigatoMaster(int id)
+        {
+            _factory.DeleteInvestigatoMaster(id);
+        }
+
+        public void CRUDInvestigatorMaster(List<InvestigatorMasterDto> investigatormasterdtolist, string mode)
+        {
+            foreach (InvestigatorMasterDto dto in investigatormasterdtolist)
+            {
+                _factory.CRUDInvestigatorMaster(InvestigatorMasterMapper.Map(dto), mode);
+            }
+        }
+
+        public List<InvestigatorMasterDto> GetSearchResultForInvestigatorMaster(InvestigatorMasterDto searchlist)
+        {
+            return InvestigatorMasterMapper.Map(_factory.GetSearchResultForInvestigatorMaster(InvestigatorMasterMapper.Map(searchlist)));
         }
     }
 }

@@ -72,6 +72,12 @@ namespace ClinicalTrail.Application.WebApplication.Views.CenterMaster
             }
         }
 
-
+        protected void grvCenterMasterSearch_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            grvCenterMasterSearch.PageIndex = e.NewPageIndex;
+            LoadCenterMasterModel();
+            grvCenterMasterSearch.DataSource = _centermastermanagermodel.FilterCenterManager(centermastermodel);
+            grvCenterMasterSearch.DataBind();
+        }
     }
 }

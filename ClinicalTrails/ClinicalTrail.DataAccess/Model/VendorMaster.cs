@@ -14,7 +14,7 @@ namespace ClinicalTrail.DataAccess.Model
     
     public partial class VendorMaster
     {
-        public int Center_No { get; set; }
+        public int Vendor_No { get; set; }
         public string Vendor_Name { get; set; }
         public string Vendor_Type { get; set; }
         public string Street_Address { get; set; }
@@ -32,5 +32,6 @@ namespace ClinicalTrail.DataAccess.Model
         public string Equipments { get; set; }
         public string Payee_Name { get; set; }
         public string Bank_Account_Number { get; set; }
+        public bool IsActive { get; set; }
     }
 }

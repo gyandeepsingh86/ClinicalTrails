@@ -167,8 +167,9 @@
             </div>
             <div class="row">
                 <div class="column100">
-                    <asp:GridView ID="grvCenterMasterSearch" CssClass="table table-striped table-bordered table-hover" runat="server" PageSize="10"
-                        AutoGenerateColumns="false" ShowFooter="true">
+                    <asp:GridView ID="grvCenterMasterSearch" CssClass="table table-striped table-bordered table-hover" runat="server" PageSize="10" AllowPaging="true"
+                        AutoGenerateColumns="false" ShowFooter="true"
+                        OnPageIndexChanging="grvCenterMasterSearch_PageIndexChanging">
                         <Columns>
                             <asp:TemplateField HeaderText="Center No">
                                 <ItemTemplate>

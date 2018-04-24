@@ -22,5 +22,10 @@ namespace ClinicalTrail.Business.Managers
         {
             return AddressTypeMapper.Map(_factory.GetAllAddressTypeList());
         }
+
+        public AddressTypeDto GetAddressTypeByID(string name)
+        {
+            return AddressTypeMapper.Map(_factory.GetAddressTypeByID(name));
+        }
     }
 }

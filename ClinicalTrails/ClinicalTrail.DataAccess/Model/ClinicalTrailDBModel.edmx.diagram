@@ -5,7 +5,6 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="e224f73b4e6f4c7d8655ce8d6dd55b31" Name="Diagram1" ZoomLevel="55">
-        <EntityTypeShape EntityType="ClinicalTrialsDBModelContext.VendorMaster" Width="1.5" PointX="2.375" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ClinicalTrialsDBModelContext.CityMaster" Width="1.5" PointX="6" PointY="0.75" />
         <EntityTypeShape EntityType="ClinicalTrialsDBModelContext.CountryMaster" Width="1.5" PointX="7.75" PointY="0.75" />
         <EntityTypeShape EntityType="ClinicalTrialsDBModelContext.StateMaster" Width="1.5" PointX="9.625" PointY="0.75" />
@@ -15,7 +14,7 @@
         <EntityTypeShape EntityType="ClinicalTrialsDBModelContext.CenterMaster" Width="1.5" PointX="8.75" PointY="3.75" />
         <AssociationConnector Association="ClinicalTrialsDBModelContext.FK_InvestigatorMaster_InvestigatorMaster" />
         <EntityTypeShape EntityType="ClinicalTrialsDBModelContext.InvestigatorMaster" Width="1.5" PointX="0.75" PointY="6.75" />
-        <AssociationConnector Association="ClinicalTrialsDBModelContext.FK_InvestigatorMaster_InvestigatorMaster" />
+        <EntityTypeShape EntityType="ClinicalTrialsDBModelContext.VendorMaster" Width="1.5" PointX="0.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

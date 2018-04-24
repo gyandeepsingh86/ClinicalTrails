@@ -20,5 +20,10 @@ namespace ClinicalTrail.Application.WebApplication.Manager
         {
             return AddressTypeModelMapper.Map(_manager.GetAddressTypeList());
         }
+
+        public AddressTypeModel GetAddressTypeByID(string name)
+        {
+            return AddressTypeModelMapper.Map(_manager.GetAddressTypeByID(name));
+        }
     }
 }

@@ -85,6 +85,24 @@ namespace ClinicalTrail.Application.WebApplication.Views.CenterMaster {
         protected global::System.Web.UI.WebControls.TextBox txtCenterName;
         
         /// <summary>
+        /// rfvtxtCenterName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvtxtCenterName;
+        
+        /// <summary>
+        /// revtxtCenterName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revtxtCenterName;
+        
+        /// <summary>
         /// lblCenterType control.
         /// </summary>
         /// <remarks>
@@ -94,13 +112,22 @@ namespace ClinicalTrail.Application.WebApplication.Views.CenterMaster {
         protected global::System.Web.UI.WebControls.Label lblCenterType;
         
         /// <summary>
-        /// txtCenterType control.
+        /// ddlCenterType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCenterType;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCenterType;
+        
+        /// <summary>
+        /// rfvddlCenterType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvddlCenterType;
         
         /// <summary>
         /// lblStreetAddress control.
@@ -121,6 +148,15 @@ namespace ClinicalTrail.Application.WebApplication.Views.CenterMaster {
         protected global::System.Web.UI.WebControls.TextBox txtStreetAddress;
         
         /// <summary>
+        /// rfvtxtStreetAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvtxtStreetAddress;
+        
+        /// <summary>
         /// lblCity control.
         /// </summary>
         /// <remarks>
@@ -137,6 +173,24 @@ namespace ClinicalTrail.Application.WebApplication.Views.CenterMaster {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCity;
+        
+        /// <summary>
+        /// rfvtxtCity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvtxtCity;
+        
+        /// <summary>
+        /// revtxtCity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revtxtCity;
         
         /// <summary>
         /// lblState control.
@@ -157,6 +211,15 @@ namespace ClinicalTrail.Application.WebApplication.Views.CenterMaster {
         protected global::System.Web.UI.WebControls.TextBox txtState;
         
         /// <summary>
+        /// rfvtxtState control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvtxtState;
+        
+        /// <summary>
         /// lblCountry control.
         /// </summary>
         /// <remarks>
@@ -173,6 +236,15 @@ namespace ClinicalTrail.Application.WebApplication.Views.CenterMaster {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCountry;
+        
+        /// <summary>
+        /// rfvtxtCountry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvtxtCountry;
         
         /// <summary>
         /// lblPostcode control.
@@ -193,6 +265,24 @@ namespace ClinicalTrail.Application.WebApplication.Views.CenterMaster {
         protected global::System.Web.UI.WebControls.TextBox txtPostcode;
         
         /// <summary>
+        /// rfvtxtPostcode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvtxtPostcode;
+        
+        /// <summary>
+        /// revtxtPostcode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revtxtPostcode;
+        
+        /// <summary>
         /// lblSpecialties control.
         /// </summary>
         /// <remarks>
@@ -209,6 +299,33 @@ namespace ClinicalTrail.Application.WebApplication.Views.CenterMaster {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSpecialties;
+        
+        /// <summary>
+        /// rfvtxtSpecialties control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvtxtSpecialties;
+        
+        /// <summary>
+        /// lblEquipments control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEquipments;
+        
+        /// <summary>
+        /// txtEquipments control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEquipments;
         
         /// <summary>
         /// lblOfficePhone control.
@@ -229,6 +346,24 @@ namespace ClinicalTrail.Application.WebApplication.Views.CenterMaster {
         protected global::System.Web.UI.WebControls.TextBox txtOfficePhone;
         
         /// <summary>
+        /// rvftxtOfficePhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rvftxtOfficePhone;
+        
+        /// <summary>
+        /// revtxtOfficePhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revtxtOfficePhone;
+        
+        /// <summary>
         /// lblMobilePhone control.
         /// </summary>
         /// <remarks>
@@ -245,6 +380,24 @@ namespace ClinicalTrail.Application.WebApplication.Views.CenterMaster {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMobilePhone;
+        
+        /// <summary>
+        /// rfvtxtMobilePhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvtxtMobilePhone;
+        
+        /// <summary>
+        /// revtxtMobilePhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revtxtMobilePhone;
         
         /// <summary>
         /// lblEmail control.
@@ -265,6 +418,24 @@ namespace ClinicalTrail.Application.WebApplication.Views.CenterMaster {
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
         
         /// <summary>
+        /// rfvtxtEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvtxtEmail;
+        
+        /// <summary>
+        /// regexEmailValid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regexEmailValid;
+        
+        /// <summary>
         /// lblPrimaryEmail control.
         /// </summary>
         /// <remarks>
@@ -281,6 +452,15 @@ namespace ClinicalTrail.Application.WebApplication.Views.CenterMaster {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPrimaryEmail;
+        
+        /// <summary>
+        /// revtxtPrimaryEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revtxtPrimaryEmail;
         
         /// <summary>
         /// lblSecondaryEmail control.
@@ -301,40 +481,13 @@ namespace ClinicalTrail.Application.WebApplication.Views.CenterMaster {
         protected global::System.Web.UI.WebControls.TextBox txtSecondaryEmail;
         
         /// <summary>
-        /// lblWebsite control.
+        /// revtxtSecondaryEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblWebsite;
-        
-        /// <summary>
-        /// txtWebsite control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtWebsite;
-        
-        /// <summary>
-        /// lblEquipments control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEquipments;
-        
-        /// <summary>
-        /// txtEquipments control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEquipments;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revtxtSecondaryEmail;
         
         /// <summary>
         /// lblInvestigator1 control.
@@ -389,6 +542,24 @@ namespace ClinicalTrail.Application.WebApplication.Views.CenterMaster {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtInvestigator3;
+        
+        /// <summary>
+        /// lblWebsite control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblWebsite;
+        
+        /// <summary>
+        /// txtWebsite control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtWebsite;
         
         /// <summary>
         /// lblPayeeName control.
@@ -463,13 +634,13 @@ namespace ClinicalTrail.Application.WebApplication.Views.CenterMaster {
         protected global::System.Web.UI.WebControls.Label lblUploadCeneterMaster;
         
         /// <summary>
-        /// file control.
+        /// fuCenterMaster control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button file;
+        protected global::System.Web.UI.WebControls.FileUpload fuCenterMaster;
         
         /// <summary>
         /// btnUpload control.
@@ -479,6 +650,15 @@ namespace ClinicalTrail.Application.WebApplication.Views.CenterMaster {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnUpload;
+        
+        /// <summary>
+        /// GridView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
         /// Label1 control.

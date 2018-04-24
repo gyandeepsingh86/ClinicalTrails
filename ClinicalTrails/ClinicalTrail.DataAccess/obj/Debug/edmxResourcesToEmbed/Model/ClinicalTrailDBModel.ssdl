@@ -110,24 +110,11 @@
     <Property Name="UserType" Type="nvarchar" MaxLength="1" />
     <Property Name="UserPageAccess" Type="nvarchar" MaxLength="100" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'ClinicalTrials.dbo.VendorMaster' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="VendorMaster">
     <Key>
-      <PropertyRef Name="Center No" />
-      <PropertyRef Name="Vendor Name" />
-      <PropertyRef Name="Street Address" />
-      <PropertyRef Name="City" />
-      <PropertyRef Name="State" />
-      <PropertyRef Name="Country" />
-      <PropertyRef Name="Post code" />
-      <PropertyRef Name="Specialties" />
-      <PropertyRef Name="Office Phone" />
-      <PropertyRef Name="Email" />
-      <PropertyRef Name="Payee Name" />
-      <PropertyRef Name="Bank Account Number" />
+      <PropertyRef Name="Vendor No" />
     </Key>
-    <Property Name="Center No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Vendor No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Vendor Name" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="Vendor Type" Type="varchar" MaxLength="100" />
     <Property Name="Street Address" Type="varchar" MaxLength="100" Nullable="false" />
@@ -143,8 +130,9 @@ warning 6002: The table/view 'ClinicalTrials.dbo.VendorMaster' does not have a p
     <Property Name="Secondary Email" Type="varchar" MaxLength="100" />
     <Property Name="Website" Type="varchar" MaxLength="100" />
     <Property Name="Equipments" Type="varchar" MaxLength="100" />
-    <Property Name="Payee Name" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Bank Account Number" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Payee Name" Type="varchar" MaxLength="100" />
+    <Property Name="Bank Account Number" Type="varchar" MaxLength="100" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
   </EntityType>
   <Association Name="FK_InvestigatorMaster_InvestigatorMaster">
     <End Role="InvestigatorMaster" Type="Self.InvestigatorMaster" Multiplicity="1" />
@@ -178,28 +166,7 @@ warning 6002: The table/view 'ClinicalTrials.dbo.VendorMaster' does not have a p
     <EntitySet Name="InvestigatorMaster" EntityType="Self.InvestigatorMaster" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="StateMaster" EntityType="Self.StateMaster" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserMaster" EntityType="Self.UserMaster" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="VendorMaster" EntityType="Self.VendorMaster" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [VendorMaster].[Center No] AS [Center No], 
-    [VendorMaster].[Vendor Name] AS [Vendor Name], 
-    [VendorMaster].[Vendor Type] AS [Vendor Type], 
-    [VendorMaster].[Street Address] AS [Street Address], 
-    [VendorMaster].[City] AS [City], 
-    [VendorMaster].[State] AS [State], 
-    [VendorMaster].[Country] AS [Country], 
-    [VendorMaster].[Post code] AS [Post code], 
-    [VendorMaster].[Specialties] AS [Specialties], 
-    [VendorMaster].[Office Phone] AS [Office Phone], 
-    [VendorMaster].[Mobile Phone] AS [Mobile Phone], 
-    [VendorMaster].[Email] AS [Email], 
-    [VendorMaster].[Primary Email] AS [Primary Email], 
-    [VendorMaster].[Secondary Email] AS [Secondary Email], 
-    [VendorMaster].[Website] AS [Website], 
-    [VendorMaster].[Equipments] AS [Equipments], 
-    [VendorMaster].[Payee Name] AS [Payee Name], 
-    [VendorMaster].[Bank Account Number] AS [Bank Account Number]
-    FROM [dbo].[VendorMaster] AS [VendorMaster]</DefiningQuery>
-    </EntitySet>
+    <EntitySet Name="VendorMaster" EntityType="Self.VendorMaster" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_InvestigatorMaster_InvestigatorMaster" Association="Self.FK_InvestigatorMaster_InvestigatorMaster">
       <End Role="InvestigatorMaster" EntitySet="InvestigatorMaster" />
       <End Role="InvestigatorMaster1" EntitySet="InvestigatorMaster" />

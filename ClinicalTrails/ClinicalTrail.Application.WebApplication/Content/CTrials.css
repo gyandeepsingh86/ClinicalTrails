@@ -621,21 +621,21 @@ background: #f0f0f0;
     line-height: 38px;
 }
 
-    .followus a {
-        float: right;
-    }
+.followus a {
+    float: right;
+}
 
-        .followus a i {
-            font-size: 2em;
-            padding: 0 4px;
-            color: #747373;
-            text-shadow: 1px -1px 1px #000000;
-        }
+.followus a i {
+    font-size: 2em;
+    padding: 0 4px;
+    color: #747373;
+    text-shadow: 1px -1px 1px #000000;
+}
 
-        .followus a.active i,
-        .followus a:hover i {
-            color: #141414;
-        }
+.followus a.active i,
+.followus a:hover i {
+    color: #141414;
+}
 
 .contactBlk {
     padding: 0 0 14px;
@@ -796,6 +796,7 @@ background: #f0f0f0;
     padding: 25px;
 }
 
+
 #colorNav li ul {
     position: absolute;
     list-style: none;
@@ -807,6 +808,23 @@ background: #f0f0f0;
     /* This is important for the show/hide CSS animation */
     max-height: 0px;
     overflow-y: hidden;
+    -webkit-transition: max-height 0.8s linear;
+    -moz-transition: max-height 0.8s linear;
+    transition: max-height 0.8s linear;
+}
+
+#colorNav li ul li ul {
+    position: relative;
+    list-style: none;
+    text-align: center;
+    width: 230px;
+    left: 50%;
+    margin-left: -135px;
+    font: bold 12px 'Open Sans Condensed', sans-serif;
+    /* This is important for the show/hide CSS animation */
+    max-height: 0px;
+    overflow-y: hidden;
+    overflow-x: hidden;
     -webkit-transition: max-height 0.8s linear;
     -moz-transition: max-height 0.8s linear;
     transition: max-height 0.8s linear;
@@ -879,6 +897,7 @@ background: #f0f0f0;
     width: 100%;
     padding-right: 5px;
     padding-left: 5px;
+    padding-top: 10px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -1281,3 +1300,8 @@ a.article, a.article:hover {
     .search-query:focus{
         width: 260px;
     }   
+
+    .OverFlowX{
+        /*overflow-x:scroll;*/
+    }
+

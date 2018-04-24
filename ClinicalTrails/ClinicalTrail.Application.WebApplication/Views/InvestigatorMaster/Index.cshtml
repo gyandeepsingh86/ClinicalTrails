@@ -1,0 +1,267 @@
+﻿@{
+    ViewBag.Title = "Search Investigator Master";
+    Layout = "~/MasterPages/ClinicalTrailsMaster.cshtml";
+}
+@model ClinicalTrail.Application.WebApplication.Models.InvestigatorMasterModel
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Search Investigator Master</title>
+
+</head>
+<html>
+<body>
+    <div class="container">
+        <div class="panel panel-primary">
+            @using (Html.BeginForm("Search", "InvestigatorMaster", FormMethod.Post, new { id = "popupForm" }))
+            {
+                if (Model != null && Model.ID > 0)
+                {
+            @Html.HiddenFor(a => a.ID)
+                }
+
+            }
+            <div class="panel-heading">
+                Please Enter The Investigator Master Details
+            </div>
+            <div class="row" id="divInvestigatorNumberTab">
+                <div class="column10 label left">
+                    Title
+                </div>
+                <div class="column80">
+                    @Html.TextBoxFor(a => a.Title, new { @class = "form-control text-left fulllength" })
+                    @Html.ValidationMessageFor(a => a.Title)
+                </div>
+            </div>
+            <div class="row">
+                <div class="column10 label left">
+                    @Html.Label("First Name")
+                </div>
+                <div class="column20">
+                    @Html.TextBoxFor(a => a.Investigator_First_Name, new { @class = "form-control text-left fulllength" })
+                    @Html.ValidationMessageFor(a => a.Investigator_First_Name)
+                </div>
+                <div class="column10 label left">
+                    @Html.Label("Middle Name")
+                </div>
+                <div class="column20">
+                    @Html.TextBoxFor(a => a.Investigator_Middle_Name, new { @class = "form-control text-left fulllength" })
+                    @Html.ValidationMessageFor(a => a.Investigator_Middle_Name)
+                </div>
+                <div class="column10 label left">
+                    @Html.Label("Last Name")
+                </div>
+                <div class="column20">
+                    @Html.TextBoxFor(a => a.Investigator_Last_Name, new { @class = "form-control text-left fulllength" })
+                    @Html.ValidationMessageFor(a => a.Investigator_Last_Name)
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column10 label left">
+                    @Html.Label("Degree")
+                </div>
+                <div class="column20">
+                    @Html.TextBoxFor(a => a.Degree, new { @class = "form-control text-left fulllength" })
+                    @Html.ValidationMessageFor(a => a.Degree)
+                </div>
+                <div class="column10 label left">
+                    @Html.Label("Address Type")
+                </div>
+                <div class="column20">
+                    @Html.TextBoxFor(a => a.Address_Type, new { @class = "form-control text-left fulllength" })
+                    @Html.ValidationMessageFor(a => a.Address_Type)
+                </div>
+                <div class="column10 label left">
+                    @Html.Label("Institute Name")
+                </div>
+                <div class="column20">
+                    @Html.TextBoxFor(a => a.Institute_Name, new { @class = "form-control text-left fulllength" })
+                    @Html.ValidationMessageFor(a => a.Institute_Name)
+                </div>
+            </div>
+            <div class="row">
+                <div class="column10 label left">
+                    @Html.Label("Street Address")
+                </div>
+                <div class="column50">
+                    @Html.TextBoxFor(a => a.Street_Address, new { @class = "form-control text-left fulllength" })
+                    @Html.ValidationMessageFor(a => a.Street_Address)
+                </div>
+                <div class="column10 label left">
+                    @Html.Label("City")
+                </div>
+                <div class="column20">
+                    @Html.TextBoxFor(a => a.City, new { @class = "form-control text-left fulllength" })
+                    @Html.ValidationMessageFor(a => a.City)
+                </div>
+            </div>
+            <div class="row">
+                <div class="column10 label left">
+                    @Html.Label("State")
+                </div>
+                <div class="column20">
+                    @Html.TextBoxFor(a => a.State, new { @class = "form-control text-left fulllength" })
+                    @Html.ValidationMessageFor(a => a.State)
+                </div>
+                <div class="column10 label left">
+                    @Html.Label("Country")
+                </div>
+                <div class="column20">
+                    @Html.TextBoxFor(a => a.Country, new { @class = "form-control text-left fulllength" })
+                    @Html.ValidationMessageFor(a => a.Country)
+                </div>
+                <div class="column10 label left">
+                    @Html.Label("Post Code")
+                </div>
+                <div class="column20">
+                    @Html.TextBoxFor(a => a.Post_Code, new { @class = "form-control text-left fulllength" })
+                    @Html.ValidationMessageFor(a => a.Post_Code)
+                </div>
+            </div>
+            <div class="row">
+                <div class="column10 label left">
+                    @Html.Label("Mobile Phone")
+                </div>
+                <div class="column20">
+                    @Html.TextBoxFor(a => a.Mobile_Phone, new { @class = "form-control text-left fulllength" })
+                </div>
+                <div class="column10 label left">
+                    @Html.Label("Office Phone")
+                </div>
+                <div class="column20">
+                    @Html.TextBoxFor(a => a.Office_Phone, new { @class = "form-control text-left fulllength" })
+                </div>
+                <div class="column10 label left">
+                    @Html.Label("Fax No")
+                </div>
+                <div class="column20">
+                    @Html.TextBoxFor(a => a.Fax_No, new { @class = "form-control text-left fulllength" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="column10 label left">
+                    @Html.Label("Certification")
+                </div>
+                <div class="column35">
+                    @Html.TextBoxFor(a => a.Certification, new { @class = "form-control text-left fulllength" })
+                </div>
+                <div class="column10 label left">
+                    @Html.Label("Specialties")
+                </div>
+                <div class="column35">
+                    @Html.TextBoxFor(a => a.Speciality, new { @class = "form-control text-left fulllength" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="column10 label left">
+                    @Html.Label("Email")
+                </div>
+                <div class="column20">
+                    @Html.TextBoxFor(a => a.Email_ID, new { @class = "form-control text-left fulllength" })
+                </div>
+                <div class="column10 label left">
+                    @Html.Label("Primary Email")
+                </div>
+                <div class="column20">
+                    @Html.TextBoxFor(a => a.Primary_Email, new { @class = "form-control text-left fulllength" })
+                </div>
+                <div class="column10 label left">
+                    @Html.Label("Secondary Email")
+                </div>
+                <div class="column20">
+                    @Html.TextBoxFor(a => a.Secondary_Email_ID, new { @class = "form-control text-left fulllength" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="column10 label left">
+                    @Html.Label("Center 1")
+                </div>
+                <div class="column20">
+                    @Html.TextBoxFor(a => a.Centre_1, new { @class = "form-control text-left fulllength" })
+                </div>
+                <div class="column10 label left">
+                    @Html.Label("Center 2")
+                </div>
+                <div class="column20">
+                    @Html.TextBoxFor(a => a.Centre_2, new { @class = "form-control text-left fulllength" })
+                </div>
+                <div class="column10 label left">
+                    @Html.Label("Center 3")
+                </div>
+                <div class="column20">
+                    @Html.TextBoxFor(a => a.Centre_3, new { @class = "form-control text-left fulllength" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="column10 label left">
+                    @Html.Label("Payee Name")
+                </div>
+                <div class="column20">
+                    @Html.TextBoxFor(a => a.Payee_Name, new { @class = "form-control text-left fulllength" })
+                </div>
+                <div class="column10 label left">
+                    @Html.Label("Bank Acc No")
+                </div>
+                <div class="column20">
+                    @Html.TextBoxFor(a => a.Bank_Account_Number, new { @class = "form-control text-left fulllength" })
+                </div>
+                <div class="column10 label left">
+                    @Html.Label("Is Active")
+                </div>
+                <div class="column20">
+                    @Html.CheckBoxFor(a => a.IsActive, new { @class = "form-control text-left fulllength" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="column100">
+                    <input type="submit" value="Save" class="btn btn-info" />
+                    <input type="submit" value="Clear" class="btn btn-info" />
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Investigator Master Search Result
+            </div>
+            <div class="row">
+                <div class="column100">
+                    <table id="myDatatable" class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email ID</th>
+                                <th>City</th>
+                                <th>Country</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+            <script>
+                $(document).ready(function () {
+                    var oTable = $('#myDatatable').DataTable({
+                        "ajax": {
+                            "url": '/InvestigatorMaster/SearchInvestigator',
+                            "type": "get",
+                            "datatype": "json"
+                        },
+                        "columns": [
+                            { "data": "Investigator_First_Name" },
+                            { "data": "Investigator_Last_Name" },
+                            { "data": "Email_ID" },
+                            { "data": "City" },
+                            { "data": "Country" },
+                        ]
+                    })
+                    $('.tablecontainer').on('click', 'a.popup', function (e) {
+                        e.preventDefault();
+                        OpenPopup($(this).attr('href'));
+                    })
+                })
+            </script>
+        </div>
+    </div>
+</body>
+</html>
+

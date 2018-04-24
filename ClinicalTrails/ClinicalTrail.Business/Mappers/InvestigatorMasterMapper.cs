@@ -89,7 +89,7 @@ namespace ClinicalTrail.Business.Mappers
             invertigatormasterdto.Centre_3 = investigatormaster.Centre_3;
             invertigatormasterdto.Payee_Name = investigatormaster.Payee_Name;
             invertigatormasterdto.Bank_Account_Number = investigatormaster.Bank_Account_Number;
-            invertigatormasterdto.IsActive = investigatormaster.IsActive;
+            invertigatormasterdto.IsActive = investigatormaster.IsActive.Value;
 
             return invertigatormasterdto;
         }

@@ -1,6 +1,6 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ClinicalTrail.Application.WebApplication._Default" %>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/MasterPages/ClinicalTrailMaster.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ClinicalTrail.Application.WebApplication._Default" %>
 
-<asp:Content runat="server" ID="FeaturedContent" ContentPlaceHolderID="FeaturedContent">
+<asp:Content runat="server" ID="FeaturedContent" ContentPlaceHolderID="head">
     <section class="featured">
         <div class="content-wrapper">
             <hgroup class="title">
@@ -16,7 +16,7 @@
         </div>
     </section>
 </asp:Content>
-<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="ContentPlaceHolder1">
     <h3>We suggest the following:</h3>
     <ol class="round">
         <li class="one">

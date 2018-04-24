@@ -6,6 +6,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
 using ClinicalTrail.Application.WebApplication;
+using ClinicalTrail.Services.WebAPI;
 
 namespace ClinicalTrail.Application.WebApplication
 {

@@ -11,9 +11,9 @@ namespace ClinicalTrail.Business.Managers
 {
     public class CenterMasterManager : Manager
     {
-         private readonly CenterMasterFactory _centermasterfactory;
+        private readonly CenterMasterFactory _centermasterfactory;
 
-         public CenterMasterManager()
+        public CenterMasterManager()
         {
             _centermasterfactory = new CenterMasterFactory(_context);
         }
@@ -23,7 +23,7 @@ namespace ClinicalTrail.Business.Managers
             return CenterMasterMapper.Map(_centermasterfactory.GetAllCenterMaster());
         }
 
-        public void Add(CenterMasterDto centermanagerlist)
+        public void AddCenterManager(CenterMasterDto centermanagerlist)
         {
             _centermasterfactory.AddCenterManager(CenterMasterMapper.Map(centermanagerlist));
         }
@@ -41,6 +41,14 @@ namespace ClinicalTrail.Business.Managers
         public bool DeleteCenterManager(int centno)
         {
             return _centermasterfactory.DeleteCenterManager(centno);
+        }
+
+        public void AddCenterManager(List<CenterMasterDto> list)
+        {
+            foreach (CenterMasterDto dto in list)
+            {
+                _centermasterfactory.AddCenterManager(CenterMasterMapper.Map(dto));
+            }
         }
     }
 }

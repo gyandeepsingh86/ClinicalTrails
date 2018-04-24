@@ -33,6 +33,6 @@ namespace ClinicalTrail.Application.WebApplication.Models
         public string Centre_3 { get; set; }
         public string Payee_Name { get; set; }
         public string Bank_Account_Number { get; set; }
-        public Nullable<bool> IsActive { get; set; }
+        public bool IsActive { get; set; }
     }
 }

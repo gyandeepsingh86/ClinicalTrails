@@ -21,9 +21,9 @@ namespace ClinicalTrail.Application.WebApplication.Manager
             return CenterMasterModelMapper.Map(_centermanager.GetAllCenterMaster());
         }
 
-        internal void Add(CenterMasterModel centermastermodel, string Userid)
+        internal void AddCenterManager(CenterMasterModel centermastermodel, string Userid)
         {
-            _centermanager.Add(CenterMasterModelMapper.Map(centermastermodel));
+            _centermanager.AddCenterManager(CenterMasterModelMapper.Map(centermastermodel));
          }
 
         internal CenterMasterModel GetCenterManager(int CentNo)
@@ -39,6 +39,11 @@ namespace ClinicalTrail.Application.WebApplication.Manager
         internal bool DeleteCenterManager(int centno)
         {
             return _centermanager.DeleteCenterManager(centno);
+        }
+
+        internal void AddCenterManager(List<CenterMasterModel> excellist, string username)
+        {
+            _centermanager.AddCenterManager(CenterMasterModelMapper.Map(excellist));
         }
     }
 }

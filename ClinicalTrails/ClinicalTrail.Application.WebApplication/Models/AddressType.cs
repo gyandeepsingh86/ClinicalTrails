@@ -7,7 +7,7 @@ namespace ClinicalTrail.Application.WebApplication.Models
 {
     public class AddressTypeModel
     {
-        public int AddressTypeID { get; set; }
+        public int? AddressTypeID { get; set; }
         public string AddressTypeName { get; set; }
                
     }

@@ -1,4 +1,3 @@
-D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\obj\Debug\ClinicalTrail.Application.WebApplication.Test.csprojResolveAssemblyReference.cache
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\ClinicalTrail.Application.WebApplication.Test.dll.config
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\ClinicalTrail.Application.WebApplication.Test.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\ClinicalTrail.Application.WebApplication.Test.pdb
@@ -19,11 +18,11 @@ D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplicatio
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\System.Web.Mvc.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\System.Web.Optimization.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\Microsoft.AspNet.Membership.OpenAuth.dll
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\System.Web.Http.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\AtlasCopco.Framework.Objects.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\DotNetOpenAuth.AspNet.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\Microsoft.AspNet.FriendlyUrls.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\Microsoft.AspNet.Identity.Core.dll
-D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\System.Web.Http.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\Microsoft.Owin.Security.OAuth.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
@@ -64,11 +63,11 @@ D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplicatio
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\System.Web.Mvc.xml
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\System.Web.Optimization.xml
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\Microsoft.AspNet.Membership.OpenAuth.xml
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\System.Web.Http.xml
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\AtlasCopco.Framework.Objects.pdb
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\DotNetOpenAuth.AspNet.xml
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\Microsoft.AspNet.FriendlyUrls.xml
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\Microsoft.AspNet.Identity.Core.xml
-D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\System.Web.Http.xml
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\Microsoft.Owin.Security.OAuth.xml
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
@@ -92,5 +91,6 @@ D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplicatio
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\Microsoft.Practices.Unity.xml
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\obj\Debug\ClinicalTrail.Application.WebApplication.Test.csprojResolveAssemblyReference.cache
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\obj\Debug\ClinicalTrail.Application.WebApplication.Test.dll
 D:\Project\ClinicalTrails\ClinicalTrails\ClinicalTrail.Application.WebApplication.Test\obj\Debug\ClinicalTrail.Application.WebApplication.Test.pdb

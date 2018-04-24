@@ -22,5 +22,13 @@ namespace ClinicalTrail.DataAccess.Factory
                     select resp;
             return v.ToList();
         }
+
+        public AddressType GetAddressTypeByID(string name)
+        {
+            var v = from resp in _context.AddressTypes
+                    where resp.AddressTypeName == name
+                    select resp;
+            return v.FirstOrDefault();
+        }
     }
 }

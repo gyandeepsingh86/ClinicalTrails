@@ -92,6 +92,5 @@ namespace ClinicalTrail.Business.Mappers
             to.Center_No = CentNo;
             return to;
         }
-                
     }
 }

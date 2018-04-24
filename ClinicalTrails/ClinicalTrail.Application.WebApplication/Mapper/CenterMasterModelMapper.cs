@@ -17,6 +17,14 @@ namespace ClinicalTrail.Application.WebApplication.Mapper
             return to.ToList();
         }
 
+        internal static List<CenterMasterDto> Map(List<CenterMasterModel> list)
+        {
+            var to = from c in list
+                     select Map(c);
+
+            return to.ToList();
+        }
+
         internal static CenterMasterModel Map(CenterMasterDto source)
         {
             var to = new CenterMasterModel();
@@ -74,6 +82,5 @@ namespace ClinicalTrail.Application.WebApplication.Mapper
 
             return to;
         }
-
     }
 }

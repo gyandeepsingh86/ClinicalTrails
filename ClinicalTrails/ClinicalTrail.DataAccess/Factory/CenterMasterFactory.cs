@@ -98,58 +98,58 @@ namespace ClinicalTrail.DataAccess.Factory
             //query = query.IsMember(a => a.Report_FamCode, filter.FamCode);
 
             if (!string.IsNullOrEmpty(filter.Bank_Account_Number))
-                query = query.Where(a => a.Bank_Account_Number == null || a.Bank_Account_Number == filter.Bank_Account_Number);
+                query = query.Where(a => a.Bank_Account_Number != null && a.Bank_Account_Number == filter.Bank_Account_Number);
 
             if (!string.IsNullOrEmpty(filter.Center_Name))
-                query = query.Where(a => a.Center_Name == null || a.Center_Name.Contains(filter.Center_Name));
+                query = query.Where(a => a.Center_Name != null && a.Center_Name.Contains(filter.Center_Name));
 
             if (filter.Center_No >= 0)
-                query = query.Where(a => a.Center_No == null || a.Center_No == filter.Center_No);
+                query = query.Where(a => a.Center_No != null && a.Center_No == filter.Center_No);
 
             if (!string.IsNullOrEmpty(filter.Center_Type))
-                query = query.Where(a => a.Center_Type == null || a.Center_Type.Contains(filter.Center_Type));
+                query = query.Where(a => a.Center_Type != null && a.Center_Type.Contains(filter.Center_Type));
 
             if (!string.IsNullOrEmpty(filter.City))
-                query = query.Where(a => a.City == null || a.City == filter.City);
+                query = query.Where(a => a.City != null && a.City == filter.City);
 
             if (!string.IsNullOrEmpty(filter.Country))
-                query = query.Where(a => a.Country == null || a.Country == filter.Country);
+                query = query.Where(a => a.Country != null && a.Country == filter.Country);
 
             if (!string.IsNullOrEmpty(filter.Email))
-                query = query.Where(a => a.Email == null || a.Email.Contains(filter.Email));
+                query = query.Where(a => a.Email != null && a.Email.Contains(filter.Email));
 
             if (!string.IsNullOrEmpty(filter.Equipments))
-                query = query.Where(a => a.Equipments == null || a.Equipments.Contains(filter.Equipments));
+                query = query.Where(a => a.Equipments != null && a.Equipments.Contains(filter.Equipments));
+
+            if (!string.IsNullOrEmpty(filter.IsActive.ToString()))
+                query = query.Where(a => a.IsActive != null || a.IsActive == filter.IsActive);
 
             if (!string.IsNullOrEmpty(filter.Investigator_1))
-                query = query.Where(a => a.Investigator_1 == null || a.Investigator_1.Contains(filter.Investigator_1));
+                query = query.Where(a => a.Investigator_1 != null && a.Investigator_1.Contains(filter.Investigator_1));
 
             if (!string.IsNullOrEmpty(filter.Investigator_2))
-                query = query.Where(a => a.Investigator_2 == null || a.Investigator_2.Contains(filter.Investigator_2));
+                query = query.Where(a => a.Investigator_2 != null && a.Investigator_2.Contains(filter.Investigator_2));
 
             if (!string.IsNullOrEmpty(filter.Investigator_3))
-                query = query.Where(a => a.Investigator_3 == null || a.Investigator_3.Contains(filter.Investigator_3));
+                query = query.Where(a => a.Investigator_3 != null && a.Investigator_3.Contains(filter.Investigator_3));
 
             if (!string.IsNullOrEmpty(filter.Mobile_Phone))
-                query = query.Where(a => a.Mobile_Phone == null || a.Mobile_Phone == filter.Mobile_Phone);
+                query = query.Where(a => a.Mobile_Phone != null && a.Mobile_Phone == filter.Mobile_Phone);
 
             if (!string.IsNullOrEmpty(filter.Office_Phone))
-                query = query.Where(a => a.Office_Phone == null || a.Post_code == filter.Office_Phone);
+                query = query.Where(a => a.Office_Phone != null && a.Office_Phone == filter.Office_Phone);
 
             if (!string.IsNullOrEmpty(filter.Payee_Name))
-                query = query.Where(a => a.Payee_Name == null || a.Payee_Name.Contains(filter.Payee_Name));
+                query = query.Where(a => a.Payee_Name != null && a.Payee_Name.Contains(filter.Payee_Name));
 
             if (!string.IsNullOrEmpty(filter.Post_code))
-                query = query.Where(a => a.Post_code == null || a.Post_code == filter.Post_code);
-
-            if (!string.IsNullOrEmpty(filter.Post_code))
-                query = query.Where(a => a.Post_code == null || a.Post_code == filter.Post_code);
+                query = query.Where(a => a.Post_code != null && a.Post_code == filter.Post_code);
 
             if (!string.IsNullOrEmpty(filter.Primary_Email))
-                query = query.Where(a => a.Primary_Email == null || a.Primary_Email == filter.Primary_Email);
+                query = query.Where(a => a.Primary_Email != null && a.Primary_Email == filter.Primary_Email);
 
             if (!string.IsNullOrEmpty(filter.Secondary_Email))
-                query = query.Where(a => a.Secondary_Email == null || a.Secondary_Email == filter.Secondary_Email);
+                query = query.Where(a => a.Secondary_Email != null && a.Secondary_Email == filter.Secondary_Email);
 
             if (!string.IsNullOrEmpty(filter.Specialties))
                 query = query.Where(a => filter.Specialties.Contains(a.Specialties));
