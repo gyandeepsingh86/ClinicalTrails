@@ -33,5 +33,6 @@ namespace ClinicalTrail.DataAccess.Model
         public virtual DbSet<CenterMaster> CenterMasters { get; set; }
         public virtual DbSet<InvestigatorMaster> InvestigatorMasters { get; set; }
         public virtual DbSet<VendorMaster> VendorMasters { get; set; }
+        public virtual DbSet<UserRegistration> UserRegistrations { get; set; }
     }
 }

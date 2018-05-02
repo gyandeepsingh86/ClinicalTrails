@@ -115,6 +115,30 @@
           <Property Name="UserType" Type="nvarchar" MaxLength="1" />
           <Property Name="UserPageAccess" Type="nvarchar" MaxLength="100" />
         </EntityType>
+        <EntityType Name="UserRegistration">
+          <Key>
+            <PropertyRef Name="RegisterID" />
+          </Key>
+          <Property Name="RegisterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="5" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MiddleName" Type="nvarchar" MaxLength="20" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DOB" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="SecondaryEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="JoiningDate" Type="datetime" Nullable="false" />
+          <Property Name="MobileNumber" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="OfficeNumber" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="FaxNumber" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="StreetAddress" Type="nvarchar" MaxLength="1000" />
+          <Property Name="PinCode" Type="nvarchar" MaxLength="10" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="state" Type="nvarchar" MaxLength="50" />
+          <Property Name="Country" Type="nvarchar" MaxLength="30" />
+        </EntityType>
         <EntityType Name="VendorMaster">
           <Key>
             <PropertyRef Name="Vendor No" />
@@ -171,6 +195,7 @@
           <EntitySet Name="InvestigatorMaster" EntityType="Self.InvestigatorMaster" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StateMaster" EntityType="Self.StateMaster" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserMaster" EntityType="Self.UserMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserRegistration" EntityType="Self.UserRegistration" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VendorMaster" EntityType="Self.VendorMaster" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_InvestigatorMaster_InvestigatorMaster" Association="Self.FK_InvestigatorMaster_InvestigatorMaster">
             <End Role="InvestigatorMaster" EntitySet="InvestigatorMaster" />
@@ -201,7 +226,8 @@
             <End Role="InvestigatorMaster" EntitySet="InvestigatorMasters" />
             <End Role="InvestigatorMaster1" EntitySet="InvestigatorMasters" />
           </AssociationSet>
-          <EntitySet Name="VendorMasters" EntityType="ClinicalTrialsDBModelContext.VendorMaster" />          
+          <EntitySet Name="VendorMasters" EntityType="ClinicalTrialsDBModelContext.VendorMaster" />
+          <EntitySet Name="UserRegistrations" EntityType="ClinicalTrialsDBModelContext.UserRegistration" />          
         </EntityContainer>
         <EntityType Name="CityMaster">
           <Key>
@@ -365,6 +391,30 @@
           <Property Name="Bank_Account_Number" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="IsActive" Type="Boolean" Nullable="false" />
         </EntityType>
+        <EntityType Name="UserRegistration">
+          <Key>
+            <PropertyRef Name="RegisterID" />
+          </Key>
+          <Property Name="RegisterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MiddleName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DOB" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SecondaryEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="JoiningDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="MobileNumber" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="OfficeNumber" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="FaxNumber" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="StreetAddress" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="PinCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="state" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -510,6 +560,31 @@
                 <ScalarProperty Name="Vendor_Type" ColumnName="Vendor Type" />
                 <ScalarProperty Name="Vendor_Name" ColumnName="Vendor Name" />
                 <ScalarProperty Name="Vendor_No" ColumnName="Vendor No" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRegistrations">
+            <EntityTypeMapping TypeName="ClinicalTrialsDBModelContext.UserRegistration">
+              <MappingFragment StoreEntitySet="UserRegistration">
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="PinCode" ColumnName="PinCode" />
+                <ScalarProperty Name="StreetAddress" ColumnName="StreetAddress" />
+                <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+                <ScalarProperty Name="OfficeNumber" ColumnName="OfficeNumber" />
+                <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+                <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+                <ScalarProperty Name="SecondaryEmail" ColumnName="SecondaryEmail" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="RegisterID" ColumnName="RegisterID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

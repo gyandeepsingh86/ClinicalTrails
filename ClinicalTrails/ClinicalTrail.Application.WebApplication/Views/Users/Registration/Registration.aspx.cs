@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClinicalTrail.GeneralObjectStore.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,7 +17,7 @@ namespace ClinicalTrail.Application.WebApplication.Views.Users.Registration
 
         protected void btnClear_Click(object sender, EventArgs e)
         {
-
+            ControlClearing.ClearAllControls(this.Page.Form);
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)

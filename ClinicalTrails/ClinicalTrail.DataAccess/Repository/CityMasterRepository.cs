@@ -15,6 +15,7 @@ namespace ClinicalTrail.DataAccess.Repository
         private readonly ClinicalTrialsDBEntities _context;
         private readonly ILogger _logger;
         private readonly CityMasterFactory _citymasterfactory;
+        private readonly UserRegistrationFactory _userregistrationfactory;
 
         public CityMasterRepository(ClinicalTrialsDBEntities entity, ILogger log)
         {
@@ -53,6 +54,13 @@ namespace ClinicalTrail.DataAccess.Repository
             CountryMaster results = _citymasterfactory.GetCountryByCityandStateID(citymaster);
             _logger.Debug(string.Format("SERVER|{0}|GetCountryByCityandStateID()|END", ServerControl.GetCurentDatetime()));
             return null;
+        }
+
+        public void AddNewRegisteredUser(UserRegistration newuser)
+        {
+            _logger.Debug(string.Format("SERVER|{0}|AddRegisteredUser()|START", ServerControl.GetCurentDatetime()));
+            _userregistrationfactory.AddRegisteredUser(newuser);
+            _logger.Debug(string.Format("SERVER|{0}|AddRegisteredUser()|END", ServerControl.GetCurentDatetime()));
         }
     }
 }

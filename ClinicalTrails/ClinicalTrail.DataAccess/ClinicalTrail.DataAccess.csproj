@@ -56,6 +56,7 @@
     <Compile Include="Factory\CityMasterFactory.cs" />
     <Compile Include="Factory\InvestigatorMasterFactory.cs" />
     <Compile Include="Factory\UserMasterFactory.cs" />
+    <Compile Include="Factory\UserRegistrationFactory.cs" />
     <Compile Include="Factory\VendorMasterFactory.cs" />
     <Compile Include="Model\AddressType.cs">
       <DependentUpon>ClinicalTrailDBModel.tt</DependentUpon>
@@ -91,6 +92,9 @@
       <DependentUpon>ClinicalTrailDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\UserMaster.cs">
+      <DependentUpon>ClinicalTrailDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\UserRegistration.cs">
       <DependentUpon>ClinicalTrailDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\VendorMaster.cs">
